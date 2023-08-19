@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Frequently asked questions</title>
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=43&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Statistics" href="kcomm_stats.html" />
+<link rel="next" title="Troubleshooting" href="kcomm_ts.html" />
+</head>
+<body>
+<div id="main">
+<div id="content_wrapper">
+  <div id="content">
+         <h1>Frequently asked questions</h1>
+      <p>This section of the help contains answers to frequently asked questions about KComm.</p>
+<h3>Which operating systems does KComm run under?</h3>
+<p>KComm is developed for Microsoft Windows. It has been tested using Windows XP SP2. I am unaware of any issues running it on Windows Vista, but that may be because no-one has tried to.</p>
+<p>KComm is developed using an open source cross platform development tool, Lazarus, and earlier versions were compiled and tested on Linux. As I am <a href="linux.html" title="Why I gave up using Linux">no longer using Linux in the ham shack</a> I am no longer supporting KComm under Linux (although I am endeavouring to ensure that the source code still compiles under Linux) and the Linux binaries provided are untested.</p>
+<h3>Is KComm available for Mac OS?</h3>
+<p>Lazarus supports compilation for Mac OS so a Mac version is theoretically possible. However, a certain amount of Mac programming knowledge would probably be required to get the program to work. I don't possess an Apple Macintosh so I will not be producing a Mac version.</p>
+<h3>Does KComm support other (non-Elecraft) transceivers?</h3>
+<p>KComm was designed specifically to make use of certain Elecraft-specific features such as the ability to send CW using computer control protocol commands which are not supported by other transceiver manufacturers. To avoid issues caused by third party libraries it has been written to use the Elecraft command protocol directly. No provision has been made to support other makes and models of transceiver, and to do so would be a major task that I have neither the time not the inclination to pursue.</p>
+<h3>Why don't shortcuts work with my K2 or KX3?</h3>
+<p>Many shortcuts emulate button presses using button tap/hold commands. As the front panels of the K2 and KX3 are different from the K3 the shortcuts will need modification before they will work with a K2 or KX3. This has been left as an exercise for the user. (Hint: the K2/K3/KX3 Programmers Reference will be found useful.)</p>
+<h3>How do I import my log from another logging program?</h3>
+<p>Please see <a href="kcomm_importing.html" title="Importing log data">Importing log data</a>.</p>
+<h3>How do I delete contacts from the log?</h3>
+<p>KComm does not currently provide any facility to delete contacts from the log. However, the log file is a plain text file, with one line of text per record. Close KComm, open the log file in a plain text editor (e.g. Windows Notepad), locate the lines you want to remove and delete them.</p>
+<h3>What size log file can KComm handle?</h3>
+<p>KComm stores the log in a flat file (text file), same as MixW. It does not use a database. There is no fixed limit to the number of entries in the log file. Any limits will be imposed by limitations in the display components used (unknown) or, more likely, by performance. In order to check for previous contacts, or whether a call entered is a new entity, KComm searches the entire log. This obviously takes longer the more contacts there are in the log, but a faster computer will mitigate this.</p>
+<p>Very active operators might be advised to start a new log file every year, or to create separate log files for each contest. Casual operators will probably find that the log can increase to several thousand entries before performance becomes a problem.</p>
+<h3>How do I update the prefix/country database?</h3>
+<p>KComm uses a database file created by <a href="http://www.country-files.com/cty/index.htm">Jim Reisert, AD1C</a> for the program WF1B RTTY. Creating and maintaining a database file specifically for KComm was not a task I wished to take on so I am grateful to AD1C for maintaining database files for the benefit of users of popular logging and contest programs. I could hardly expect Jim to produce a database file especially for the small number of KComm users so I used the WF1B file because I was able to figure out more or less how to use it.</p>
+<p>To update the file, <a href="http://www.country-files.com/cty/wf1b.dat">right-click this link</a> and then save the file <strong>wf1b.dat</strong> to the location where you installed KComm, overwriting the previous copy (or save it to another location and then copy it to the KComm folder.) Just in case an update contains a change that makes KComm crash, it might be wise to back up the previous version so you can go back to it if necessary.</p>
+<h3>How do I print QSL labels from my log?</h3>
+<p>KComm does not support QSL label printing. This would be a major effort to implement and I have no intention of doing so.</p>
+<p>In keeping with the philosophy of making use of other ham applications where possible, I would suggest using <a href="http://www.df3cb.com/bv/index.html" target="_blank">BV by DF3CB</a>. Like KComm, BV is free. It looks very powerful and flexible, and can import ADIF files such as those produced by KComm.</p>
+<h3>How can I create different palettes for the large PSK waterfall?</h3>
+<p>The palette files supplied with KComm were created using <a href="http://www.ham-radio-deluxe.com/Programs/More/PSK31Deluxe/tabid/91/Default.aspx" target="_blank">PSK31 Deluxe</a>. There is no tool within KComm to create new palettes.</p>
+      	 <hr>
+	 <div class="right49">
+	    Next page: <a href="kcomm_ts.html" title="Troubleshooting">Troubleshooting</a>
+	 </div>
+         <div class="left49">
+            Previous page: <a href="kcomm_stats.html" title="Statistics">Statistics</a>
+         </div>
+           </div>
+  <div id="content_left">
+      <h2>KComm Help</h2>
+             
+<ul class="clearfix">
+
+<li><a href="kcomm_hlp.html"> About KComm </a>
+
+
+</li>
+
+<li><a href="kcomm_req.html"> System requirements </a>
+
+
+</li>
+
+<li><a href="kcomm_inst.html"> Installation </a>
+
+
+</li>
+
+<li><a href="kcomm_gs.html"> Getting started </a>
+
+
+</li>
+
+<li><a href="kcomm_logging.html"> Logging </a>
+
+
+</li>
+
+<li><a href="kcomm_rx.html"> Receiving </a>
+
+
+</li>
+
+<li><a href="kcomm_tx.html"> Transmitting </a>
+
+
+</li>
+
+<li><a href="kcomm_macros.html"> Macros </a>
+
+
+</li>
+
+<li><a href="kcomm_bc.html"> Band changing </a>
+
+
+</li>
+
+<li><a href="kcomm_mc.html"> Mode changing </a>
+
+
+</li>
+
+<li><a href="kcomm-shortcuts.html"> Shortcuts </a>
+
+
+</li>
+
+<li><a href="kcomm_sb.html"> Status bar </a>
+
+
+</li>
+
+<li><a href="kcomm_dx_cluster.html"> DX Cluster </a>
+
+
+</li>
+
+<li><a href="kcomm_psk_browser.html"> PSK Browser </a>
+
+
+</li>
+
+<li><a href="kcomm_settings.html"> Settings </a>
+
+
+</li>
+
+<li><a href="kcomm_editing_log.html"> Editing log entries </a>
+
+
+</li>
+
+<li><a href="kcomm_importing.html"> Importing log data </a>
+
+
+</li>
+
+<li><a href="kcomm_exporting.html"> Exporting log data </a>
+
+
+</li>
+
+<li><a href="kcomm_stats.html"> Statistics </a>
+
+
+</li>
+
+<li><a href="kcomm_faq.html" class="currentpage"> Frequently asked questions </a>
+
+
+</li>
+
+<li><a href="kcomm_ts.html"> Troubleshooting </a>
+
+
+
+</li>
+</ul>
+
+      <ul class="clearfix">
+        <li><a href="kcomm.html"> KComm </a></li>
+        <li><a href="index.html"> G4ILO's Shack </a></li>
+      </ul>
+        </div>
+</div>
+</div>
+</body>
+</html><!-- 0.071188 / 47 / 10007480 / 10589424 -->

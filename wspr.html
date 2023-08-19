@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>WSPR - Distant Whispers</title>
+
+<meta name="description" content="An article describing WSPR, an application for receiving and transmitting low power beacon signals on the amateur radio short wave bands." />
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheet.php%3Fcssid=31&amp;mediatype=screen.css" />
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=42&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Feeding the Antenna" href="antenna.html" />
+<link rel="next" title="Why I gave up using Linux" href="linux.html" />
+</head>
+<body>
+<div id="main">
+        <ul class="accessibility">
+      <li><a href="wspr.html#menuwrapper" title="Skip to navigation" accesskey="n">Skip to navigation</a></li>
+      <li><a href="wspr.html#content" title="Skip to content" accesskey="s">Skip to content</a></li>
+    </ul>
+        <hr class="accessibility" />
+    
+<!-- header start -->
+<div id="header_wrapper">
+<div id="header">
+<hr class="accessibility" />
+</div>
+</div>
+<!-- header end -->
+<div id="content_wrapper">
+
+  <div id="content">
+         <h1>WSPR - Distant Whispers</h1>
+      <!-- adsense start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* 728x15 L/U */
+google_ad_slot = "3834710687";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+      <p>One of the things that makes communicating with amateur radio more fun than using the Internet or the phone is that you never know where your signals will be received. Short wave radio propagation is never completely predictable, and can often surprise you. If this is an aspect of radio that fascinates you, then you'll enjoy using WSPR.</p>
+<p>WSPR is a piece of software that enables you to participate in a world-wide network of low power propagation beacons. It enables your radio transceiver to transmit beacon signals, and to receive beacon signals from similarly-equipped stations in the same amateur band. Because participating stations usually upload spots that they receive in real time to a <a href="http://wsprnet.org/meptspots.php" target="_blank">web server</a>, you can find out within seconds of the end of each transmission exactly where and how strongly it was received, and even view the propagation paths on a map.</p>
+<p align="center"><img title="Live WSPR beacon spots at WSPRnet.org" src="http://www.g4ilo.com/images/wspr-spots.gif" alt="propmap" width="512" height="215" /></p>
+<p>If you left WSPR running while you were doing something else, you can also search the database to find out later where your signals were received during the day. You can analyze past signal reports to see the effect of seasonal propagation changes or antenna improvements.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>What is WSPR?</h2>
+<p>WSPR stands for <strong>Weak Signal Propagation Reporter</strong>, but it's pronounced "Whisper" - quite an appropriate name as it is all about sending and receiving signals that are barely audible.</p>
+<p>WSPR is a software application written by <a href="http://physics.princeton.edu/pulsar/K1JT/" target="_blank">Joe Taylor, K1JT</a>, a Nobel Prize-winning Princeton physicist. It was first released in April 2008. It uses a transmission mode called MEPT-JT. The "JT" stands for Joe Taylor, while MEPT stands for <strong>Manned Experimental Propagation Transmitter</strong>.</p>
+<p>MEPT is not something specific to WSPR. MEPTs are very often simple home-built QRP transmitters that send beacon messages using very low-speed Morse (QRSS). Their very weak signals are copied visually using software called a "grabber" - a horizontal waterfall display capable of detecting and highlighting signals well below the noise threshold. The content of a transmission is determined - as with many other weak-signal QRSS modes such as EME (moonbounce) - by literally reading the dots and dashes as they are displayed on the waterfall.</p>
+<p>The "manned" aspect of MEPT simply relates to the operator's license conditions. It is not necessary to obtain a special dispensation to operate a MEPT station because you are present while it is in use, just as you would be when using CW, SSB or another data mode. In fact, some MEPT enthusiasts discourage the use of the term "beacon" because beacon operation without a special permit is prohibited by some licensing authorities.</p>
+<p>Once set up, operation of WSPR is completely automated. The software logs every transmission you make, as well as all the "spots" (decoded MEPT-JT signals) received. So this is something you can do when you are otherwise engaged and not able to get on the air and make normal QSOs. Just how "hands-on" you need to be when operating WSPR is a matter between you, your license authority and your conscience, but some people leave their WSPR beacons running 24/7 and some of that time, one assumes, they must be asleep.</p>
+<h2>Principles of operation</h2>
+<p>WSPR itself does not use slow Morse. The signal is frequency shift keying (FSK) with a very small shift and a very slow rate. In fact, some people have mistakenly thought that the software wasn't working because they listened to the signal and heard what sounded like a pure tone, with no modulation at all. The bandwidth occupied is only about 6 Hz, so many stations can operate within the 200Hz WSPR window without interference.</p>
+<p>Each MEPT-JT transmission lasts for just under two minutes, and starts at the beginning of each even-numbered minute. It is important that transmitters and receivers are in sync, so one of the fundamental pre-requisites of success with WSPR is an accurately-set computer clock.</p>
+<p>The beacon transmission contains the transmitter's callsign, locator and power (in dBm.) The data is encoded to reduce the number of data bits needed, with the result that only standard callsigns can be used - no prefixes, suffixes or special calls. Forward error correction is used to improve the chances of copy even under adverse conditions while eliminating false "spots".</p>
+<p>The WSPR software incorporates both a receiver/decoder as well as a transmitter. How much transmitting you decide to do is up to you. It is not necessary to transmit at all, so this is an activity that even SWLs can participate in - and many do. Most operators set the software to transmit once in every four or five two-minute segments. This is a random probability, so that two stations which start off at the same time with the same probability will not always transmit in the same segment.</p>
+<h2>Syncing the clock<br /></h2>
+<p>As mentioned earlier, it is vitally important that your computer clock is accurate, as this governs when WSPR starts each transmit or receive period, and nothing will be decoded if your clock is more than a couple of seconds out.</p>
+<p>If you are using Windows XP, open the <strong>Date and Time</strong> window in Control Panel and select the <strong>Internet Time</strong> tab. There, you should see an option to synchronize the clock using an Internet time server, <span style="font-weight: bold">time.windows.com</span>. Select this option, and do an immediate sync to see if it works.</p>
+<p>If you have a radio-controlled clock or a GPS you can compare your computer clock with it to see how accurate it is. Do this every day over a period of a week. Windows only synchronizes the clock with the time server once per week, and many computer clocks drift several seconds per day which is just not good enough for this application. If you need to make Windows synchronize more often then <a href="http://www.dougknox.com/xp/utils/xp_inet_time.htm" target="_blank">here is a link to a utility (untested by me) that allows you to change the time sync interval</a>. Alternatively if you have a permanent Internet connection you can disable the Windows time synchronization altogether and use <a href="http://www.meinberg.de/english/sw/ntp.htm" target="_blank">NTP for Windows</a>.</p>
+<h2>Transceiver setup</h2>
+<p>WSPR needs connections between your computer sound card and your radio transceiver in order to decode received beacon signals and send your own transmissions. It also needs to be able to control your transceiver's PTT using the serial port RTS control line, unless you want to use audio VOX.</p>
+<p>If you are already set up to use data modes such as PSK31 then you probably have all the necessary connections already in place. However if you have a full serial connection between the computer and radio in order to allow full computer control, your data mode software may be using computer commands to control TX/RX switching. WSPR only knows how to use RTS to control PTT so you may need to enable this within your transceiver's configuration menu or make a transistor switch to interface between the PTT and the RS-232 RTS signal. See here for <a href="http://www.w5bbr.com/soundbd.html" target="_blank">more information about interfacing a computer and transceiver</a>. If you can't easily use a serial port to control PTT then you can try VOX.</p>
+<p>Because MEPT-JT is a very narrow band mode, it is desirable - though not essential - that your transceiver's dial calibration is accurate to within at least a few Hz. If you don't have any accurate frequency calibration equipment then an easy way to do this is to tune in some AM short wave broadcast stations in SSB mode, while monitoring the received audio using a spectrum analyzer program or data mode software with a waterfall display, and using this to measure the frequency of the carrier heterodyne.</p>
+<p>Short wave broadcast stations transmit on exact multiples of 5KHz, and their frequencies are usually accurate to within a Hz or two. Tune 1KHz above or below the  frequency the short wave station is supposed to be on (for example, 5.984000 MHz or 5.986000 MHz if the station is on 5.985 MHz) and measure the frequency of the tone produced by the carrier, which should be exactly 1000 Hz.</p>
+<p>Repeat this check with several other short wave stations, to be sure that you didn't pick one that happened to be off-frequency.</p>
+<h2>Setting up WSPR</h2>
+<p>Once you have your computer clock and transceiver interfacing sorted out it's time to install WSPR. You can <a href="http://www.physics.princeton.edu/pulsar/K1JT/" target="_blank">download WSPR from here</a>. It installs in the usual way for a Windows application. WSPR can also be compiled (with not a little difficulty) for Linux, which we'll talk about later.</p>
+<p>Once WSPR is installed, start it. Note that a console window (often, incorrectly, called a DOS Window) will appear just before the user interface window shows. This is normal. Don't close it! However, unless you have problems - in which case it might display some helpful information, such as error messages - you can ignore it. You can't hide it, but you can minimize it.</p>
+<p align="center"><img title="WSPR application main window" src="http://www.g4ilo.com/images/wspr.gif" alt="screenshot" width="400" height="315" /></p>
+<p>Open <strong>Setup</strong>, <strong>Options</strong>. Enter your callsign and full six-character locator. Enter the number of the serial port that will be used to control PTT (for COM1, enter <strong>1</strong>.) Enter <strong>0</strong> to disable PTT control if you will be using the transceiver's VOX.</p>
+<p>Select the power you will be using, in dBm.The dBm values are encoded in the software, so you can only use the values listed, e.g. 30dBm (1W), 33dBm (2W), 37dBm (5W), 40dBm (10W). Most people use 1W, which is <strong>30</strong>dBm, so this would be a good start. Remember to set the transceiver's power control to the same value. The WSPR software cannot set it for you. Then close the Options window.</p>
+<p>Now you are almost ready to go. We'll start on 30m, since that's the most popular band for WSPR users and you're bound to hear a signal.</p>
+<p>Set your transceiver to the 30m band, and set the mode to whatever you use for sound card data modes. This mode should use upper sideband, in order that the audio tones are the right side of the suppressed carrier frequency. Set the transceiver to <strong>10.138700</strong>, and enter this frequency into the <strong>Dial freq</strong> box on the main window of WSPR.</p>
+<p>The latest versions of WSPR have a <strong>Bands</strong> menu that lets you pick the band you want to operate on and select the correct Dial freq box automatically. This is just a convenience so you don't have to remember the right frequency to use on each band. WSPR does not set your transceiver to this frequency, even if you do have a CAT connection. You must set the dial manually!</p>
+<p>The frequency calibration to the right of the waterfall in WSPR shows a range of 100 to 300. This represents the frequency range 10.140100 to 10.140300 - the dial frequency plus 1.5KHz, plus or minus 100Hz. This is the 200Hz band segment that WSPR will monitor for signals. All other WSPR users on the 30m band will be listening to the same segment of band.</p>
+<h3>Receiving</h3>
+<p>Now click the <strong>Rx</strong> radio button in the <strong>T/R cycle</strong> control, and wait. When the next even numbered minute starts, WSPR will display <strong>Receiving</strong> in the bottom right of the status bar. It will continue receiving for one minute and 54 seconds, during which nothing will appear in the waterfall display. After that, it will display <strong>Waiting to start</strong>, and a couple of seconds after that a chunk of waterfall will appear in the display. If you see any faint (or not-so-faint) horizontal traces, these are probably signals from other WSPR users, and if you are lucky, WSPR will have decoded them and will have displayed the details in the <strong>Band Map</strong> and in the log list in the lower half of the window. As the clock ticks over to 00 seconds, WSPR will start receiving again.</p>
+<p>If nothing is received then look hard at the waterfall segment that was displayed. If it shows faint "noise" then it is probable that no stations were transmitting. If it is completely blank then there may be a problem with the audio connection from your radio, or your mixer settings. Since using a waterfall that only updates once every two minutes to check the result of changes can test your patience, use a regular data modes program to verify that audio is being received by the sound card and that signals appear on the waterfall.</p>
+<p>If you have more than one sound card you will probably need to specify the soundcard number in the setup options as well. The console window mentioned earlier will help you decide what number to put.</p>
+<p>When you have verified that your receiver is working correctly, tick the checkbox marked <span style="font-weight: bold">Upload spots</span>. This will cause details of the spots you receive to be uploaded to the <a href="http://wsprnet.org/meptspots.php" target="_blank">WSPR Spots Database</a> at WSPRnet.org. This is what makes WSPR fun, interesting and useful. It enables transmitters to know where their signals have been received, and at what strength. It also helps you get a picture of what propagation is like.</p>
+<h3>Transmitting</h3>
+<p><img title="Morning propagation on 30m" src="http://www.g4ilo.com/images/wspr-spots-2.gif" alt="propmap" hspace="16" vspace="4" width="240" height="217" align="right" /> Now you are almost ready to send your first MEPT transmission. Before you do, you must enter your transmit frequency in the <span style="font-weight: bold">Tx freq</span> box of WSPR. The easiest way to do this is to double-click in the waterfall. Pick a spot that is not being used by any of the stations you have already received. This should result in a frequency somewhere between 10.140100 to 10.140300.</p>
+<p>Double-check that you set the transceiver's output power to the level you specified in the settings, earlier: if you entered 30dBm the power should be set to 1 watt.</p>
+<p>Now click the 20% button in the <strong>T/R cycle</strong> control and wait. Eventually, when a new 2 minute segment starts, WSPR will display something like <span style="font-weight: bold">Txing: G4ILO IO84 30</span>. This means that it is sending the information specified - your call, locator and transmitter power, as you entered in the Setup window when you started.</p>
+<p>After one minute and 54 seconds it will display <strong>Waiting to start</strong> again, and then go back to receiving. At each new 2 minute segment your station will transmit with a probability of 20%. If activity is low, you can increase the frequency of transmissions by selecting 25% or 33%.</p>
+<p>After your transmission has finished, wait a few seconds and then open (or refresh, if it is already open) the WSPR Spots Database. With luck, your signal will have been received and decoded by other WSPR users, and will appear as spots in the database. Congratulations! You are now a fully fledged member of the WSPR Network!</p>
+<h2>Operation on other bands</h2>
+<p>Currently, most WSPR operation takes place on the 30m band. This makes 30m the best band to start off on, as it is the one that has the most receivers operating on it, so it is the band most likely to produce the greatest number of spots.</p>
+<p>However, there is a lot of interesting propagation research that can be done on other bands. WSPR could be used to determine the incidence of grayline propagation on the LF bands, for example. At the other end of the HF spectrum, WSPR could be used to detect openings on 15m or 10m. It could even be used to detect and alert operators to Sporadic E openings on 6m and 2m. All it takes is for enough people to set up their stations to receive and transmit on the appropriate frequency.</p>
+<p>At the time of writing, the following frequencies appear to be recommended for use:</p>
+<div>
+<table border="2" cellspacing="2" cellpadding="2" width="80%">
+<tbody>
+<tr>
+<th style="text-align: center">Band</th> <th style="text-align: center">Dial freq (MHz)</th> <th style="text-align: center">Tx freq (MHz)<br /> </th>
+</tr>
+<tr>
+<td style="text-align: center">160m</td>
+<td style="text-align: center">1.836600</td>
+<td style="text-align: center">1.838000 - 1.838200</td>
+</tr>
+<tr>
+<td style="text-align: center">80m<br /></td>
+<td style="text-align: center">3.592600</td>
+<td style="text-align: center">3.594000 - 3.594200<br /></td>
+</tr>
+<tr>
+<td style="text-align: center">60m<br /></td>
+<td style="text-align: center">5.287200</td>
+<td style="text-align: center">5.288600 - 5.288800</td>
+</tr>
+<tr>
+<td style="text-align: center">40m<br /></td>
+<td style="text-align: center">7.038600</td>
+<td style="text-align: center">7.040000 - 7.040200</td>
+</tr>
+<tr>
+<td style="text-align: center">30m<br /></td>
+<td style="text-align: center">10.138700</td>
+<td style="text-align: center">10.140100 - 10.140300<br /></td>
+</tr>
+<tr>
+<td style="text-align: center">20m<br /></td>
+<td style="text-align: center">14.095600</td>
+<td style="text-align: center">14.097000 - 14.097200<br /></td>
+</tr>
+<tr>
+<td style="text-align: center">17m<br /></td>
+<td style="text-align: center">18.104600</td>
+<td style="text-align: center">18.106000 - 18.106200<br /></td>
+</tr>
+<tr>
+<td style="text-align: center">15m<br /></td>
+<td style="text-align: center">21.094600</td>
+<td style="text-align: center">21.096000 - 21.096200<br /></td>
+</tr>
+<tr>
+<td style="text-align: center">12m<br /></td>
+<td style="text-align: center">24.924600<br /></td>
+<td style="text-align: center">24.926000 - 24.926200<br /></td>
+</tr>
+<tr>
+<td style="text-align: center">10m<br /></td>
+<td style="text-align: center">28.124600<br /></td>
+<td style="text-align: center">28.126000 - 28.126200<br /></td>
+</tr>
+<tr>
+<td style="text-align: center">6m<br /></td>
+<td style="text-align: center">50.293000<br /></td>
+<td style="text-align: center">50.294400 - 50.294600</td>
+</tr>
+<tr>
+<td style="text-align: center">2m<br /></td>
+<td style="text-align: center">144.488500<br /></td>
+<td style="text-align: center">144.489900 - 144.490100</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>However, there may not necessarily be anyone else listening on any of those bands. One way to check whether anyone is operational is to use the <a href="http://wsprnet.org/drupal/wsprnet/map" target="_blank">Propagation Map at WSPRnet.org</a>. If WSPR does not receive anything during a 2 minute segment then it reports the receiving station details to the Spots Database. So to check whether anyone is monitoring a band, just select that band from the map and click Update. Any stations that are active will be shown on the map, and you can click on the callsigns to see their details such as their transmit frequency and transmitter power.</p>
+<p>You can also use the <a href="http://wsprnet.org/drupal/wsprnet/chat" target="_blank">Chat/Sked Page at WSPRnet.org</a> to arrange skeds. This could be particularly useful for carrying out antenna tests.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>WSPR for Linux</h2>
+<p>As mentioned above, getting WSPR to run under Linux is quite a challenge. The GUI version described here does <em>not</em> run under wine, although the <a href="http://physics.princeton.edu/pulsar/K1JT/WSPR.EXE">older command line version</a> does. To use the latest version you must download the source code and compile your own version, as described <a href="http://oh2gqc.wippiespace.com/WSPR_on_Ubuntu.html" target="_blank">here</a>. Be warned, it's a lot more involved than running <strong>configure</strong>, <strong>make</strong> and <strong>make install</strong>.</p>
+<p>Because I wanted to run WSPR on my Asus Eee PC, I <a href="http://wsprnet.org/drupal/node/165" target="_blank">tried to compile it and was eventually successful</a>! I also hacked the user interface so it fits on the 800x480 Eee PC screen. You can <a href="http://www.g4ilo.com/files/wspr-linux.tgz" target="_blank">download my version of WSPR for Linux here</a>. The archive includes some instructions to help you get it running.</p>
+<p>This version may run under other versions of Linux besides the Eee PC standard Xandros Linux, but you will have to try it and see. If it doesn't work then I can't help, and you will probably have to compile it for yourself on your own system to overcome the errors.</p>
+<h2>Conclusion</h2>
+<p>WSPR is an easy and fun way to take part in some real radio propagation experiments. It's also a good way for people who are too busy to get on the air very often and make regular contacts to get more use out of that expensive equipment that would otherwise be sitting idle in the shack.</p>
+<p>I hope to see <em>your</em> call on my list of recent WSPR spots very soon!</p>
+      <hr class="accessibility" />
+   <!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+  </div>
+
+  <div id="content_left">
+            <div id="menuwrapper">
+<ul>
+	<li class="menuparent"><a class="menuparent" 
+href="index.html" accesskey="1" title="Home Page, shortcut key=1"><dfn>1: </dfn>Home</a>
+
+</li>
+	<li class="menuactive menuparent"><a class="menuactive menuparent" 
+href="radio.html" ><dfn>2: </dfn>Radio Topics</a>
+
+
+	<ul class='sub_nav'>
+	<li><a 
+href="ham-radio-faq.html" ><dfn>2.1: </dfn>What is amateur radio?</a>
+
+</li>
+	<li><a 
+href="qrp.html" ><dfn>2.2: </dfn>QRP is more fun&#33;</a>
+
+</li>
+	<li><a 
+href="stealth.html" ><dfn>2.3: </dfn>Stealth Amateur Radio</a>
+
+</li>
+	<li><a 
+href="wonder-loop.html" ><dfn>2.4: </dfn>The Wonder Loop</a>
+
+</li>
+	<li><a 
+href="antenna.html" ><dfn>2.5: </dfn>Feeding the Antenna</a>
+
+</li>
+	<li class="menuactive"><a class="menuactive" 
+href="wspr.html" ><dfn>2.6: </dfn>WSPR - Distant Whispers</a>
+
+</li>
+	<li><a 
+href="linux.html" ><dfn>2.7: </dfn>Why I gave up Linux</a>
+
+</li>
+	<li><a 
+href="ft817.html" ><dfn>2.8: </dfn>The FT-817 Page</a>
+
+</li>
+	<li><a 
+href="diy-ducky.html" ><dfn>2.9: </dfn>DIY Ducky for 2m</a>
+
+</li>
+	<li><a 
+href="k2_headset.html" ><dfn>2.10: </dfn>Elecraft K2 headset</a>
+
+</li>
+	<li><a 
+href="psk31.html" ><dfn>2.11: </dfn>PSK31</a>
+
+</li>
+	<li><a 
+href="k2psk31.html" ><dfn>2.12: </dfn>K2 on data modes</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="wxsats.html" ><dfn>2.13: </dfn>Receiving Wxsats</a>
+
+</li>
+	<li><a 
+href="eqsl.html" ><dfn>2.14: </dfn>Electronic QSLing</a>
+
+</li>
+	<li><a 
+href="sporadic-e.html" ><dfn>2.15: </dfn>E-type propagation</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="aprs.html" ><dfn>2.16: </dfn>APRS - On the map</a>
+
+</li>
+	<li><a 
+href="usblink.html" ><dfn>2.17: </dfn>USBlink data interface</a>
+
+
+	</li></ul>
+	</li>
+	<li class="menuparent"><a class="menuparent" 
+href="reviews.html" ><dfn>3: </dfn>Reviews</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="software.html" ><dfn>4: </dfn>Software</a>
+
+</li>
+	<li><a 
+href="guestbook.html" ><dfn>5: </dfn>Visitors Book</a>
+
+</li>
+	<li><a 
+href="log.html" ><dfn>6: </dfn>Contact Log</a>
+
+</li>
+	<li><a 
+href="psk-reporter.html" ><dfn>7: </dfn>Recently heard</a>
+
+</li>
+	<li><a 
+href="search.html" ><dfn>8: </dfn>Search the site</a>
+
+
+			</li>
+	</ul>
+<div class="clearb"></div>
+</div>
+
+<ul>
+  <li><a href="http://blog.g4ilo.com/" >G4ILO&#39;s Blog</a></li>
+  <li><a href="http://www.youtube.com/user/g4ilohamradio" >G4ILO&#39;s Videos</a></li>
+</ul>
+            <p align="center"><g:plusone size="medium"></g:plusone></p>
+<script type="text/javascript">
+  window.___gcfg = {lang: 'en-GB'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+    <div class="misc">
+      <!-- eqsl form start --> <form action="http://www.eqsl.cc/qslcard/eQSLSearch.cfm" method="post"> <input name="ReferralID" type="hidden" value="296" /> <span style="color: #ff0000; font-size: xx-small;">You have <strong>eQSLs</strong> waiting!</span><br /> <span style="font-size: xx-small;">Enter your call and click <strong>Check</strong></span><br /> <input name="Callsign" size="10" type="text" /><br /> <input type="submit" value="Check" /> </form> <!-- eqsl form end -->
+    </div>
+    <!-- adsense start -->
+<div align="center">
+<br/><br/>
+<script type="text/javascript"><!--
+google_ad_client = "pub-8473114760998486";
+/* 160x600, created 27/05/09 */
+google_ad_slot = "9973442554";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+<br />
+    <div style="text-align: center;"><br /><a href="http://evuln.com/tools/malware-scanner/g4ilo.com/"><img style="cursor:pointer" src="http://evuln.com/tools/monitoring/badge/g4ilo.com.jpg" alt="eVuln.com" /></a></div>
+    <p align="center"><a id="clustrMapsLink" href="http://www3.clustrmaps.com/counter/maps.php?url=http://www.g4ilo.com"><img id="clustrMapsImg" style="border:0px;" title="Locations of visitors to this page" src="http://www3.clustrmaps.com/counter/index2.php?url=http://www.g4ilo.com" alt="Locations of visitors to this page" /></a></p>
+    <p align="center"><a href="http://www.rsgb.org" target="_blank"><img title="RSGB Centenary" src="http://www.g4ilo.com/images/rsgb-100.png" border="0" alt="" width="160" height="83" /></a></p>
+  </div>
+
+</div>
+
+   <div id="footer_wrapper">
+   <div id="footer"><p>Copyright © 1998 - 2012 Julian, G4ILO. All rights reserved.</p></div>
+</div>
+   </div>
+
+</body>
+</html><!-- 0.081571 / 77 / 10436320 / 11052800 -->

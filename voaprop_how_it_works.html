@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>How it works</title>
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=43&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Troubleshooting" href="voaprop_probs.html" />
+<link rel="next" title="WebProp" href="webprop.html" />
+</head>
+<body>
+<div id="main">
+<div id="content_wrapper">
+  <div id="content">
+         <h1>How it works</h1>
+      <p>VOAProp is a graphical shell, which runs the prediction tools of VOACAP.
+VOAProp simply creates input files for VOACAP, and then displays the resulting
+output. If there is any inaccuracy in the results, then it is either in the
+input file generated for VOACAP, or in VOACAP itself. In either case, the
+results may be verified by running the appropriate VOACAP program.</p>
+
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+
+<h2>Global propagation maps</h2>
+
+<p>The global propagation maps provide a way to produce maps similar to those
+that can
+be produced using the VOACAP program <i>areawin.exe</i>. To verify the output
+from VOAProp, or to produce maps where you have control over more of the input
+data to the propagation model, you can run this program and input the data
+yourself.</p>
+
+
+<p>When you select a band tab and change the input values for the map display,
+VOAProp generates an input file for VOACAP in the folder <i>&lt;voacap_path&gt;\areadata\VOAProp\voaprop.voa</i>
+. VOACAP itself is then run, which produces an output file <i>&lt;voacap_path&gt;\areadata\VOAProp\voaprop.vg1</i>.
+VOAProp reads in this file and displays the output, using the DBU column to
+obtain the signal strengths at each location.</p>
+
+
+<h2>Point to point propagation charts</h2>
+
+
+<p>The propagation charts showing propagation throughout the day between your
+home location and the selected DX location are a way to produce charts similar
+to those that can be produced using the VOACAP program <i>pointwin.exe</i>. To verify
+the output from VOAProp, or to produce charts where you have control over more
+of the input data to the propagation model, or can view other outputs (such as
+SNR) you can run this program and input the data yourself.</p>
+
+<p>When you display a propagation chart or change parameters that would affect
+it, VOAProp generates an input file for VOACAP in the folder <i>&lt;voacap_path&gt;\run\voacapx.dat</i>.
+VOACAP itself is then run, which produces an output file <i>&lt;voacap_path&gt;\run\voacapx.out</i>.
+This is read in and plotted as a chart. The propagation predictions are
+calculated for multiples of 2MHz. Because VOACAP does not allow enough input
+data to calculate the whole 2 - 30MHz range in one go, the parameters are
+generated and VOACAP is run twice. Thus if you look in the folder given, you
+will only ever see the output from the last of the two runs, for the range 2 -
+22MHz.</p>
+
+
+<p>VOAProp uses the VOACAP method 22 for short path predictions, and 21 for long
+path. If you find that the chart seems to show better propagation when long path
+is selected, you probably have version 1.0 Release 1 of the software.</p>
+
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+
+<h2>VOACAP propagation model</h2>
+
+<p>For more information about the VOACAP propagation model itself, <a href="http://www.voacap.com/" target="_blank">see
+this site</a>.</p>
+      	 <hr>
+	 <div class="right49">
+	    Next page: <a href="webprop.html" title="WebProp">WebProp</a>
+	 </div>
+         <div class="left49">
+            Previous page: <a href="voaprop_probs.html" title="Troubleshooting">Troubleshooting</a>
+         </div>
+           </div>
+  <div id="content_left">
+      <h2>VOAProp Help</h2>
+             
+<ul class="clearfix">
+
+<li><a href="voaprop_about.html"> About VOAProp </a>
+
+
+</li>
+
+<li><a href="voaprop_instreq.html"> Installation </a>
+
+
+</li>
+
+<li><a href="voaprop_gs.html"> Getting started </a>
+
+
+</li>
+
+<li><a href="voaprop_bcns.html"> Beacon monitoring </a>
+
+
+</li>
+
+<li><a href="voaprop_locns.html"> Editing locations </a>
+
+
+</li>
+
+<li><a href="voaprop_faq.html"> Frequently asked questions </a>
+
+
+</li>
+
+<li><a href="voaprop_probs.html"> Troubleshooting </a>
+
+
+</li>
+
+<li><a href="voaprop_how_it_works.html" class="currentpage"> How it works </a>
+
+
+
+</li>
+</ul>
+
+      <ul class="clearfix">
+        <li><a href="voaprop.html"> VOAProp </a></li>
+        <li><a href="index.html"> G4ILO's Shack </a></li>
+      </ul>
+
+        </div>
+</div>
+</div>
+</body>
+</html><!-- 0.06208 / 20 / 9651520 / 10251016 -->

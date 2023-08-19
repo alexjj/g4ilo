@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Receiving weather satellite images</title>
+
+<meta name="description" content="How to receive images from orbiting NOAA weather satellites using simple receiving equipment and a computer." />
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheet.php%3Fcssid=31&amp;mediatype=screen.css" />
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=42&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Getting started on data modes with the Elecraft K2" href="k2psk31.html" />
+<link rel="next" title="APT Decoders Compared" href="imgcmp.html" />
+</head>
+<body>
+<div id="main">
+        <ul class="accessibility">
+      <li><a href="wxsats.html#menuwrapper" title="Skip to navigation" accesskey="n">Skip to navigation</a></li>
+      <li><a href="wxsats.html#content" title="Skip to content" accesskey="s">Skip to content</a></li>
+    </ul>
+        <hr class="accessibility" />
+    
+<!-- header start -->
+<div id="header_wrapper">
+<div id="header">
+<hr class="accessibility" />
+</div>
+</div>
+<!-- header end -->
+<div id="content_wrapper">
+
+  <div id="content">
+         <h1>Receiving weather satellite images</h1>
+      <!-- adsense start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* 728x15 L/U */
+google_ad_slot = "3834710687";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+      <p>You don't need to ride the Space Shuttle to see the earth from space! You can get live images on your computer by receiving radio transmissions from weather satellites (often abbreviated to <em>wxsats</em>.)</p>
+<p><img title="Detail" src="http://www.g4ilo.com/images/noaa14ex.jpg" alt="img" hspace="8" vspace="4" width="320" height="240" align="left" />There are two types of weather satellite from which it is possible to receive images: orbiting satellites and geostationary satellites. Geostationary satellites stay in a fixed place in the sky, and can be received all the time. However, they are further away so their signals are weak. They transmit at microwave frequencies. You need a dish antenna and some quite expensive equipment to receive images from them.</p>
+<p>Orbiting satellites are only a few hundred kilometres above the Earth's surface. They move all the time, so they can only be received when they are above your horizon, but when they are, the signals from them are much stronger. Being closer to the Earth the images show a smaller area in more detail. Polar orbiters transmit in the VHF wave-band so the receiving equipment and aerial needed are both much simpler. A disadvantage is that their signals are more susceptible to interference from all the electronic equipment (and especially computers) that we have. In the UK, we also have to contend with radio pager transmitters that may radiate strong intermittent signals close to the VHF weather satellite band.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<p>To receive signals from orbiting weather satellites, you need a receiver and antenna capable of receiving frequency modulation (FM) in the 137 MHz satellite band. The audio from the receiver is fed into the line input of the computer sound card, where it is saved as an audio file (usually in WAV format) and then decoded into an image using computer software.</p>
+<p>Because orbiting satellites are constantly moving, you also need a satellite tracking program that will tell you when they pass overhead. Software is now available that can handle the satellite tracking and recording automatically, and can even switch  computer controlled receiver to the correct channel for each satellite.</p>
+<h2>Using scanners</h2>
+<p><a href="http://www.g4ilo.com/images/ft-817ex.jpg" target="_blank"><img src="http://www.g4ilo.com/images/ft-817ex-s.jpg" border="0" alt="img" hspace="8" vspace="8" width="320" height="278" align="right" /></a> Many VHF scanning receivers can receive FM in the 137 MHz satellite band. However, they often lack sufficient sensitivity to receive a clear, noise-free signal. Another problem with scanners is that their receiver bandwidth is too narrow, as it is optimized for voice signals. The orbiting NOAA weather satellites require a wider bandwidth receiver, though not as wide as that used for FM broadcast signals. The effect of receiving the satellite telemetry using a narrow band receiver is that the loudest bits of the signal, representing the brightest parts of the image, are clipped.</p>
+<p>Better results can be achieved using a general purpose scanning receiver if the receive frequency can be tracked to follow the Doppler shift of the satellite (a phenomenon that causes the frequency of the satellite signal to change as the satellite moves towards and then away from the receiver. This ensures that the best possible use is made of the available receiver bandwidth, so that clipping is kept to a minimum.</p>
+<p>The <a href="http://www.wxtoimg.com/" target="_blank">WXtoImg</a> software supports computer control of several models of receiver via a serial port, and it can track the frequency of those receivers that are continuously tunable to compensate for Doppler shift. I have used WXtoImg to receive images using my <a href="ft817.html">FT-817 transceiver</a>. Although the images obtained by this method aren't as good as those obtained using a dedicated satellite band receiver, as you can see from the example above (click it to see the image full size) it is better than nothing.</p>
+<p>The other decoding programs mentioned won't generate any kind of an image from the telemetry recorded using a narrow band receiver.</p>
+<p>One compensating advantage of using a receiver like the FT-817 to receive satellite images is that it has a relatively good dynamic range compared to many scanners and satellite receivers. This means that it is less bothered by the strong pager signals we have here in the UK, which transmit on frequencies barely 60KHz away from the highest frequency currently used by a weather satellite.</p>
+<h2>Dedicated receiver</h2>
+<p><img title="The" src="http://www.g4ilo.com/images/r2fx.jpg" border="0" alt="pic" hspace="16" vspace="4" width="200" height="90" align="right" /> For best results, you need to use a receiver developed specifically for the reception of weather satellites, which has the correct IF bandwidth. I use an <a href="http://www.df2fq.de/produkte/r2fx.html" target="_blank">R2FX APT receiver</a>. Unfortunately this receiver, designed and made in Germany where the problem of close-by pager signals does not exist, suffers from desensitization and cross-modulation when the pager transmitters operate. This results in received images that are scarred with ugly interference bands. Receivers made in the UK by companies like <a href="http://www.time-step.com/" target="_blank">Timestep</a> and <a href="http://www.dartcom.co.uk/" target="_blank">Dartcom</a> are reputedly better, but unfortunately they are a lot more expensive.</p>
+<p><img title="My home-made quadrifilar helix (QFH) antenna hanging in my attic antenna farm" src="http://www.g4ilo.com/images/qfh_sml.jpg" border="0" alt="pic" hspace="16" vspace="4" width="80" height="146" align="left" /> A good antenna is essential if you want to receive a clear signal from orbiting weather satellites. A whip antenna or even a 2m dipole or vertical will produce a weak signal with frequent fade-outs. When I first started in weather satellite receiving I used a turnstile (crossed dipole) antenna, but I soon found that a quadrifilar helix (QFH) antenna is much more effective. A QFH is difficult to make, and expensive to buy ready-made, but if you don't intend to use it out of doors (or aren't allowed to, as in my case) one can be made out of uPVC plumbing pipe and coaxial cable.</p>
+<p><a href="qfh.html">My QFH</a>, to a design by Chris van Lint, produced better signals and significantly reduced the effect of the pager signals. Many QFH designs are optimized to produce good satellite reception from horizon to horizon; however, this one is designed to favour higher elevations, which when coupled with its rejection of linearly polarized signals, helps to reduce the strength of pager transmissions.</p>
+<p>As mentioned earlier, there are several programs you can use to record the satellite signals as audio WAV files and then decode them into images. I can recommend the excellent freeware <a href="http://www.ptast.com/apt/decoder/index.html" target="_blank">APTDecoder developed by Patrik Tast</a> which is a complete integrated package. It is one of the best APT decoding programs available for Windows, producing the most attractive looking images. APTDecoder is also the most advanced software available in terms of its satellite tracking features and its ability to upload images automatically to the Web. It can even generate an RSS feed to keep your site visitors up to date with the latest images.</p>
+<p>The shareware program <a href="http://www.wxtoimg.com/" target="_blank">WXtoImg</a> doesn't produce such fine detailed images, but it does give better results with poor quality signals. It has many more options for displaying the images, and can make much more useful images from night-time passes. It can also overlay country borders on the received image, making it much easier to see what you are looking at when there is a lot of cloud.</p>
+<p><a href="http://www.satsignal.net/" target="_blank">SatSignal</a> by David Taylor was one of the first satellite decoding programs and is worthy of mention, although it is now a rather expensive alternative to those mentioned above. The basic program is free, but several utilities required to obtain all the functionality of its two competitors, and the features needed to automate image recording and decoding are only available once you purchase a license.</p>
+<p>Here you can see a <a href="imgcmp.html">comparison of the results from these three APT decoder programs</a>.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>More information</h2>
+<p>If you would like more information about how to receive orbiting weather satellites, try the following sites:</p>
+<ul>
+<li><a href="http://www.geo-web.org.uk/" target="_blank">Group for Earth Observation</a></li>
+<li><a href="http://www.rig.org.uk/" target="_blank">Remote Imaging Group</a></li>
+<li><a href="http://www.time-step.com/" target="_blank">Timestep</a></li>
+</ul>
+      <hr class="accessibility" />
+   <!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+  </div>
+
+  <div id="content_left">
+            <div id="menuwrapper">
+<ul>
+	<li class="menuparent"><a class="menuparent" 
+href="index.html" accesskey="1" title="Home Page, shortcut key=1"><dfn>1: </dfn>Home</a>
+
+</li>
+	<li class="menuactive menuparent"><a class="menuactive menuparent" 
+href="radio.html" ><dfn>2: </dfn>Radio Topics</a>
+
+
+	<ul class='sub_nav'>
+	<li><a 
+href="ham-radio-faq.html" ><dfn>2.1: </dfn>What is amateur radio?</a>
+
+</li>
+	<li><a 
+href="qrp.html" ><dfn>2.2: </dfn>QRP is more fun&#33;</a>
+
+</li>
+	<li><a 
+href="stealth.html" ><dfn>2.3: </dfn>Stealth Amateur Radio</a>
+
+</li>
+	<li><a 
+href="wonder-loop.html" ><dfn>2.4: </dfn>The Wonder Loop</a>
+
+</li>
+	<li><a 
+href="antenna.html" ><dfn>2.5: </dfn>Feeding the Antenna</a>
+
+</li>
+	<li><a 
+href="wspr.html" ><dfn>2.6: </dfn>WSPR - Distant Whispers</a>
+
+</li>
+	<li><a 
+href="linux.html" ><dfn>2.7: </dfn>Why I gave up Linux</a>
+
+</li>
+	<li><a 
+href="ft817.html" ><dfn>2.8: </dfn>The FT-817 Page</a>
+
+</li>
+	<li><a 
+href="diy-ducky.html" ><dfn>2.9: </dfn>DIY Ducky for 2m</a>
+
+</li>
+	<li><a 
+href="k2_headset.html" ><dfn>2.10: </dfn>Elecraft K2 headset</a>
+
+</li>
+	<li><a 
+href="psk31.html" ><dfn>2.11: </dfn>PSK31</a>
+
+</li>
+	<li><a 
+href="k2psk31.html" ><dfn>2.12: </dfn>K2 on data modes</a>
+
+</li>
+	<li class="menuactive menuparent"><a class="menuactive menuparent" 
+href="wxsats.html" ><dfn>2.13: </dfn>Receiving Wxsats</a>
+
+
+	<ul class='sub_nav'>
+	<li><a 
+href="imgcmp.html" ><dfn>2.13.1: </dfn>APT decoders compared</a>
+
+</li>
+	<li><a 
+href="qfh.html" ><dfn>2.13.2: </dfn>Making a QFH antenna</a>
+
+
+	</li></ul>
+	</li>
+	<li><a 
+href="eqsl.html" ><dfn>2.14: </dfn>Electronic QSLing</a>
+
+</li>
+	<li><a 
+href="sporadic-e.html" ><dfn>2.15: </dfn>E-type propagation</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="aprs.html" ><dfn>2.16: </dfn>APRS - On the map</a>
+
+</li>
+	<li><a 
+href="usblink.html" ><dfn>2.17: </dfn>USBlink data interface</a>
+
+
+	</li></ul>
+	</li>
+	<li class="menuparent"><a class="menuparent" 
+href="reviews.html" ><dfn>3: </dfn>Reviews</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="software.html" ><dfn>4: </dfn>Software</a>
+
+</li>
+	<li><a 
+href="guestbook.html" ><dfn>5: </dfn>Visitors Book</a>
+
+</li>
+	<li><a 
+href="log.html" ><dfn>6: </dfn>Contact Log</a>
+
+</li>
+	<li><a 
+href="psk-reporter.html" ><dfn>7: </dfn>Recently heard</a>
+
+</li>
+	<li><a 
+href="search.html" ><dfn>8: </dfn>Search the site</a>
+
+
+			</li>
+	</ul>
+<div class="clearb"></div>
+</div>
+
+<ul>
+  <li><a href="http://blog.g4ilo.com/" >G4ILO&#39;s Blog</a></li>
+  <li><a href="http://www.youtube.com/user/g4ilohamradio" >G4ILO&#39;s Videos</a></li>
+</ul>
+            <p align="center"><g:plusone size="medium"></g:plusone></p>
+<script type="text/javascript">
+  window.___gcfg = {lang: 'en-GB'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+    <div class="misc">
+      <!-- eqsl form start --> <form action="http://www.eqsl.cc/qslcard/eQSLSearch.cfm" method="post"> <input name="ReferralID" type="hidden" value="296" /> <span style="color: #ff0000; font-size: xx-small;">You have <strong>eQSLs</strong> waiting!</span><br /> <span style="font-size: xx-small;">Enter your call and click <strong>Check</strong></span><br /> <input name="Callsign" size="10" type="text" /><br /> <input type="submit" value="Check" /> </form> <!-- eqsl form end -->
+    </div>
+    <!-- adsense start -->
+<div align="center">
+<br/><br/>
+<script type="text/javascript"><!--
+google_ad_client = "pub-8473114760998486";
+/* 160x600, created 27/05/09 */
+google_ad_slot = "9973442554";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+<br />
+    <div style="text-align: center;"><br /><a href="http://evuln.com/tools/malware-scanner/g4ilo.com/"><img style="cursor:pointer" src="http://evuln.com/tools/monitoring/badge/g4ilo.com.jpg" alt="eVuln.com" /></a></div>
+    <p align="center"><a id="clustrMapsLink" href="http://www3.clustrmaps.com/counter/maps.php?url=http://www.g4ilo.com"><img id="clustrMapsImg" style="border:0px;" title="Locations of visitors to this page" src="http://www3.clustrmaps.com/counter/index2.php?url=http://www.g4ilo.com" alt="Locations of visitors to this page" /></a></p>
+    <p align="center"><a href="http://www.rsgb.org" target="_blank"><img title="RSGB Centenary" src="http://www.g4ilo.com/images/rsgb-100.png" border="0" alt="" width="160" height="83" /></a></p>
+  </div>
+
+</div>
+
+   <div id="footer_wrapper">
+   <div id="footer"><p>Copyright © 1998 - 2012 Julian, G4ILO. All rights reserved.</p></div>
+</div>
+   </div>
+
+</body>
+</html><!-- 0.08672 / 79 / 10445672 / 11076296 -->

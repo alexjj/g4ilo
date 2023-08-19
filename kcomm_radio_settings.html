@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Radio control</title>
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=43&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Logging" href="kcomm_log_settings.html" />
+<link rel="next" title="Contest" href="kcomm_contest_settings.html" />
+</head>
+<body>
+<div id="main">
+<div id="content_wrapper">
+  <div id="content">
+         <h1>Radio control</h1>
+      <p><img src="http://www.g4ilo.com/images/kcomm-h7.gif" border="0" alt="Radio control settings" hspace="16" width="240" height="230" align="right" />The <strong>Radio control</strong> settings specify which Elecraft radio (K2 or K3) is in use, and which serial port it is connected to.</p>
+<ul>
+<li><strong>Radio</strong> - select Elecraft K2 or Elecraft K3.</li>
+<li><strong>Rev 2.04+ f/w</strong> - (K2 only) this should be checked if your K2 has  	revision 2.04 firmware or later.</li>
+<li><strong>Port</strong> - select the COM port the radio is connected to.</li>
+<li><strong>Speed</strong> - select the speed (baud rate) of the connection. The K2 uses 4800 and this is fixed. The K3 is set to 4800 by default but you can change it in the CONFIG menu. I recommend using 38400. Whatever you choose, the value set in the software <em>must</em> match the value used by the radio, or they will not communicate. </li>
+<li><strong>Debug Window</strong> - if selected, a trace window will appear when you connect to the radio, showing the computer commands sent and received. This can be useful for troubleshooting. Note: KComm polls the radio twice per second for TX/RX status and S-meter readings; this polling is disabled by default when the debug window opens to avoid other information scrolling out of view. You must enable polling if you want to transmit while the debug window is showing.</li>
+<li><strong>Use CW Rev</strong> - if selected, CW Rev mode will be used when CW is selected. This option was added for compatibility with CW Skimmer, which requires CW to be received in USB.</li>
+<li><strong>Enable Griffin PowerMate support</strong> - if selected, KComm will respond to Ctrl+arrow key keystrokes as shown below. The Griffin PowerMate must be installed and its software configured to generate the required keystrokes when the knob is turned or pressed. KComm will only respond to these keystrokes when it is in the foreground. A better solution for Windows users who wish to use a PowerMate is <a href="ktune.html" title="KTune">KTune</a>.</li>
+</ul>
+<h3>PowerMate configuration</h3>
+<p>If a Griffin PowerMate is used, then it must be configured to generate the following keystrokes:</p>
+<ul>
+<li><strong>Turn knob clockwise:</strong> Ctrl+Alt+Right arrow - tune HF</li>
+<li><strong>Turn knob anti-clockwise:</strong> Ctrl+Alt+Left arrow - tune LF</li>
+<li><strong>Press knob down:</strong> Ctrl+Alt+Up arrow - increase tuning rate (10Hz, 20Hz, 50Hz, 1KHz)</li>
+<li><strong>Long press down:</strong> Ctrl+Alt+Down arrow - set tuning rate to 10Hz.</li>
+</ul>
+Note that versions of KComm pre 1.8 used Ctrl+arrow keys. This was changed so that the Ctrl+arrow keys can be used when editing.
+      	 <hr>
+	 <div class="right49">
+	    Next page: <a href="kcomm_contest_settings.html" title="Contest">Contest</a>
+	 </div>
+         <div class="left49">
+            Previous page: <a href="kcomm_log_settings.html" title="Logging">Logging</a>
+         </div>
+           </div>
+  <div id="content_left">
+      <h2>KComm Help</h2>
+             
+<ul class="clearfix">
+
+<li><a href="kcomm_hlp.html"> About KComm </a>
+
+
+</li>
+
+<li><a href="kcomm_req.html"> System requirements </a>
+
+
+</li>
+
+<li><a href="kcomm_inst.html"> Installation </a>
+
+
+</li>
+
+<li><a href="kcomm_gs.html"> Getting started </a>
+
+
+</li>
+
+<li><a href="kcomm_logging.html"> Logging </a>
+
+
+</li>
+
+<li><a href="kcomm_rx.html"> Receiving </a>
+
+
+</li>
+
+<li><a href="kcomm_tx.html"> Transmitting </a>
+
+
+</li>
+
+<li><a href="kcomm_macros.html"> Macros </a>
+
+
+</li>
+
+<li><a href="kcomm_bc.html"> Band changing </a>
+
+
+</li>
+
+<li><a href="kcomm_mc.html"> Mode changing </a>
+
+
+</li>
+
+<li><a href="kcomm-shortcuts.html"> Shortcuts </a>
+
+
+</li>
+
+<li><a href="kcomm_sb.html"> Status bar </a>
+
+
+</li>
+
+<li><a href="kcomm_dx_cluster.html"> DX Cluster </a>
+
+
+</li>
+
+<li><a href="kcomm_psk_browser.html"> PSK Browser </a>
+
+
+</li>
+
+<li class="activeparent"> <a href="kcomm_settings.html" class="activeparent"> Settings </a>
+
+
+<ul>
+
+<li><a href="kcomm_log_settings.html"> Logging </a>
+
+
+</li>
+
+<li><a href="kcomm_radio_settings.html" class="currentpage"> Radio control </a>
+
+
+</li>
+
+<li><a href="kcomm_contest_settings.html"> Contest </a>
+
+
+</li>
+
+<li><a href="kcomm_eqsl_settings.html"> eQSL </a>
+
+
+</li>
+
+<li><a href="kcomm_soundcard.html"> Soundcard </a>
+
+
+</li>
+
+<li><a href="kcomm_dx_cluster_settings.html"> DX Cluster </a>
+
+
+</li>
+
+<li><a href="kcomm_cw_software.html"> CW software </a>
+
+
+</li>
+
+<li><a href="kcomm_digimode_software.html"> Digimode software </a>
+
+
+</li>
+
+<li><a href="kcomm_lookups_settings.html"> Lookups </a>
+
+
+</li>
+
+<li><a href="kcomm_miscellaneous_settings.html"> Miscellaneous </a>
+
+
+</li></ul>
+</li>
+
+<li><a href="kcomm_editing_log.html"> Editing log entries </a>
+
+
+</li>
+
+<li><a href="kcomm_importing.html"> Importing log data </a>
+
+
+</li>
+
+<li><a href="kcomm_exporting.html"> Exporting log data </a>
+
+
+</li>
+
+<li><a href="kcomm_stats.html"> Statistics </a>
+
+
+</li>
+
+<li><a href="kcomm_faq.html"> Frequently asked questions </a>
+
+
+</li>
+
+<li><a href="kcomm_ts.html"> Troubleshooting </a>
+
+
+
+</li>
+</ul>
+
+      <ul class="clearfix">
+        <li><a href="kcomm.html"> KComm </a></li>
+        <li><a href="index.html"> G4ILO's Shack </a></li>
+      </ul>
+        </div>
+</div>
+</div>
+</body>
+</html><!-- 0.073012 / 56 / 10165688 / 10719088 -->

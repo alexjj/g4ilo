@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>PSK Browser</title>
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=43&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="DX Cluster" href="kcomm_dx_cluster.html" />
+<link rel="next" title="Settings" href="kcomm_settings.html" />
+</head>
+<body>
+<div id="main">
+<div id="content_wrapper">
+  <div id="content">
+         <h1>PSK Browser</h1>
+      <p><img style="margin: 4px 32px; float: right;" title="The PSK Browser window" src="http://www.g4ilo.com/images/kcomm-pskb1.gif" alt="" width="240" height="288" />The Windows version of KComm provides a PSK Browser that displays the decoded text of all the PSK31 signals within a 2.4KHz passband. This is available when using PSK data modes using the PSK Core DLL soundcard modem. Click the PSK Browser button on the status bar and the window will appear.</p>
+<p>The PSK Browser displays the frequency of the signal and any text that has been decoded. The browser will also search for the callsign of the transmitting station and extract and display it. To minimize errors the program needs to receive the same call twice within a short interval.</p>
+<p>You can get information about a station whose call has been displayed by clicking once on that line in the PSK Browser window. The status bar will then show information such as the country name, continent, CQ and ITU zone, distance and beam heading.</p>
+<p>You can tune directly to any station shown in the PSK Browser by double-clicking on that line in the window. The main transmit and receive frequency will be set to that station and the audio buffer rewound and replayed so that the last ten seconds of text will be decoded and displayed in the main receive window.</p>
+<h2>PSK Reporter</h2>
+<p><a href="http://pskreporter.info" target="_blank">PSK Automatic Propagation Reporter</a> is a website that gathers reports of stations heard by reporting stations around the world and displays them on a map in near real-time. It was started by Philip Gladstone originally as a project to monitor PSK31 activity so that PSK operators can see where their transmission has been received. But it can be used to report signals heard on any legal mode and because of the large number of reporters has become a useful propagation indicator.</p>
+<p style="text-align: center;"><img title="An example PSK Reporter map" src="http://www.g4ilo.com/images/kcomm-pskrep.jpg" alt="" width="400" height="150" /></p>
+<p>Most of the data reported to PSK Reporter originates from wide band PSK browsers in the digital mode programs <a href="http://www.ham-radio-deluxe.com/Programs/DigitalMaster780/tabid/89/Default.aspx" target="_blank">DM780</a>, <a href="http://www.w1hkj.com/Fldigi.html" target="_blank">Fldigi</a> and now the Windows version of KComm.</p>
+<h3>Reporting PSK31 stations heard<br /></h3>
+<p>To enable reporting of stations whose calls are decoded to the PSK Reporter website, tick the checkbox <strong>Spot to PSK Reporter</strong>.</p>
+<p><img style="margin: 0px 32px; float: right;" title="The Stations Spotted window" src="http://www.g4ilo.com/images/kcomm-pskb2.gif" alt="" width="240" height="187" />If you also tick <strong>Show Spots</strong> then another window will appear which will list all the spots that are sent to the website. This can be useful especially if you leave the program running unattended and want to collect the information for propagation studies. If you right-click the window you can select text from the list and copy it to the clipboard or save it to a file.</p>
+<p>The status bar of this window shows statistics of the spots that are sent. To avoid overloading the PSK Reporter server spots are collected and then sent every few minutes rather than immediately. Spots are not sent if less than half an hour has elapsed since the last spot of the same station.</p>
+<h3>Other methods of spotting</h3>
+<p>Without using the PSK Browser, reports of stations whose calls are parsed from decoded text in the main receive window when operating PSK31 or using the MRP40 CW decoder may automatically be reported to PSK Reporter by selecting <strong>Spot decoded calls to pskreporter.info</strong> in the <a href="kcomm_log_settings.html" title="Logging">Logging</a> settings.</p>
+<p>Reports of CW stations decoded when using CW Skimmer may be reported automatically to PSK Reporter by selecting <strong>Report spots to pskreporter.info</strong> in the <a href="kcomm_cw_software.html" title="CW software">CW Skimmer software settings</a>.</p>
+<p><img style="margin: 0px 32px; float: right;" title="Reporting stations heard manually" src="http://www.g4ilo.com/images/kcomm-pskr3.gif" alt="" width="95" height="40" />You can also report manually any station you hear whose call and mode have been entered in the respective log fields simply by clicking the yellow pin icon just above the Call field in the log window.</p>
+      	 <hr>
+	 <div class="right49">
+	    Next page: <a href="kcomm_settings.html" title="Settings">Settings</a>
+	 </div>
+         <div class="left49">
+            Previous page: <a href="kcomm_dx_cluster.html" title="DX Cluster">DX Cluster</a>
+         </div>
+           </div>
+  <div id="content_left">
+      <h2>KComm Help</h2>
+             
+<ul class="clearfix">
+
+<li><a href="kcomm_hlp.html"> About KComm </a>
+
+
+</li>
+
+<li><a href="kcomm_req.html"> System requirements </a>
+
+
+</li>
+
+<li><a href="kcomm_inst.html"> Installation </a>
+
+
+</li>
+
+<li><a href="kcomm_gs.html"> Getting started </a>
+
+
+</li>
+
+<li><a href="kcomm_logging.html"> Logging </a>
+
+
+</li>
+
+<li><a href="kcomm_rx.html"> Receiving </a>
+
+
+</li>
+
+<li><a href="kcomm_tx.html"> Transmitting </a>
+
+
+</li>
+
+<li><a href="kcomm_macros.html"> Macros </a>
+
+
+</li>
+
+<li><a href="kcomm_bc.html"> Band changing </a>
+
+
+</li>
+
+<li><a href="kcomm_mc.html"> Mode changing </a>
+
+
+</li>
+
+<li><a href="kcomm-shortcuts.html"> Shortcuts </a>
+
+
+</li>
+
+<li><a href="kcomm_sb.html"> Status bar </a>
+
+
+</li>
+
+<li><a href="kcomm_dx_cluster.html"> DX Cluster </a>
+
+
+</li>
+
+<li><a href="kcomm_psk_browser.html" class="currentpage"> PSK Browser </a>
+
+
+</li>
+
+<li><a href="kcomm_settings.html"> Settings </a>
+
+
+</li>
+
+<li><a href="kcomm_editing_log.html"> Editing log entries </a>
+
+
+</li>
+
+<li><a href="kcomm_importing.html"> Importing log data </a>
+
+
+</li>
+
+<li><a href="kcomm_exporting.html"> Exporting log data </a>
+
+
+</li>
+
+<li><a href="kcomm_stats.html"> Statistics </a>
+
+
+</li>
+
+<li><a href="kcomm_faq.html"> Frequently asked questions </a>
+
+
+</li>
+
+<li><a href="kcomm_ts.html"> Troubleshooting </a>
+
+
+
+</li>
+</ul>
+
+      <ul class="clearfix">
+        <li><a href="kcomm.html"> KComm </a></li>
+        <li><a href="index.html"> G4ILO's Shack </a></li>
+      </ul>
+        </div>
+</div>
+</div>
+</body>
+</html><!-- 0.072231 / 45 / 10000256 / 10584904 -->

@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>The USBlink - a home-brew digital modes interface</title>
+
+<meta name="description" content="Build a USB interface for ham radio digital modes for under £10. Home-brew a SignaLink clone using a cheap USB sound card and a handful of junk box parts." />
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheet.php%3Fcssid=31&amp;mediatype=screen.css" />
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=42&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Getting started with APRSISCE/32" href="aprsisce_gs.html" />
+<link rel="next" title="Reviews" href="reviews.html" />
+</head>
+<body>
+<div id="main">
+        <ul class="accessibility">
+      <li><a href="usblink.html#menuwrapper" title="Skip to navigation" accesskey="n">Skip to navigation</a></li>
+      <li><a href="usblink.html#content" title="Skip to content" accesskey="s">Skip to content</a></li>
+    </ul>
+        <hr class="accessibility" />
+    
+<!-- header start -->
+<div id="header_wrapper">
+<div id="header">
+<hr class="accessibility" />
+</div>
+</div>
+<!-- header end -->
+<div id="content_wrapper">
+
+  <div id="content">
+         <h1>The USBlink - a home-brew digital modes interface</h1>
+      <!-- adsense start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* 728x15 L/U */
+google_ad_slot = "3834710687";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+      <p>Digital modes using sound card software have become increasingly popular over the last few years. However what with YouTube ham radio videos, podcasts and other hobby-related multimedia most hams want to have sound from their computer and are unwilling to give this up to work digital modes. Many solve the problem by buying a <a href="http://www.tigertronics.com/slusbmain.htm" target="_blank">SignaLink USB Interface</a>. It's a fine piece of kit and I've heard nothing but good reports of it but it is quite expensive. So how would you like to build your own USB sound card interface for a fraction of the cost of a SignaLink? I did, and I called it the <em>USB</em>link. This article describes how I did it.</p>
+<p style="text-align: center;"><img title="USBlink interface with cables" src="http://www.g4ilo.com/images/usblink-s.jpg" alt="usblink" width="480" height="240" /></p>
+<p>The SignaLink USB Interface is a USB powered device that contains a sound card and VOX circuitry that keys the radio PTT whenever the digital mode software goes into transmit and produces audio. This avoids the need for a serial interface using a second USB port just to control the transceiver PTT, which is the bane of interfaces like the RigBlaster, and it works with just about any digital mode software.</p>
+<p>The TigerTronics SignalLink has three front panel rotary controls that let you set transmit and receive audio levels plus VOX delay. It also provides full isolation between the radio and the computer. My <em>USB</em>link requires you to use the computer mixer slider controls to set the audio levels, just as you would when using a regular sound card, and the VOX delay is fixed and fast acting. I don't know of any digital modes where you would want a slow acting VOX.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>No isolation</h2>
+<p>My USBlink also does not provide isolation. Every commercial sound card interface and just about every published sound card interface design includes transformer isolation of the audio circuits and opto-isolation of the PTT line. It's enough to make me wonder what I'm missing because in all the time I have been using sound card digital modes since the late 1990s I have never used an interface that had isolation and never found it to be necessary. The one time I used a commercial interface with isolation - to connect an Asus Eee PC to my FT-817 - I experienced bad 50Hz hum and had to solder a link between the grounds on the radio and PC sides because the netbook had no grounding through its power supply and so it was floating.</p>
+<p>Because my <em>USB</em>link doesn't provide many of these functions of the TigerTronics SignaLink it can't fairly be called a SignaLink clone. But omitting these components allows a big cost saving to be made, as long as you are one of the people who, like me, does not need to isolate the radio from the computer. It also lets you make the interface very small, which is a bonus for portable operation.</p>
+<h2>Choice of sound card<br /></h2>
+<p><img style="float: right; margin: 2px 16px; border: 0pt none;" title="The USB sound card dongle used in my USBlink" src="http://www.g4ilo.com/images/usblink-sc.jpg" alt="soundcard" width="120" height="177" />The <em>USB</em>link comprises an inexpensive USB sound card together with a simple audio VOX circuit, housed in a small case.</p>
+<p>The USB sound card I used is shown on the right. At the time of writing these devices can be purchased from China on eBay for a couple of pounds if you are willing to wait a couple of weeks for delivery. Purchased from a supplier in the UK they are a bit more expensive. These sound devices are better quality and more reliable than the cheapest thumb-sized "dongles" and have controls for speaker volume and muting the mic input and speaker output.</p>
+<p>I must point out that in tests I made a few months ago I found this particular type of dongle to give poor results with some sound card software such as the AGW Packet Engine. When playing back recordings I made of weak EME (earth-moon-earth) signals the faint morse code could not be heard at all. I am not sure of the reason for this but it may have to do with the sample rate used.</p>
+<p>Most digital mode programs use a sample rate of 11,025Hz or can select the native sample rate of the sound card. I did not observe poor decoding with other programs I tried. I have switched to using TrueTTY for HF packet and it works with this USB sound device perfectly. So I decided to use this cheap USB audio device rather than a better quality one as the loss would be small if the project didn't work.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>Installing the sound card<br /></h2>
+<p>After selecting a suitable case, a piece of Veroboard (stripboard) was cut to fit. The USB sound card was then attached to the board using superglue (cyanoacrylate) so that the USB connector would protrude out the back of the case.</p>
+<p style="text-align: center;"><a href="http://www.g4ilo.com/images/usblink-2.jpg"><img style="border: 0pt none;" title="Internal layout of the USBlink" src="http://www.g4ilo.com/images/usblink-2s.jpg" alt="circuit layout" width="480" height="360" /></a></p>
+<p>Before doing this you should connect the device to the computer and ensure that the volume is set to maximum and neither of the input or output are muted (the red LED should be OFF.)</p>
+<p>After unplugging the device from the computer you can crack the case open using a craft knife. I then clipped the heads off the two LEDs leaving the leads free. Actually there was no need to clip the head of the red LED as it should be OFF in normal use and it would be a useful troubleshooting aid in case you accidentally press one of the mute switches. But by the time I thought of that it was too late!</p>
+<p>The two leads of the green LED are extended using thin wire (the black and white twisted wire in the picture) to a new green LED on the front panel of the case. The green LED lights up when the device is recognized by Windows and flashes when the device is in use by software. This will impress the XYL (well it impressed mine.)</p>
+<p>You can also see (click the image to open a larger version that will enable you to see more clearly) that I have tapped into the +5V supply from the USB connector to provide power for the VOX circuit. The supply lines are the outer two of the four connectors on the USB plug. The positive rail is the lower one in the picture, and ground is the upper one. If using a different USB sound card check the polarity with a meter as the USB plug may be the other way round.</p>
+<p>The supply rail is routed via a front panel switch. This enables you to disable the VOX by simply removing the power from the VOX circuit. If you use the USBlink at the same time as you have CAT control of the radio via a serial port then you can switch the VOX off and use it as a normal sound card.</p>
+<h2>VOX circuit</h2>
+<p>The digital VOX circuit is based on the <a href="http://home.comcast.net/~kh6ty/interface/" target="_blank">very simple one developed by Skip Teller, KH6TY</a>. I made a few changes to the circuit, which are described below.</p>
+<p>First, as mentioned earlier, I dispensed with the isolation transformers. I also used a trimmer potentiometer in the microphone circuit to aid with setting the output audio level on transmit.</p>
+<p>I added a 1N4148 diode across the PTT transistor output to protect it from back-voltage spikes when switching a transceiver using relays - but note that the switching transistor is a low power device and will not handle high voltage or high current. I also added a transistor with its base connected to the base of the PTT switching transistor with a red LED from its collector to the +5V supply, to give a TX indicator.</p>
+<p>The circuit is non-critical and just about any general purpose NPN transistors should do. Skip used 2N2222A transistors but after prototyping the circuit using those I substituted 2N3904s which are cheaper and it worked just as well. So that's what I used.</p>
+<p>The final circuit I ended up with is shown in the schematic diagram below. Click for a larger version.</p>
+<p style="text-align: center;"><a href="http://www.g4ilo.com/images/usblink-cct.gif"><img style="border: 0pt none;" title="USBlink schematic" src="http://www.g4ilo.com/images/usblink-cct.gif" alt="schematic" width="480" height="234" /></a></p>
+<p>I do not have a diagram of the stripboard layout but the photo above shows a top view of the board and you can see the breaks in the copper strips in the bottom view <a href="http://www.g4ilo.com/images/usblink-3.jpg">here</a>. Note that some breaks were made in error and have been bridged with wire.</p>
+<p>The schematic shows only the circuit for the transmit audio (which causes the VOX to operate.) The receive audio is a direct connection from the radio line output to the Mic connector of the USB sound adapter. The switch in the +5V supply line is also not shown.</p>
+<p>I wired all the connections to a mini-DIN socket on the rear panel of the interface, so that I could easily change interface cables for different radios. My Elecraft K2 does not have a high level line input for audio, you have to use the front panel mic socket, so I added some extra attenuation within the mic plug shell in order to keep the output level from the <em>USB</em>link similar to that required by other radios. An alternative solution would have been to have high and low level outputs on different pins of the DIN socket.</p>
+<h2>Setup and testing</h2>
+<p>The interface is connected to the computer using a USB extension cable. The USB sound device may come with a short cable as the device is too big to plug directly into the back sockets of many computers (though if bought from the cheapest eBay suppliers who ship the device without packaging you probably won't get this.) However you may want a longer cable in any case. These are readily obtainable from computer stores. As it will be used with a transmitter it would be wise to choose a well-screened one.</p>
+<p>I found that the USB sound device was recognized by Windows so there was no need to install any drivers. It was even recognized by the EeeBuntu Linux distribution on my Eee PC netbook.</p>
+<p>The mixer controls for the device should be set so that the output control is at about 80% of maximum. You should then adjust the variable resistor to set the transmit audio to the desired level for the radio. You need a strong signal from the USB audio device headphone output to ensure positive triggering of the VOX circuit. If you need to reduce the output level from the computer too much to avoid overdriving the radio then the VOX may not work.</p>
+<p>If the VOX starts oscillating on and off during receive then check the mixer settings for receive (recording) and make sure the microphone input is muted. The default setting for these devices on Windows seems to be for the microphone input to be enabled for playback so the receive audio is played back through the headphone output and triggers the VOX circuit. This caused a heart-stopping moment until I realized what was happening.</p>
+<h2>Conclusion</h2>
+<p>This is a simple circuit which works well and allows you to operate sound card digital modes without tying up your computer's built-in sound card and without needing a separate USB or serial interface to handle PTT switching. Whilst full CAT transceiver control is becoming the norm it certainly isn't necessary, and the simplified interfacing is very convenient particularly for portable operation.</p>
+<p style="text-align: center;"><img title="The USBlink in use with my K2 on HF APRS" src="http://www.g4ilo.com/images/usblink-k2-s.jpg" alt="usblink" width="480" height="263" /></p>
+<p>I made up interface cables for both my FT-817ND and Elecraft K2 and have tested the <em>USB</em>link with both radios. Several QRP PSK31 contacts were successfully made and the <em>USB</em>link is now in full time use in my HF packet radio APRS station.</p>
+<p>I am delighted with the success of this little project and I think that the <em>USB</em>link will turn out to be one of the most useful home-brew radio accessories I have ever constructed.</p>
+      <hr class="accessibility" />
+   <!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+  </div>
+
+  <div id="content_left">
+            <div id="menuwrapper">
+<ul>
+	<li class="menuparent"><a class="menuparent" 
+href="index.html" accesskey="1" title="Home Page, shortcut key=1"><dfn>1: </dfn>Home</a>
+
+</li>
+	<li class="menuactive menuparent"><a class="menuactive menuparent" 
+href="radio.html" ><dfn>2: </dfn>Radio Topics</a>
+
+
+	<ul class='sub_nav'>
+	<li><a 
+href="ham-radio-faq.html" ><dfn>2.1: </dfn>What is amateur radio?</a>
+
+</li>
+	<li><a 
+href="qrp.html" ><dfn>2.2: </dfn>QRP is more fun&#33;</a>
+
+</li>
+	<li><a 
+href="stealth.html" ><dfn>2.3: </dfn>Stealth Amateur Radio</a>
+
+</li>
+	<li><a 
+href="wonder-loop.html" ><dfn>2.4: </dfn>The Wonder Loop</a>
+
+</li>
+	<li><a 
+href="antenna.html" ><dfn>2.5: </dfn>Feeding the Antenna</a>
+
+</li>
+	<li><a 
+href="wspr.html" ><dfn>2.6: </dfn>WSPR - Distant Whispers</a>
+
+</li>
+	<li><a 
+href="linux.html" ><dfn>2.7: </dfn>Why I gave up Linux</a>
+
+</li>
+	<li><a 
+href="ft817.html" ><dfn>2.8: </dfn>The FT-817 Page</a>
+
+</li>
+	<li><a 
+href="diy-ducky.html" ><dfn>2.9: </dfn>DIY Ducky for 2m</a>
+
+</li>
+	<li><a 
+href="k2_headset.html" ><dfn>2.10: </dfn>Elecraft K2 headset</a>
+
+</li>
+	<li><a 
+href="psk31.html" ><dfn>2.11: </dfn>PSK31</a>
+
+</li>
+	<li><a 
+href="k2psk31.html" ><dfn>2.12: </dfn>K2 on data modes</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="wxsats.html" ><dfn>2.13: </dfn>Receiving Wxsats</a>
+
+</li>
+	<li><a 
+href="eqsl.html" ><dfn>2.14: </dfn>Electronic QSLing</a>
+
+</li>
+	<li><a 
+href="sporadic-e.html" ><dfn>2.15: </dfn>E-type propagation</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="aprs.html" ><dfn>2.16: </dfn>APRS - On the map</a>
+
+</li>
+	<li class="menuactive"><a class="menuactive" 
+href="usblink.html" ><dfn>2.17: </dfn>USBlink data interface</a>
+
+
+	</li></ul>
+	</li>
+	<li class="menuparent"><a class="menuparent" 
+href="reviews.html" ><dfn>3: </dfn>Reviews</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="software.html" ><dfn>4: </dfn>Software</a>
+
+</li>
+	<li><a 
+href="guestbook.html" ><dfn>5: </dfn>Visitors Book</a>
+
+</li>
+	<li><a 
+href="log.html" ><dfn>6: </dfn>Contact Log</a>
+
+</li>
+	<li><a 
+href="psk-reporter.html" ><dfn>7: </dfn>Recently heard</a>
+
+</li>
+	<li><a 
+href="search.html" ><dfn>8: </dfn>Search the site</a>
+
+
+			</li>
+	</ul>
+<div class="clearb"></div>
+</div>
+
+<ul>
+  <li><a href="http://blog.g4ilo.com/" >G4ILO&#39;s Blog</a></li>
+  <li><a href="http://www.youtube.com/user/g4ilohamradio" >G4ILO&#39;s Videos</a></li>
+</ul>
+            <p align="center"><g:plusone size="medium"></g:plusone></p>
+<script type="text/javascript">
+  window.___gcfg = {lang: 'en-GB'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+    <div class="misc">
+      <!-- eqsl form start --> <form action="http://www.eqsl.cc/qslcard/eQSLSearch.cfm" method="post"> <input name="ReferralID" type="hidden" value="296" /> <span style="color: #ff0000; font-size: xx-small;">You have <strong>eQSLs</strong> waiting!</span><br /> <span style="font-size: xx-small;">Enter your call and click <strong>Check</strong></span><br /> <input name="Callsign" size="10" type="text" /><br /> <input type="submit" value="Check" /> </form> <!-- eqsl form end -->
+    </div>
+    <!-- adsense start -->
+<div align="center">
+<br/><br/>
+<script type="text/javascript"><!--
+google_ad_client = "pub-8473114760998486";
+/* 160x600, created 27/05/09 */
+google_ad_slot = "9973442554";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+<br />
+    <div style="text-align: center;"><br /><a href="http://evuln.com/tools/malware-scanner/g4ilo.com/"><img style="cursor:pointer" src="http://evuln.com/tools/monitoring/badge/g4ilo.com.jpg" alt="eVuln.com" /></a></div>
+    <p align="center"><a id="clustrMapsLink" href="http://www3.clustrmaps.com/counter/maps.php?url=http://www.g4ilo.com"><img id="clustrMapsImg" style="border:0px;" title="Locations of visitors to this page" src="http://www3.clustrmaps.com/counter/index2.php?url=http://www.g4ilo.com" alt="Locations of visitors to this page" /></a></p>
+    <p align="center"><a href="http://www.rsgb.org" target="_blank"><img title="RSGB Centenary" src="http://www.g4ilo.com/images/rsgb-100.png" border="0" alt="" width="160" height="83" /></a></p>
+  </div>
+
+</div>
+
+   <div id="footer_wrapper">
+   <div id="footer"><p>Copyright © 1998 - 2012 Julian, G4ILO. All rights reserved.</p></div>
+</div>
+   </div>
+
+</body>
+</html><!-- 0.090688 / 79 / 10442320 / 11068584 -->

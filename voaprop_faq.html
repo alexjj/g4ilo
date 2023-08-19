@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Frequently asked questions</title>
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=43&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Editing locations" href="voaprop_locns.html" />
+<link rel="next" title="Troubleshooting" href="voaprop_probs.html" />
+</head>
+<body>
+<div id="main">
+<div id="content_wrapper">
+  <div id="content">
+         <h1>Frequently asked questions</h1>
+      <p>This page contains answers to some of the questions I have frequently been asked. See also the <a href="voaprop_probs.html">Troubleshooting</a> page if you are experiencing a problem.</p>
+<h2>Can you explain more about propagation?</h2>
+<p>No. I am not a propagation expert. I wrote VOAProp to help <em> me</em> learn more about it.</p>
+<p>There are many books you can buy on the subject and many good articles you can find on the Internet that explain more about it. Here are some articles from reliable sources that you may find helpful in extending your knowledge of this fascinating subject. Some of these pages contain links to other articles that may also be considered to be reliable.</p>
+<ul>
+<li><a href="http://www.arrl.org/tis/info/propagation.html" target="_blank">ARRL 	Web: Propagation</a></li>
+<li><a href="http://www.radio-electronics.com/info/propagation/solar_indices/solar_index.php" target="_blank">Solar 	Indices and Radio Propagation</a></li>
+<li><a href="http://www.barrettcommunications.com.au/about-hf-ssb.html" target="_blank">About 	HF SSB Communications</a></li>
+<li><a href="http://www.astrosurf.org/luxorion/qsl-hf-tutorial-nm7m.htm" target="_blank">HF 	Propagation tutorial by Bob Brown, NM7M</a></li>
+<li><a href="http://www.qsl.net/w2vtm/hf_solar.html" target="_blank">N2LVI's 	Quick Guide to HF Propagation using Solar Indices</a></li>
+</ul>
+<p>The following site contains documentation and articles about VOACAP, the "engine" of VOAProp. This may be of interest if you want to find out more about the propagation model, or about using the VOACAP software by itself. Articles on this site answer questions such as why VOAProp/VOACAP cannot provide a specific forecast prediction for a given day of the month.</p>
+<ul>
+<li><a href="http://www.voacap.com/" target="_blank">VOACAP Quick Guide</a></li>
+</ul>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>The propagation shown does not agree with what I can hear</h2>
+<p>The propagation predicted by VOACAP and plotted on the map by VOAProp is only the typical expected propagation for that hour of the day and day of the year, based on the predicted Smoothed Sunspot Number for the month in question. The actual propagation may be better or worse than that shown. Propagation software should only be used to illustrate propagation trends in general, to get an idea of what is the best time for communication to a particular location. It just is not the case that "because the computer says there is propagation to X, I should be able to hear it."</p>
+<p>If you have the Auto Update box checked, and VOAProp has downloaded the latest solar data from WWV, then this is used to give an indication of how actual conditions are likely to be, relative to that shown.</p>
+<h2>How do I set my location and other settings?</h2>
+<p>All the settings that are not immediately obvious in VOAProp are accessed by right-clicking the map and selecting them from a pop-up menu.</p>
+<h2>Where do the SSN data values come from?</h2>
+<p>A data file is included with VOAProp containing monthly SSN data values from the year 1900 to the latest date available. This source of the data is <a href="ftp://ftp.ngdc.noaa.gov/STP/SOLAR_DATA/SUNSPOT_NUMBERS/sunspot.predict" target="_blank">this NOAA data file</a>, however the data file VOAProp uses is in a different format and is downloaded from my web site. The VOAProp file is updated by me from the official one from time to time, and VOAProp will then pick it up when it checks for updates. I do not update VOAProp's data file every time NOAA changes theirs (it gets tiresome after a while) so there may sometimes be small differences in the values. These differences make a negligible difference to the predictions.</p>
+<h2>Why do these values differ from those given in ARRL bulletins, etc?</h2>
+<p>The values in the VOAProp data file are <strong>smoothed sunspot numbers</strong>. That is, they are twelve month rolling averages based on the sunspot numbers for six months on either side of the month in question. In the case of current dates, the rolling average is based on predictions of what the monthly average sunspot number will be in the months ahead.</p>
+<p>Sunspot numbers published in weekly ARRL propagation bulletins and other sources including <a href="webprop.html" title="WebProp">WebProp</a> are <strong>current sunspot numbers</strong> based on the sunspots that are visible <span style="font-style: italic">now</span>.</p>
+<h2>Why doesn't VOAProp use the current sunspot number?</h2>
+<p>The developers of VOACAP state that the propagation model was not designed to forecast propagation using current figures. It was designed to be used with smoothed sunspot numbers. Therefore that is what VOAProp uses.</p>
+<p>You can change the sunspot number to the current number and see the effect this has on the predicted propagation. However, this is not a valid use of the VOACAP model and VOAProp will not store this value. On the whole, when solar activity is above the smoothed value for the month, it is likely to result in significantly better propagation than the prediction using that value would show, and vice versa. But the changes are not consistent and therefore not predictable.</p>
+<h2>What do High, Medium and Low represent?</h2>
+<p>In order to simplify the interface, VOAProp doesn't require you to enter the power, antenna gain and radiation angle of each station. Instead, it gives you a slider that ranges from QRPer to big gun DXer. You can see what the calibration marks approximately represent by pointing at them with the mouse and reading the tooltip text. A zero dB gain antenna is assumed at the receiving end. Because of the inaccuracies inherent in HF propagation prediction, I consider it unnecessary to have greater control over the transmitting and receiving station parameters. If you desire that degree of control, then of course you can always use VOACAP's native user interface.</p>
+<p>The angle of radiation from the antenna makes a big difference when it comes to DX propagation. Most hams probably have no idea what the angle of radiation of their antenna is, or have an over-optimistic idea based on a manufacturer's exaggerated claims. The antenna height at the medium setting of the slider is taken to be 10m, a half wavelength on 20m. The height reduces (and therefore the angle of radiation increases) on the lower settings, and increases (giving a lower angle of radiation) in the higher settings, representing the fact that the more well equipped stations will usually also have a higher antenna.</p>
+<h2>What is the difference between calibration points on the S meter display?</h2>
+<p>VOAProp uses 6dB per S-point. The readings are converted from the received signal levels forecast by VOACAP, which are -150dbW for S1, to -100dbW for S9. Most amateur radio receivers, using an AGC feedback voltage derived S-meter, have meters that are very non-linear, often as little as 3dB per S-point in the S2 - S9 region.</p>
+<h2>I have an existing installation of VOACAP. Can I use it?</h2>
+<p>You can try, but if it doesn't work, please try installing a new version of the software in the default location, as this is how the program has been tested.</p>
+<h2>Why doesn't VOAProp display MUF, LUF and critical frequencies?</h2>
+<p>This information is not available from VOACAP. The MUF value calculated by VOACAP and displayed in some of its outputs is the maximum usable frequency <em>over a particular path</em>. My earlier program HFProp displayed the 3000km MUF <em>at a particular point</em>, and the two values are not at all comparable.</p>
+<h2>I can hear beacon x, but VOAProp shows it as off the air</h2>
+<p>The beacon status is obtained from <a href="http://www.ncdxf.org/Beacon/BeaconSchedule.html" target="_blank">this web page maintained by the NCDXF</a>. When <a href="http://www.changedetection.com/log/org/ncdxf/beaconschedule7_log.html" target="_blank">ChangeDetection.com notifies me that this page has changed</a>, I update the data file <strong>beacons.txt</strong>. VOAProp will then download it when it next checks for updates.</p>
+<p>Because updating the file is a manual process, there may be some delay between the NCDXF web page being updated and the VOAProp data file following suit. This is especially if I am away or on holiday, which happens increasingly often now that I am semi-retired. Please do <em>not</em> email me to tell me the data file needs updating as it is very annoying.I will update the file when I can, and no sooner. If you hear a beacon and the NCDXF page shows that it is off the air, please tell NCDXF!</p>
+<h2>Country/prefix information in the database is invalid</h2>
+<p>The country database included with VOAProp is based on a very old file. It has kindly been updated by Gianni, IS0VSG. However, no guarantee is offered as to its accuracy. If anyone is willing to take on the task of validating and then maintaining the database I will be happy to provide a link to that others can download an updated version.</p>
+<h2>Can I center the map on my location?</h2>
+<p>Sorry, no. The map is a bitmap image centered on 0 degrees of longitude. There is no facility to center it on a different location.</p>
+<h2>Could you add this new feature to the next version of VOAProp?</h2>
+<p>VOAProp is no longer being developed so there will be no new versions. I no longer even have access to the software used to develop the older programs on this site. VOAProp as it stands works fine for me, and I am more interested in spending my time on new projects and activities than revisiting old ones.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>Why are these help pages online and not included with the software?</h2>
+<p>By placing the help pages on the website I can ensure that, whenever someone looks at these pages, they are always seeing the latest version, updated with the answers to the most recently asked questions.</p>
+      	 <hr>
+	 <div class="right49">
+	    Next page: <a href="voaprop_probs.html" title="Troubleshooting">Troubleshooting</a>
+	 </div>
+         <div class="left49">
+            Previous page: <a href="voaprop_locns.html" title="Editing locations">Editing locations</a>
+         </div>
+           </div>
+  <div id="content_left">
+      <h2>VOAProp Help</h2>
+             
+<ul class="clearfix">
+
+<li><a href="voaprop_about.html"> About VOAProp </a>
+
+
+</li>
+
+<li><a href="voaprop_instreq.html"> Installation </a>
+
+
+</li>
+
+<li><a href="voaprop_gs.html"> Getting started </a>
+
+
+</li>
+
+<li><a href="voaprop_bcns.html"> Beacon monitoring </a>
+
+
+</li>
+
+<li><a href="voaprop_locns.html"> Editing locations </a>
+
+
+</li>
+
+<li><a href="voaprop_faq.html" class="currentpage"> Frequently asked questions </a>
+
+
+</li>
+
+<li><a href="voaprop_probs.html"> Troubleshooting </a>
+
+
+</li>
+
+<li><a href="voaprop_how_it_works.html"> How it works </a>
+
+
+
+</li>
+</ul>
+
+      <ul class="clearfix">
+        <li><a href="voaprop.html"> VOAProp </a></li>
+        <li><a href="index.html"> G4ILO's Shack </a></li>
+      </ul>
+
+        </div>
+</div>
+</div>
+</body>
+</html><!-- 0.073714 / 22 / 9677040 / 10269264 -->

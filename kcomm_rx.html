@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Receiving</title>
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=43&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Logging" href="kcomm_logging.html" />
+<link rel="next" title="Transmitting" href="kcomm_tx.html" />
+</head>
+<body>
+<div id="main">
+<div id="content_wrapper">
+  <div id="content">
+         <h1>Receiving</h1>
+      <p>If you are operating phone, or CW using your key and with no wish for  computer assistance, you will not be interested in the receiving and  transmitting panels. So it is worth mentioning at this point that the small  button with an up-arrow at the far right of the <a href="kcomm_sb.html" title="Status bar">status bar</a> at the foot of the  window can be used to shrink the window and hide these panels. When the up arrow is shown, a click of the button hides first the receive and then the transmit panels. The button  caption then becomes a down arrow which can be used to open up the window again.</p>
+<p style="text-align: center;"><img style="border: 0pt none;" src="http://www.g4ilo.com/images/kcomm-h3.gif" alt="The Receiving panel" width="520" height="80" /></p>
+<p>The <strong>Receiving</strong> panel is used to display decoded PSK31, RTTY or Morse text which  has been received via the serial port from the K3 (when this is supported) or  decoded using the internal sound card decoding software.</p>
+<p>Even in CW mode it is useful to have the received text displayed in this panel because it allows you to fill in fields in  the logging panel by double-clicking on words in the text instead of typing them with the risk of mistakes. Of course, you still need to decode the CW in your head to be sure that the text displayed is correct, because even the best computer morse decoders are not completely accurate!</p>
+<p>When you double-click a word, KComm tries to  work out what sort of information the word you clicked on is, and enters it into  the correct field. It can distinguish a callsign, report or QTH locator from other text. The first word containing purely alphabetics will be assumed to be the name, the next the QTH.</p>
+<p>In cases where there are no spaces separating the  information, or if there are unwanted spaces within the text, you can select the text you  want with the mouse, then right-click [Linux: middle-click] the text window. A <strong>pop-up menu</strong> will appear, and you can then pick where to copy the selected text.</p>
+<p>Because it can sometimes be difficult selecting text while new text is being added, the pop-up menu has an option to turn off updating of the receive window  temporarily. Remember to turn it back on again after you have finished!</p>
+<p>The pop-up menu also offers the option to save the received text to a file.</p>
+<p>The <strong>Clear</strong> button is used to clear the received text window. Use this when a lot of text has been received and the display starts to flicker when new text is added.</p>
+<h2>PSK using the sound card</h2>
+<p>If you are operating PSK31 or PSK63 using the sound card PSK modem (PSK Core DLL, Windows only) then KComm offers two ways of displaying the received signal.</p>
+<h3>Small waterfall<br /></h3>
+<p><img style="border: 0pt none; margin: 4px 16px; text-align: right; float: right;" src="http://www.g4ilo.com/images/kcomm-h3a.gif" alt="The waterfall display used for sound card PSK decoding" width="151" height="67" />The small waterfall display appears to the right of the text window with AFC and TX Lock check boxes in the space above the Clear buttons. This is meant to be used in a similar way to the tuning indicator   on the K3, allowing you to tune in a PSK signal to the selected spot frequency.</p>
+<p>This waterfall works similar to the   waterfall display in other data mode programs. You can click on a PSK signal   on the display to tune in to it. However unlike most other PSK programs, when you left-click on a signal that is far from the center line, KComm shifts the transceiver frequency to center the signal in the receiver passband. (The center frequency is defined in the <a href="kcomm_soundcard.html" title="Soundcard">Soundcard settings</a>.) This is designed to emulate using the K3's internal DSP decoder, where you must tune the signal to the center frequency in order to receive it.</p>
+<p>Left-clicking on the waterfall display changes both the receive and transmit audio  frequency, unless the TX Lock option is selected. Right-clicking the display  enables receive AFC (automatic frequency control) for one second, allowing the decoder to fine-tune on to the  signal. Use this when decoding stops or produces garbage even though the signal  seems to be tuned in and free of interference.</p>
+<h3>Large waterfall</h3>
+<p style="text-align: center;"><img title="The large PSK waterfall" src="http://www.g4ilo.com/images/kcomm-lw.gif" alt="large waterfall" width="580" height="72" /></p>
+<p>The large waterfall works in a similar way to the waterfall displays of other digimode programs. The waterfall displays a 2.4KHz wide section of the audio spectrum, the region within you can operate without suffering attenuation due to the SSB filter passband. To receive any signal, left-click on it. KComm will re-play the last 10 seconds of the audio in order to decode what had been sent by that station before you clicked on it. Right-clicking a signal momentarily engages AFC to help the decoder lock on to the signal.</p>
+<p>The green indicator to the right of the waterfall displays signal quality, expressed as a percentage probablilty of perfect copy.</p>
+<h2>Receiving foreign character sets</h2>
+<p>If you are receiving data modes such as PSK31 which can transmit the full range of 256 characters then some characters may not print correctly because the sender's computer is using a different character set than yours. In this case, you can change the character set used to display the received text. Right-click the receive window and select <strong>Character encoding</strong>, then pick a character encoding such as <strong>KOI8 (Cyrillic)</strong>. This setting will stick until you change it.</p>
+<p>Note that KComm does not currently support languages that print right-to-left such as Arabic although such encodings can be selected as they are supported by the software libraries used by the program.</p>
+<h2>Receiving Morse<br /></h2>
+<p>If you would like to have computer-decoded Morse text appear in the received text window then KComm can get decoded text from external programs <a href="http://www.dxatlas.com/CwSkimmer/" target="_blank">CW Skimmer</a> or <a href="http://www.polar-electric.com/Morse/MRP40-EN/" target="_blank">MRP40</a> (Windows only) or <a href="http://www.w1hkj.com/Fldigi.html" target="_blank">Fldigi</a>. You must also, of course, ensure that the chosen decoder software is running. Buttons to start the applications are displayed in the KComm status bar. If you have an Elecraft K3 then KComm can also get the decoded text from the radio.</p>
+<p>Alternatively KComm may display a waterfall of the audio passband, similar to the PSK31 waterfall shown above. You can use this to spot (center) a CW signal (or a RTTY or PSK31 signal if the K3 internal DSP modem is being used) by clicking on the signal trace in the waterfall. Which of these options you wish to use must be selected using <a href="kcomm_settings.html" title="Settings">Settings</a>.</p>
+<p><strong>Note:</strong> Displaying a tuning waterfall at the same time as a sound card decoder software is running may cause problems.</p>
+<p>You can choose to have decoded Morse code printed as upper case, if that is  your preference. The <strong>Clear</strong> button clears the contents of the receive  window, which gets a bit jerky when being updated if it contains a lot of text.  The <strong>Save</strong> button lets you save the received text to a file.</p>
+<h2>Using CW Skimmer<br /></h2>
+<p>If you are using the external program CW Skimmer then the KComm receive panel is superfluous and can be closed up. This helps to make room for the CW Skimmer window. CW Skimmer displays decoded text in a scrolling display close to the bottom of the application window,</p>
+<p>You can connect KComm to CW Skimmer using the CW Skimmer button on the status bar. When the two programs are connected, you just need to click on a word in the scrolling display - such as a call, name, QTH or locator - and it will be copied to the appropriate field in the KComm log.</p>
+<h2>Using the K3 DSP decoder</h2>
+<p>If you wish to have RTTY or PSK31 text decoded by the K3 DSP displayed in the received text window then you must select this option in <a href="kcomm_soundcard.html" title="Soundcard">Soundcard settings</a>. If this option is enabled then KComm will use the K3 DSP digital modes when RTTY and PSK31 are selected.</p>
+<p>If you wish to have decoded CW, RTTY or PSK31 text displayed in KComm then you must that ensure that the CW text decoder is enabled on the K3. KComm will not do this for you. You must enable it manually. KComm is always enabled to poll for decoded text from the K3 so so not enable the text decoder on the radio at the same time as you are using a sound card decoding program.</p>
+      	 <hr>
+	 <div class="right49">
+	    Next page: <a href="kcomm_tx.html" title="Transmitting">Transmitting</a>
+	 </div>
+         <div class="left49">
+            Previous page: <a href="kcomm_logging.html" title="Logging">Logging</a>
+         </div>
+           </div>
+  <div id="content_left">
+      <h2>KComm Help</h2>
+             
+<ul class="clearfix">
+
+<li><a href="kcomm_hlp.html"> About KComm </a>
+
+
+</li>
+
+<li><a href="kcomm_req.html"> System requirements </a>
+
+
+</li>
+
+<li><a href="kcomm_inst.html"> Installation </a>
+
+
+</li>
+
+<li><a href="kcomm_gs.html"> Getting started </a>
+
+
+</li>
+
+<li><a href="kcomm_logging.html"> Logging </a>
+
+
+</li>
+
+<li><a href="kcomm_rx.html" class="currentpage"> Receiving </a>
+
+
+</li>
+
+<li><a href="kcomm_tx.html"> Transmitting </a>
+
+
+</li>
+
+<li><a href="kcomm_macros.html"> Macros </a>
+
+
+</li>
+
+<li><a href="kcomm_bc.html"> Band changing </a>
+
+
+</li>
+
+<li><a href="kcomm_mc.html"> Mode changing </a>
+
+
+</li>
+
+<li><a href="kcomm-shortcuts.html"> Shortcuts </a>
+
+
+</li>
+
+<li><a href="kcomm_sb.html"> Status bar </a>
+
+
+</li>
+
+<li><a href="kcomm_dx_cluster.html"> DX Cluster </a>
+
+
+</li>
+
+<li><a href="kcomm_psk_browser.html"> PSK Browser </a>
+
+
+</li>
+
+<li><a href="kcomm_settings.html"> Settings </a>
+
+
+</li>
+
+<li><a href="kcomm_editing_log.html"> Editing log entries </a>
+
+
+</li>
+
+<li><a href="kcomm_importing.html"> Importing log data </a>
+
+
+</li>
+
+<li><a href="kcomm_exporting.html"> Exporting log data </a>
+
+
+</li>
+
+<li><a href="kcomm_stats.html"> Statistics </a>
+
+
+</li>
+
+<li><a href="kcomm_faq.html"> Frequently asked questions </a>
+
+
+</li>
+
+<li><a href="kcomm_ts.html"> Troubleshooting </a>
+
+
+
+</li>
+</ul>
+
+      <ul class="clearfix">
+        <li><a href="kcomm.html"> KComm </a></li>
+        <li><a href="index.html"> G4ILO's Shack </a></li>
+      </ul>
+        </div>
+</div>
+</div>
+</body>
+</html><!-- 0.069268 / 48 / 10011824 / 10589376 -->

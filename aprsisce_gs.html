@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Getting started with APRSISCE/32</title>
+
+<meta name="description" content="The main features of APRSISCE/32. Understanding what appears on the screen." />
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheet.php%3Fcssid=31&amp;mediatype=screen.css" />
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=42&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Installing APRSISCE/32" href="aprsisce_install.html" />
+<link rel="next" title="The USBlink - a home-brew digital modes interface" href="usblink.html" />
+</head>
+<body>
+<div id="main">
+        <ul class="accessibility">
+      <li><a href="aprsisce_gs.html#menuwrapper" title="Skip to navigation" accesskey="n">Skip to navigation</a></li>
+      <li><a href="aprsisce_gs.html#content" title="Skip to content" accesskey="s">Skip to content</a></li>
+    </ul>
+        <hr class="accessibility" />
+    
+<!-- header start -->
+<div id="header_wrapper">
+<div id="header">
+<hr class="accessibility" />
+</div>
+</div>
+<!-- header end -->
+<div id="content_wrapper">
+
+  <div id="content">
+         <h1>Getting started with APRSISCE/32</h1>
+      <!-- adsense start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* 728x15 L/U */
+google_ad_slot = "3834710687";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+      <p>Now that you have APRSISCE/32 running on your computer or Windows Mobile device, you'll probably be wondering what a lot of it means.</p>
+<p style="text-align: center;"><img src="http://www.g4ilo.com/images/aprsisce_win.jpg" alt="APRSISCE main window" width="480" height="310" /></p>
+<p>You will probably have noticed a column on the left hand side of the program containing a list of mostly callsigns scrolling up the screen. As these calls appear, icons sometimes appear on the screen. A detailed explanation of this list can be found <a class="external" href="http://aprsisce.wikidot.com/scrolling-stations" target="_blank">in the wiki</a>.</p>
+<p><strong>Note:</strong> The items on the screen arrange themselves to try to make the best use of the available space, bearing in mind that the display area may be a smartphone screen which is relatively small. This arrangement may not always be to your preference. You can change the layout using the option <strong>Configure</strong>, <strong>Screen</strong>, <strong>Orientation</strong>. You can choose whether other items appear using other options under <strong>Configure</strong>, <strong>Screen</strong>. Experiment, you won't break it.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>Screen items</h2>
+<p>Whenever an APRS packet is received, whether it is from the APRS internet system (APRS-IS) or over the radio, an entry showing the originating call (or object name) is added at the foot of the list. If the packet contains position data then an icon is added or moved to the corresponding position on the map. You can filter the stations that appear on the map using the <strong>View</strong> menu. Usually you will want the default View, All. But you can change the filter to show only stations received over RF, or stations that are message-capable, or one of a number of other criteria.</p>
+<p>APRS stations may send many different types of information besides position data. Icons for stations whose position has not yet been received are displayed at longitude 0 degrees on the Equator. If you zoom out the map you'll usually see quite a few icons clustered in that area.</p>
+<p>To start with you'll only see stations from around your area. That is because of the effect of the Range value specified in the main <a href="http://www.g4ilo.com/images/aprsisce_cfg_1.gif" target="_blank">Client Configuration dialog</a>, which by default is set to 500 tenths of a mile - in other words, a 50 mile radius of your location. The APRS-IS server knows that all the stations it sends you are in this area, even if it may be a while before you receive a packet containing the station's position.</p>
+<p>If you pan the map to look at a different area, you'll start receiving data from stations in that area too. Briefly, APRSISCE/32 specifies a filter to the APRS-IS server that tells it the area you want to receive data from. You will always receive data from your local area, but the program will create additional filters as you pan around or start tracking stations in other areas. For a more detailed explanation <a class="external" href="http://aprsisce.wikidot.com/automatic-filters" target="_blank">see the wiki</a>.</p>
+<h2>Information</h2>
+<p>You can get information about a station, whether it is in the scrolling list or on the screen, by clicking on it. You will then see a pop-up menu similar to the one shown below.</p>
+<p style="text-align: center;"><img src="http://www.g4ilo.com/images/aprsisce_use_1.gif" alt="APRSISCE pop-up menu" width="181" height="239" /></p>
+<p>The menu will show brief details of the station, in this case Mark, MM1MPB who is running APRSIS32 as an IGate (internet gateway) in Annan, Scotland. We will come back to the other menu options later but note that the Message option appears, which if clicked would allow you to send Mark an APRS text message.</p>
+<p>To get more information, click on the top part of the menu and a pop-up window will appear showing more details, as in the examples (from two different stations) below.</p>
+<p style="text-align: center;"><img src="http://www.g4ilo.com/images/aprsisce_use_2.gif" alt="APRSISCE station info" width="189" height="276" /> <img src="http://www.g4ilo.com/images/aprsisce_obj.gif" alt="APRS repeater object info" width="233" height="227" /></p>
+<p>The first example shows the information for Tim, G4VXE-7, a home station in grid locator IO91gq running APRSIS32. This station is capable of receiving messages so the option to send a message is offered.</p>
+<p>The second example shows a repeater object that has been originated by Richard, MM1BHO and has been received direct over RF. The information about the repeater is given in the format specified by Bob Bruninga, WB7APR, the inventor of APRS. It shows that the repeater output id on 145.775MHz, the PL tone frequency is 103Hz and the shift is -60 x 10kHz i.e. 600kHz. Using this format rather than a free format allows radios that support this format (principally the Kenwood TM-D700, TM-D710 and TH-D72) to be able to QSY directly to the repeater frequency at the click of a button. But it is up to the originator of the repeater object (MM1BHO in this case) to choose the format used for the information.</p>
+<h2>Directory Enquiries</h2>
+<p>APRSISCE can give you more information about a station or object. If you click on <strong>Address</strong> in the pop-up menu you'll see a dialog like the one shown below, giving its geographical location.</p>
+<p style="text-align: center;"><img src="http://www.g4ilo.com/images/aprsisce_address.gif" alt="APRSISCE address information" width="210" height="211" /></p>
+<p>If you click on <strong>Lookup</strong> the program will send a WHO-IS query to a server on the APRS internet network. After a few seconds you should receive a reply like the one shown below, giving the name and country of origin of that station.</p>
+<p style="text-align: center;"><img src="http://www.g4ilo.com/images/aprsisce_lookup.gif" alt="APRSISCE WHOIS lookup" width="315" height="100" /></p>
+<h2>Tracking</h2>
+<p>If you click on <strong>Center</strong> then APRSISCE/32 will pan the map to center on the object you clicked on and start tracking it, if it is a moving object.</p>
+<p>Another, better way to track moving stations is to click <strong>MultiTrack(TM)</strong>. This feature is I believe unique to APRSIS32 (it isn't available in the Windows Mobile version due to the lack of support for child windows.)</p>
+<p style="text-align: center;"><img src="http://www.g4ilo.com/images/aprsisce_multitrk.gif" alt="APRSISCE MultiTrack window" width="440" height="266" /></p>
+<p>MultiTrack opens up a new window to track the station you selected, without altering the "big picture" view in the main window. What I particularly like about MultiTrack is that you can set the size, zoom level and map opacity of the window to whatever you want and then store the settings using the <strong>Preferred</strong> menu. Then whenever you select MultiTrack for a station, the window will open up using the stored preferences.</p>
+<p>If you have a dual monitor PC then you can move the MultiTrack window on to a separate screen. You can open several MultiTrack windows at once, tracking several stations. Imagine, as an emergency event co-ordinator, being able to watch everything that is going on in the main window and being able to keep an eye on the exact position of individual personnel at the same time. It's a very powerful feature.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>Conclusion</h2>
+<p>That's all for this tutorial. In the next one we will take a look at messaging.</p>
+<p>Remember, if you have any questions about using APRSISCE/32 then check out the <a class="external" href="http://aprsisce.wikidot.com/" target="_blank">APRSISCE wiki</a>. If you can't find the answer there then please ask in the <a class="external" href="http://groups.yahoo.com/group/aprsisce/" target="_blank">APRSISCE Yahoo! group</a>. Use the group's search function first in case it is a frequently asked question!</p>
+      <hr class="accessibility" />
+   <!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+  </div>
+
+  <div id="content_left">
+            <div id="menuwrapper">
+<ul>
+	<li class="menuparent"><a class="menuparent" 
+href="index.html" accesskey="1" title="Home Page, shortcut key=1"><dfn>1: </dfn>Home</a>
+
+</li>
+	<li class="menuactive menuparent"><a class="menuactive menuparent" 
+href="radio.html" ><dfn>2: </dfn>Radio Topics</a>
+
+
+	<ul class='sub_nav'>
+	<li><a 
+href="ham-radio-faq.html" ><dfn>2.1: </dfn>What is amateur radio?</a>
+
+</li>
+	<li><a 
+href="qrp.html" ><dfn>2.2: </dfn>QRP is more fun&#33;</a>
+
+</li>
+	<li><a 
+href="stealth.html" ><dfn>2.3: </dfn>Stealth Amateur Radio</a>
+
+</li>
+	<li><a 
+href="wonder-loop.html" ><dfn>2.4: </dfn>The Wonder Loop</a>
+
+</li>
+	<li><a 
+href="antenna.html" ><dfn>2.5: </dfn>Feeding the Antenna</a>
+
+</li>
+	<li><a 
+href="wspr.html" ><dfn>2.6: </dfn>WSPR - Distant Whispers</a>
+
+</li>
+	<li><a 
+href="linux.html" ><dfn>2.7: </dfn>Why I gave up Linux</a>
+
+</li>
+	<li><a 
+href="ft817.html" ><dfn>2.8: </dfn>The FT-817 Page</a>
+
+</li>
+	<li><a 
+href="diy-ducky.html" ><dfn>2.9: </dfn>DIY Ducky for 2m</a>
+
+</li>
+	<li><a 
+href="k2_headset.html" ><dfn>2.10: </dfn>Elecraft K2 headset</a>
+
+</li>
+	<li><a 
+href="psk31.html" ><dfn>2.11: </dfn>PSK31</a>
+
+</li>
+	<li><a 
+href="k2psk31.html" ><dfn>2.12: </dfn>K2 on data modes</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="wxsats.html" ><dfn>2.13: </dfn>Receiving Wxsats</a>
+
+</li>
+	<li><a 
+href="eqsl.html" ><dfn>2.14: </dfn>Electronic QSLing</a>
+
+</li>
+	<li><a 
+href="sporadic-e.html" ><dfn>2.15: </dfn>E-type propagation</a>
+
+</li>
+	<li class="menuactive menuparent"><a class="menuactive menuparent" 
+href="aprs.html" ><dfn>2.16: </dfn>APRS - On the map</a>
+
+
+	<ul class='sub_nav'>
+	<li><a 
+href="aprsisce_install.html" ><dfn>2.16.1: </dfn>Installing APRSISCE/32</a>
+
+</li>
+	<li class="menuactive"><a class="menuactive" 
+href="aprsisce_gs.html" ><dfn>2.16.2: </dfn>Getting started</a>
+
+
+	</li></ul>
+	</li>
+	<li><a 
+href="usblink.html" ><dfn>2.17: </dfn>USBlink data interface</a>
+
+
+	</li></ul>
+	</li>
+	<li class="menuparent"><a class="menuparent" 
+href="reviews.html" ><dfn>3: </dfn>Reviews</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="software.html" ><dfn>4: </dfn>Software</a>
+
+</li>
+	<li><a 
+href="guestbook.html" ><dfn>5: </dfn>Visitors Book</a>
+
+</li>
+	<li><a 
+href="log.html" ><dfn>6: </dfn>Contact Log</a>
+
+</li>
+	<li><a 
+href="psk-reporter.html" ><dfn>7: </dfn>Recently heard</a>
+
+</li>
+	<li><a 
+href="search.html" ><dfn>8: </dfn>Search the site</a>
+
+
+			</li>
+	</ul>
+<div class="clearb"></div>
+</div>
+
+<ul>
+  <li><a href="http://blog.g4ilo.com/" >G4ILO&#39;s Blog</a></li>
+  <li><a href="http://www.youtube.com/user/g4ilohamradio" >G4ILO&#39;s Videos</a></li>
+</ul>
+            <p align="center"><g:plusone size="medium"></g:plusone></p>
+<script type="text/javascript">
+  window.___gcfg = {lang: 'en-GB'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+    <div class="misc">
+      <!-- eqsl form start --> <form action="http://www.eqsl.cc/qslcard/eQSLSearch.cfm" method="post"> <input name="ReferralID" type="hidden" value="296" /> <span style="color: #ff0000; font-size: xx-small;">You have <strong>eQSLs</strong> waiting!</span><br /> <span style="font-size: xx-small;">Enter your call and click <strong>Check</strong></span><br /> <input name="Callsign" size="10" type="text" /><br /> <input type="submit" value="Check" /> </form> <!-- eqsl form end -->
+    </div>
+    <!-- adsense start -->
+<div align="center">
+<br/><br/>
+<script type="text/javascript"><!--
+google_ad_client = "pub-8473114760998486";
+/* 160x600, created 27/05/09 */
+google_ad_slot = "9973442554";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+<br />
+    <div style="text-align: center;"><br /><a href="http://evuln.com/tools/malware-scanner/g4ilo.com/"><img style="cursor:pointer" src="http://evuln.com/tools/monitoring/badge/g4ilo.com.jpg" alt="eVuln.com" /></a></div>
+    <p align="center"><a id="clustrMapsLink" href="http://www3.clustrmaps.com/counter/maps.php?url=http://www.g4ilo.com"><img id="clustrMapsImg" style="border:0px;" title="Locations of visitors to this page" src="http://www3.clustrmaps.com/counter/index2.php?url=http://www.g4ilo.com" alt="Locations of visitors to this page" /></a></p>
+    <p align="center"><a href="http://www.rsgb.org" target="_blank"><img title="RSGB Centenary" src="http://www.g4ilo.com/images/rsgb-100.png" border="0" alt="" width="160" height="83" /></a></p>
+  </div>
+
+</div>
+
+   <div id="footer_wrapper">
+   <div id="footer"><p>Copyright © 1998 - 2012 Julian, G4ILO. All rights reserved.</p></div>
+</div>
+   </div>
+
+</body>
+</html><!-- 0.080444 / 79 / 10440360 / 11070112 -->

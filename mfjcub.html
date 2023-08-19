@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Building the MFJ Cub QRP transceiver kit</title>
+
+<meta name="description" content="A review of the 20m MFJ Cub QRP CW transceiver by Julian Moss, G4ILO. Building and using this tiny low power transceiver." />
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheet.php%3Fcssid=31&amp;mediatype=screen.css" />
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=42&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="KK7UQ PSK IMD Meter" href="imd-meter.html" />
+<link rel="next" title="MFJ Magnetic Loop" href="mfj-magnetic-loop.html" />
+</head>
+<body>
+<div id="main">
+        <ul class="accessibility">
+      <li><a href="mfjcub.html#menuwrapper" title="Skip to navigation" accesskey="n">Skip to navigation</a></li>
+      <li><a href="mfjcub.html#content" title="Skip to content" accesskey="s">Skip to content</a></li>
+    </ul>
+        <hr class="accessibility" />
+    
+<!-- header start -->
+<div id="header_wrapper">
+<div id="header">
+<hr class="accessibility" />
+</div>
+</div>
+<!-- header end -->
+<div id="content_wrapper">
+
+  <div id="content">
+         <h1>Building the MFJ Cub QRP transceiver kit</h1>
+      <!-- adsense start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* 728x15 L/U */
+google_ad_slot = "3834710687";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+      <p><img title="The completed 20m MFJ Cub. It's small..." src="http://www.g4ilo.com/images/cub1.jpg" alt="pic" hspace="8" width="190" height="172" align="right" /> I built and use an <a href="k2.html">Elecraft K2</a> and am proud of it. But I believe that QRP isn't just about using low power, it's about using simple equipment (and simple antennas.) Perhaps the K2 isn't simple enough? I wanted to try a more basic radio. I also wanted a transceiver small enough and light enough that I could try some portable operating when the weather was good. I didn't have the money to buy an Elecraft K1 kit, and perhaps that isn't simple enough either. I didn't want something so simple, however, that I'd be rockbound on the QRP calling frequency wondering which of the many stations I could hear in the wide-as-a-barn-door receiver was calling me. So I built an MFJ Cub.</p>
+<h2>Choice</h2>
+<p>The MFJ Cub comes in versions for every ham band between 15 and 80 metres. So the first challenge is deciding which one to buy. I like the high frequency bands, but with the declining sunspot cycle the days are numbered when any band above 20m will be open. However, I've never operated much on the bands below 20m, mainly due to never having the space to erect an efficient antenna for them. What I do know is that any time there's activity, I can usually hear stations around the QRP calling frequency on 14.060MHz. And a 20m dipole isn't too big to string up in most temporary or portable locations. So 20m it was.</p>
+<p>I ordered the kit from the UK distributor of MFJ, <a href="http://www.wsplc.com/" target="_blank">Waters and Stanton</a>. I baulked a bit that the price in pounds is the same number of dollars in the US, but there wasn't a lot I could do about that.</p>
+<p>When the kit arrived on Saturday morning, I decided to inventory the parts. This is something of a departure for me, as usually I'm keen to get on with building, and if there are a lot of parts in the bag I'm more worried about losing one during inventorying than I am about parts being missing in the first place. In this case, however, I'm glad I did, as I found that a varactor diode was missing. I didn't have one, which put an end to any thoughts of having the radio on the air that weekend. An email to W&amp;S was answered on Monday, and the part arrived in the post on Wednesday morning.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>Construction</h2>
+<p>This kit should be well within the capabilities of anyone who knows how to use a soldering iron. The PCB is of very high quality, clearly silk screened to make it easy to see which part goes where. Unusually, it contains a number of preassembled (and tested) SMD parts. This is what allows the Cub to be so small, yet have boast a full superhet receiver for good performance. Installing the SMD parts would be beyond the capabilities of the average constructor (I have trouble enough reading the markings on <em>standard</em> components!) So the builder has only to add a few larger parts, plus all the parts that determine the band of operation. This simplifies assembly, and reduces the chance of the kit not working when completed. Some may regard it as cheating.</p>
+<p>The components are supplied in three bags. One bag contains the circuit board parts that are standard for all kits (this was the one that was missing the varactor diode.) A second bag contains the frequency-determining parts (mostly capacitors and crystals.) The third bag contains hardware. There are two manuals: a construction manual and an operating manual (the Cub is also available ready-built.)</p>
+<p align="center"><img title="The MFJ Cub kit before assembly" src="http://www.g4ilo.com/images/cub2.jpg" alt="pic" width="440" height="241" /></p>
+<p>One thing that should be supplied, but isn't, is an adjusting tool for the Toko-type screened inductor cores. If you don't have one, you might be able to fashion one out of a matchstick, but don't try to use a screwdriver - you'll be sure to break a core. I did have an adjusting tool, but it was provided by a more thoughtful manufacturer of a kit I assembled several years ago. Yep, I just checked the manual to make sure: it was supplied by Elecraft with the K2!</p>
+<p>The construction manual is very good: matching the standards set by Heathkit and Elecraft. There's no reason to make a mistake. But I did. I soldered one 330pF capacitor (C52) into one of its own holes and an adjacent hole belonging to an inductor. I discovered this when it was the inductor's turn to be installed. Being wary of damaging the PCB, I decided to sacrifice the capacitor. I cut it away leaving two short lengths of lead, which I then gripped with pliers and removed by heating the solder from the underside. I then cleaned out the holes using the solder sucker. Fortunately I had another 330pF capacitor in my parts box, though it was a disc ceramic type not a multilayer as used by MFJ. It doesn't seem to have done any harm</p>
+<p>There are two toroids to wind, which are used in the transmitter output filters. This activity is many people's pet hate, judging by the Elecraft reflector. I quite enjoy it. It is often the only part of kit construction that isn't "building by numbers", where the performance of the completed kit depends on your own individual craftsmanship. The two cores used in the Cub are pretty small, so they are a bit fiddly to wind. There are 12 turns on each toroid in the 20m kit: the 80m version requires 24 turns using the same #24 wire, which I imagine could be quite a challenge!</p>
+<h2>Alignment</h2>
+<p>Alignment was very straightforward, and doesn't require any special test equipment. You'll need a power meter to peak the output (though the manual gives an alternative method using an LED) and some kind of well-calibrated receiver. The first step is to set the BFO frequency. On the 20m kit this is 9.996MHz, which can be received in the 30m position using the K2. A length of wire from the K2's antenna socket trailed across the Cub board provided adequate pickup. The 40m, 30m and 15m Cubs have BFO frequencies well outside the ham bands, so you'll either have to align it by ear, use a frequency counter or have a general coverage receiver.</p>
+<p align="center"><a href="http://www.g4ilo.com/images/cub_int.jpg" target="_blank"><img title="Inside the completed Cub - click for a larger version" src="http://www.g4ilo.com/images/cub3.jpg" border="0" alt="pic" width="292" height="292" /></a></p>
+<p>The next step is to align the VFO. On the 20m Cub, it must operate at 4.000 - 4.060MHz, which is receivable using the 80m band setting of an amateur transceiver. Other band versions have BFOs more distant from the ham bands, so again you'll need a frequency counter or a general coverage receiver, though you could probably try keying your main Tx into a dummy load and adjusting the Cub's VFO until you can hear the signal.</p>
+<p>Peaking the receiver bandpass was easily done with perfect accuracy using noise. I tried again using an alternative method, tuning in a signal provided by the K2 and measuring the AGC voltage, but I'd got it right on the nose the first time.</p>
+<p>The carrier offset adjustment was one of the trickiest things to set. The Cub's sidetone is produced by the receiver receiving its own (heavily attenuated) transmitted signal, so what you have to do is key down and adjust the offset until you hear a 600Hz tone in the headphones. I connected the receiver output to my computer sound card and used <a href="http://www.simtel.net/product.php?url_fb_product_page=9440" target="_blank">Spectrogram</a> to get it absolutely spot on.</p>
+<p>Using Spectrogram you can also get a good idea of the filter passband and shape. This is useful when doing the BFO touch up adjustment. Using this you can see that, although you might prefer a higher frequency for your sidetone (I use 800Hz on the K2) this is well down the slope of the filter passband, and sensitivity would suffer if you tried it. It's not bad selectivity, considering the size and cost of the Cub kit, and better than trying to copy CW through an SSB filter.</p>
+<p align="center"><img title="Spectrogram plot of MFJ Cub receiver passband" src="http://www.g4ilo.com/images/cubfilt.gif" alt="pic" width="400" height="300" /></p>
+<p>The transmitter is adjusted by peaking two coils, then adjusting the drive level control so you are not overdriving the output transistor. Again, there were reassuring, clearly definable peaks and they didn't occur at the limit of the tuning core's travel either. I got about 1.25W as measured on my Lake Electronics QRP power meter. Not quite the 1.5 - 2W promised by MFJ, but close enough.</p>
+<h2>Calibration</h2>
+<p>On 20m the BFO covers not quite 60KHz. MFJ recommends setting the lower frequency limit 5kHz above the band edge to avoid accidental out-of-band transmission. This is also necessary to ensure that you can tune up to and beyond the 20m QRP calling frequency.</p>
+<p>The tuning calibration is decidedly non-linear, being much more cramped at the low end of the range than at the high end. As there's no reduction drive, tuning is quite critical anyway, so this is actually an advantage as it means that the 10KHz centered on the QRP calling frequency occupies almost half of the tuning range giving easier tuning.</p>
+<p>I say calibration, but actually there isn't any. I'm not one of those fanatics who spend hours adjusting the readout on my K2 to the nearest Hz, but I do like to know roughly where I am on the band, so once the radio was installed in its case I fixed a paper template behind the tuning knob and marked up a scale in 5kHz increments. I then used PaintShop Pro to make up a neat version on the computer, printed it off, cut round it and fixed it to the front panel using clear tape. You can see the result in the pictures. You can't read the numbers without a magnifying glass (at least, <em>I</em> can't) but that doesn't matter as I know what they are now anyway!</p>
+<p>I almost forgot. Installing the assembled board in the case is perhaps the most difficult job in the entire kit. It's a very tight fit. The volume and tuning knob spindles have to be poked through their respective holes at an angle, but the threaded part won't go through at that angle, while the connectors on the back foul the back panel and stop you getting the board in straight. You have to try and spring the front and back panels apart so that the rear connectors drop down to where their holes are, juggle the board until the fixing screws poke through the corresponding holes in it, then breathe a sigh of relief that you haven't broken anything worse than a fingernail or two before tightening up the nuts.</p>
+<h2>Power Supply</h2>
+<p>I haven't actually measured it, but the Cub is claimed to draw less than 400mA on transmit. A cheap Uniross 12V 500mA regulated analogue power supply (£8.99 from the local hardware store) does the job admirably. (Just say <strong>no</strong> to switched-mode power supplies - the hash they radiate will be picked up by any temporary indoor antenna you're likely to use.) I've heard claims that some Cubs "chirp" due to the supply voltage dropping a bit on transmit, and certainly the VFO does move a bit if you vary the supply voltage. So it probably isn't wise to use a power supply with poor regulation.</p>
+<p>I have also managed to squeeze an internal battery pack into the case. This consists of ten AAA-L NiMH cells, which I bought from <a href="http://www.jabdog.com/" target="_blank">JAB Electronic Components</a>. They are the length of AA cells, but the diameter of AAA cells, and have a reported capacity of 850mAH. If you can't get hold of these, standard AAA cells will fit, and typically have a capacity of 550mAH. The Cub DC power plug has a contact that is disconnnected from ground when an external supply is plugged in. Using this, the batteries are connected to ground through a diode and series resistor when a power supply is attached, so they don't power the rig, but can be charged inside the rig. (Ten NiMH cells deliver almost 13.8V when fully charged. I use an <em>unregulated</em> 12V supply for charging, which produces 16-17V at 15-20mA. For operation, of course, a regulated supply must be used.) With no supply connected, the batteries are properly grounded and power the Cub in the usual way. When they are fully charged, I get nearly 2W output.</p>
+<h2>Accessories</h2>
+<p>An MFJ Cub and power supply isn't all you need to make a complete compact 20m QRP CW station. You'll need headphones, a key, and an antenna too.</p>
+<p>A 20m dipole is easy enough to make up using thin wire and lightweight RG-174 coax. Hung from a low branch or slung in a tree, it will work better than any whip or random wire, and there's no need to add to the size of your portable station by carrying around a QRP ATU. The SWR probably won't be perfect, but why worry about it? I've made contacts with the Cub connected directly to my non-resonant loop antenna which has an SWR of approaching 3 to 1 on 20m.</p>
+<p>The RCA phono connectors used by MFJ may not be everyone's choice of RF connector but they do save space and weight, so that's what I use. There's a place on the Cub's back panel where you can install a BNC socket if you want to, but I bought an RCA male to BNC female adapter to allow me to use my existing cables when I need to.</p>
+<p>Any Walkman-style earphones work perfectly with the Cub. Fold-away ones are very small, and ideal for an application like this.</p>
+<p>That just leaves a key. The Cub can't use a paddle, and I don't want to carry a heavy, expensive piece of precision engineering around in my backpack anyway. You can see my solution to the problem in the last picture. I mounted a subminiature press-to-make switch in an upturned castor cup (the things you put the castors of chairs in to stop them making a hole in the carpet) and then used a bit of plastic found in the junk box as the keying arm. It isn't pretty, but it's small, weighs almost nothing and works well enough. Since QRP, to me, doesn't only mean low power, but also <em>simple</em> (and preferably <em>cheap</em> too!) I think this is a good QRP key.</p>
+<p align="center"><img title="The complete set-up, including home-made morse key!" src="http://www.g4ilo.com/images/cub4.jpg" alt="pic" width="440" height="165" /></p>
+<h2>Circuit</h2>
+<p>The MFJ cub is a single superhet design. The IF and VFO frequencies vary depending on the model. The 20 meter version has a 10.0MHz IF and a 4MHz VFO. 10MHz is an unusual IF frequency, and was presumably chosen because of the ready availability of cheap crystals.</p>
+<p>After a two-stage Chebychev filter, receive signals are converted to the IF frequency using an SA602A IC, using its internal local oscillator as a varactor-tuned VFO. A ladder filter made up of three 10MHz crystals provides the IF selectivity. Another SA602A converts the IF signal to audio, using another 10MHz crystal to provide the BFO. A transistor attenuator provides some AGC control, before the audio arrives at the LM386 audio amplifier, which provides some additional audio filtering. The receiver remains on during key-down to provide the sidetone. However, there is no real QSK as the AGC recovery time is too long.</p>
+<p>On transmit, the VFO frequency is mixed in yet another SA602A which has its own 10MHz crystal oscillator, pulled 600Hz from the BFO frequency to provide TX offset. An internal potentiometer lets you vary the level from zero to the maximum power output. After a 2N3904 buffer amplifier, a two-stage Chebychev filter selects the 14MHz product, which is then amplified by a PN2222A driver stage and 2N5109 PA. A pi filter (using the two toroidal inductors) reduces the harmonic content of the transmitter.</p>
+<p>During transmission, diode switching is used to isolate the output from the receiver input during transmission, and the receiver input is grounded. This provides sufficient attenuation that you aren't deafened by the sidetone, which as mentioned above is the result of receiving the actual transmitted signal. However, it's still pretty loud, and there's no sidetone level control.</p>
+<h2>Performance</h2>
+<p>The Cub's performance isn't bad, and there's nothing that shouldn't prevent you having a lot of fun. The receiver tuning is tricky (especially at the counter-clockwise end of the scale) but apart from that it's a delight, giving clear single-signal reception just like a much more expensive receiver (and better than some more expensive receivers I've used.) It doesn't hear all the weak signals the K2 does, but then nor can some radios costing ten times the Cub's price. I'm confident it can hear every station I'm going to work with 2 watts output, which is what really matters. In the evening, I noticed a bit of what sounded like breakthrough from the 49m broadcast band (with a 10MHz IF, the image frequency is bang in the middle of it.)</p>
+<p>The worst problem is that the Cub drifts, as just about everyone who has built one mentions. The drift is a lot less noticeable after the rig has warmed up for 20 minutes or so, but after you have been transmitting for about 30 seconds it starts to drift LF, and the drift continues for about a minute after you have stopped. I'd estimate it moved 300Hz or more during an over, which is a bit too much for my liking although it hasn't prevented me making QSOs. The PA heat sink doesn't warm up much, so the amount of drift is a bit surprising. Some people have claimed to improved matters by substituting different types of capacitor in the VFO circuit, but it's a time-consuming trial-and-error process and I don't have a lot of patience.</p>
+<p>There is a modification in SPRAT issue 115 (the G-QRP club journal) to convert the Cub to VXO operation, but that involves buying an expensive custom crystal and sacrificing a lot of tuning range. The <a href="2009/04/cub-tamed-just-about.html">solution I eventually adopted</a> was to install a huff and puff VFO stabilizer - the X-Lock from <a href="http://www.cumbriadesigns.co.uk/" target="_blank">Cumbria Designs</a>.</p>
+<p>What can you work with this tiny radio? From Britain, you can easily work eastern and western Europe and the European parts of the former USSR. You would be surprised how many of the stations you call come back first time. I've heard Japan and South America at good strength on the Cub using this antenna, too. With a bit of patience and better CW operating skills, worldwide DX should be possible.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>The bottom line</h2>
+<p>For most people, the MFJ Cub is simply a fun radio, but it could easily be the only radio for someone who doesn't have a lot of money to spend on the hobby.</p>
+<p>It's interesting to add up what a complete Cub station would cost. The price of the kit was £100. The power supply £9. An antenna, say £2 for wire and RCA plug. The home-made key would cost about £2.50 if you had to buy all the bits. The earphones, if you don't already have them, another fiver. So you have a complete station capable of worldwide DX when conditions are right, for less than £120 (For readers across the pond, just change the £ sign for $.) Who said ham radio was an expensive hobby?</p>
+      <hr class="accessibility" />
+   <!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+  </div>
+
+  <div id="content_left">
+            <div id="menuwrapper">
+<ul>
+	<li class="menuparent"><a class="menuparent" 
+href="index.html" accesskey="1" title="Home Page, shortcut key=1"><dfn>1: </dfn>Home</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="radio.html" ><dfn>2: </dfn>Radio Topics</a>
+
+</li>
+	<li class="menuactive menuparent"><a class="menuactive menuparent" 
+href="reviews.html" ><dfn>3: </dfn>Reviews</a>
+
+
+	<ul class='sub_nav'>
+	<li><a 
+href="atx.html" ><dfn>3.1: </dfn>ATX Walkabout</a>
+
+</li>
+	<li><a 
+href="k2.html" ><dfn>3.2: </dfn>Elecraft K2</a>
+
+</li>
+	<li><a 
+href="t1.html" ><dfn>3.3: </dfn>Elecraft T1</a>
+
+</li>
+	<li><a 
+href="jingtong.html" ><dfn>3.4: </dfn>Jingtong JT-208</a>
+
+</li>
+	<li><a 
+href="imd-meter.html" ><dfn>3.5: </dfn>KK7UQ IMD Meter</a>
+
+</li>
+	<li class="menuactive"><a class="menuactive" 
+href="mfjcub.html" ><dfn>3.6: </dfn>MFJ Cub</a>
+
+</li>
+	<li><a 
+href="mfj-magnetic-loop.html" ><dfn>3.7: </dfn>MFJ Magnetic Loop</a>
+
+</li>
+	<li><a 
+href="mfj1026.html" ><dfn>3.8: </dfn>MFJ-1026 Noise Canceler</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="mwhip.html" ><dfn>3.9: </dfn>Miracle Whip</a>
+
+</li>
+	<li><a 
+href="rigexpert.html" ><dfn>3.10: </dfn>MixW RigExpert</a>
+
+</li>
+	<li><a 
+href="rigexpert-aa-200.html" ><dfn>3.12: </dfn>RigExpert AA-200</a>
+
+</li>
+	<li><a 
+href="mp1.html" ><dfn>3.13: </dfn>Superantennas MP-1</a>
+
+</li>
+	<li><a 
+href="watson-80plus2-antenna.html" ><dfn>3.14: </dfn>Watson 80Plus2 Antenna</a>
+
+</li>
+	<li><a 
+href="wonder-wand.html" ><dfn>3.15: </dfn>Wonder Wand L-Whip</a>
+
+
+	</li></ul>
+	</li>
+	<li class="menuparent"><a class="menuparent" 
+href="software.html" ><dfn>4: </dfn>Software</a>
+
+</li>
+	<li><a 
+href="guestbook.html" ><dfn>5: </dfn>Visitors Book</a>
+
+</li>
+	<li><a 
+href="log.html" ><dfn>6: </dfn>Contact Log</a>
+
+</li>
+	<li><a 
+href="psk-reporter.html" ><dfn>7: </dfn>Recently heard</a>
+
+</li>
+	<li><a 
+href="search.html" ><dfn>8: </dfn>Search the site</a>
+
+
+			</li>
+	</ul>
+<div class="clearb"></div>
+</div>
+
+<ul>
+  <li><a href="http://blog.g4ilo.com/" >G4ILO&#39;s Blog</a></li>
+  <li><a href="http://www.youtube.com/user/g4ilohamradio" >G4ILO&#39;s Videos</a></li>
+</ul>
+            <p align="center"><g:plusone size="medium"></g:plusone></p>
+<script type="text/javascript">
+  window.___gcfg = {lang: 'en-GB'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+    <div class="misc">
+      <!-- eqsl form start --> <form action="http://www.eqsl.cc/qslcard/eQSLSearch.cfm" method="post"> <input name="ReferralID" type="hidden" value="296" /> <span style="color: #ff0000; font-size: xx-small;">You have <strong>eQSLs</strong> waiting!</span><br /> <span style="font-size: xx-small;">Enter your call and click <strong>Check</strong></span><br /> <input name="Callsign" size="10" type="text" /><br /> <input type="submit" value="Check" /> </form> <!-- eqsl form end -->
+    </div>
+    <!-- adsense start -->
+<div align="center">
+<br/><br/>
+<script type="text/javascript"><!--
+google_ad_client = "pub-8473114760998486";
+/* 160x600, created 27/05/09 */
+google_ad_slot = "9973442554";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+<br />
+    <div style="text-align: center;"><br /><a href="http://evuln.com/tools/malware-scanner/g4ilo.com/"><img style="cursor:pointer" src="http://evuln.com/tools/monitoring/badge/g4ilo.com.jpg" alt="eVuln.com" /></a></div>
+    <p align="center"><a id="clustrMapsLink" href="http://www3.clustrmaps.com/counter/maps.php?url=http://www.g4ilo.com"><img id="clustrMapsImg" style="border:0px;" title="Locations of visitors to this page" src="http://www3.clustrmaps.com/counter/index2.php?url=http://www.g4ilo.com" alt="Locations of visitors to this page" /></a></p>
+    <p align="center"><a href="http://www.rsgb.org" target="_blank"><img title="RSGB Centenary" src="http://www.g4ilo.com/images/rsgb-100.png" border="0" alt="" width="160" height="83" /></a></p>
+  </div>
+
+</div>
+
+   <div id="footer_wrapper">
+   <div id="footer"><p>Copyright © 1998 - 2012 Julian, G4ILO. All rights reserved.</p></div>
+</div>
+   </div>
+
+</body>
+</html><!-- 0.105828 / 71 / 10339288 / 10931392 -->

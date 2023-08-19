@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Getting started</title>
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=43&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Installation and Requirements" href="voaprop_instreq.html" />
+<link rel="next" title="Beacon monitoring" href="voaprop_bcns.html" />
+</head>
+<body>
+<div id="main">
+<div id="content_wrapper">
+  <div id="content">
+         <h1>Getting started</h1>
+      <p>
+To get started with VOAProp:
+</p>
+<ul>
+	<li>Start the program.
+	</li>
+	<li>If the &quot;Locate / Install VOACAP&quot; dialog appears:<br />
+	- If VOACAP is not already installed, click &quot;Open VOACAP download
+	site&quot;, download and install VOACAP;<br />
+	- Click &quot;Locate VOACAP installation folder&quot; and select the folder
+	in which VOACAP is installed;<br />
+	- The dialog should then close. If you do not carry out this step correctly
+	then VOAProp will not display any propagation information on the map.
+	</li>
+	<li><b>Right-click the map</b>. Most of the configuration options are on this
+	right-click menu.
+	</li>
+	<li>Select &quot;Set home location&quot; and enter the
+	details for your location. To set the location using your QTH locator, enter
+	the locator and hit Tab.
+	</li>
+	<li>Optionally, select &quot;Short wave bands&quot; instead of &quot;Amateur
+	bands&quot;.
+	</li>
+	<li>Ensure that at least one of &quot;Show signal strengths&quot; or
+	&quot;Show workable call areas&quot; is selected. Signal strengths are a
+	relative measure, shown by contour lines indicating S1, S5 and S9. Call
+	areas are shown by their prefix letters, with a bright font illustrating the
+	strongest signals.
+	</li>
+	<li>Click the &quot;Solar data&quot; button, then click &quot;Update&quot; to
+	download the latest solar-terrestrial data from WWV. The smoothed sunspot
+	data file and the IARU beacon activity file will also be periodically updated.
+	</li>
+	<li>Check the &quot;Auto update&quot; box if you want these files to be
+	updated automatically in future.
+	</li>
+	<li>Select the band or map of interest.
+	</li>
+	<li>Adjust the sensitivity slider between &quot;High&quot; and &quot;Low&quot;
+	so that the propagation indicated by the map best matches the capabilities
+	of your station. <i>(As a rough guide, you can take High as 4KW+tower
+	mounted beam, Medium as 100W+dipole, Low as 1W+low dipole. On the short wave
+	bands, use 100W to 4MW.)</i></li>
+</ul>
+<p>
+The Date and Time controls of VOAProp only allow the month, year and hour to
+be set. This is because VOACAP only produces average predictions for the month.
+Its input parameters do not have a field for the date, or the exact time to the
+nearest minute. If you would like VOAProp to display the UTC time, it can do
+this in the title bar of the window. Just select &quot;Show UTC time in title
+bar&quot; on the menu.
+</p>
+<p>
+If you check &quot;Auto update&quot; on the main window, the Date and Time
+controls will keep in step with the system clock, and the propagation display
+will be refreshed every hour. To investigate past or future propagation, uncheck
+this box. VOAProp will use values from its database of smoothed sunspot numbers,
+going back to the year 1900. Note that the WWV solar data values (solar flux, A
+index and K index) are hidden when &quot;Auto update&quot; is unchecked, because
+they are only valid for the current time and date.
+</p>
+<p>
+<!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+</p>
+<h2>Path predictions</h2>
+<p>
+You can get an idea of the best time to communicate with a particular
+location by clicking on that location with the mouse (or right-clicking the map
+and choosing &quot;Set DX location&quot;.) A yellow line will be drawn showing
+the path (check the &quot;Long Path&quot; box to investigate long path
+propagation) and the &quot;S meter&quot; display in the status line will give an
+indication of the current signal strength from that location. (When an IARU
+beacon is displayed, the &quot;S meter&quot; shows the signal strength of the
+currently transmitting beacon.)
+</p>
+<p>
+Click &quot;Show chart&quot; to see a chart of propagation conditions and
+expected signal strengths over that path throughout the day. You can print the
+chart by clicking the printer icon at the lower left of the chart window. Check
+the &quot;Preview&quot; box to start with a print preview. For more control over
+the printed output, click the &quot;Copy&quot; icon to copy the chart to the
+clipboard. You can then paste it into Microsoft Word or a similar application,
+resize it, or add multiple charts to one document.
+</p>
+<p>
+To see what propagation would be like from another location without
+permanently changing your stored home location, right-click the map and choose
+&quot;Set alternative location.&quot; Use &quot;Set home location&quot; to
+change it back again.
+</p>
+<h2>Conditions</h2>
+<p>
+Propagation prediction is not an exact science. In any case, the propagation
+shown on the map is only the <i>expected propagation</i> under <i>average
+conditions</i> for the time of day during the selected month, based on the
+predicted Smoothed Sunspot Number for that month. The VOACAP model knows nothing
+about the actual state of the ionosphere at this particular moment in time.
+Therefore observed propagation will inevitably differ to some extent from that
+shown.
+</p>
+<p>
+To help give a better idea of what actual conditions should be like, VOAProp
+obtains the latest solar data from WWV and uses them to display a qualitative
+indicator of band conditions. (Note that this information is only shown when &quot;Auto update&quot; is
+checked, because the WWV data is only valid for the current time and date.)
+</p>
+<p>
+The indicator of conditions may be assessed as follows:
+</p>
+<ul>
+	<li><b>Very good:</b> Propagation may be much better than shown.</li>
+	<li><b>Good:</b> Propagation may be a little better than shown.</li>
+	<li><b>Average:</b> Propagation will be approximately as shown.</li>
+	<li><b>Fair:</b> Propagation will be a little worse than shown.</li>
+	<li><b>Poor:</b> Propagation could be a lot worse than shown.</li>
+	<li><b>Disturbed:</b> It is possible that there could be little or no
+	propagation at all. </li>
+</ul>
+<p>
+<!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+</p>
+      	 <hr>
+	 <div class="right49">
+	    Next page: <a href="voaprop_bcns.html" title="Beacon monitoring">Beacon monitoring</a>
+	 </div>
+         <div class="left49">
+            Previous page: <a href="voaprop_instreq.html" title="Installation and Requirements">Installation and Requirements</a>
+         </div>
+           </div>
+  <div id="content_left">
+      <h2>VOAProp Help</h2>
+             
+<ul class="clearfix">
+
+<li><a href="voaprop_about.html"> About VOAProp </a>
+
+
+</li>
+
+<li><a href="voaprop_instreq.html"> Installation </a>
+
+
+</li>
+
+<li><a href="voaprop_gs.html" class="currentpage"> Getting started </a>
+
+
+</li>
+
+<li><a href="voaprop_bcns.html"> Beacon monitoring </a>
+
+
+</li>
+
+<li><a href="voaprop_locns.html"> Editing locations </a>
+
+
+</li>
+
+<li><a href="voaprop_faq.html"> Frequently asked questions </a>
+
+
+</li>
+
+<li><a href="voaprop_probs.html"> Troubleshooting </a>
+
+
+</li>
+
+<li><a href="voaprop_how_it_works.html"> How it works </a>
+
+
+
+</li>
+</ul>
+
+      <ul class="clearfix">
+        <li><a href="voaprop.html"> VOAProp </a></li>
+        <li><a href="index.html"> G4ILO's Shack </a></li>
+      </ul>
+
+        </div>
+</div>
+</div>
+</body>
+</html><!-- 0.099828 / 20 / 9640096 / 10205944 -->

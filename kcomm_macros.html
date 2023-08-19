@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Macros</title>
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=43&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Transmitting" href="kcomm_tx.html" />
+<link rel="next" title="Band changing" href="kcomm_bc.html" />
+</head>
+<body>
+<div id="main">
+<div id="content_wrapper">
+  <div id="content">
+         <h1>Macros</h1>
+      <p>Macros are a very powerful feature of KComm and are very useful during  data mode communication or during CW contests. You can edit a macro by  right-clicking a button, which opens a dialog box that allows you to change all  its properties.</p>
+<div style="text-align: center;"><img style="border: 0pt none;" src="http://www.g4ilo.com/images/kcomm-h5.gif" alt="Editing macros" width="400" height="229" /></div>
+<p>You can specify the button caption, the tooltip text (hint) that appears when  you point at the button, and the actual text. Note that some of the macros also  have an F key associated with them. You can activate the macro by pressing that  F key, but this only works when the transmit window is the focus of your typing.</p>
+<p>A list at the right shows the control commands and macro expansions you can  use within the text. They are also shown in the following table:</p>
+<table style="margin-left:auto;margin-right:auto;" border="2" cellpadding="2" width="90%">
+<tbody>
+<tr>
+<th width="50%">Control commands</th> <th width="50%">Text expansions</th>
+</tr>
+<tr>
+<td width="50%"><strong>^c</strong> - clear typeahead text</td>
+<td width="50%"><strong>%a</strong> - antenna (from settings)<br /></td>
+</tr>
+<tr>
+<td width="50%"><strong>^l</strong> - save contact to log</td>
+<td width="50%"><strong>%c</strong> - contact's call (from log field)<strong><br /></strong></td>
+</tr>
+<tr>
+<td width="50%"><strong>^r</strong> - go to receive</td>
+<td width="50%"><strong>%g</strong> - greeting (GA, good morning, ...)<strong><br /></strong></td>
+</tr>
+<tr>
+<td width="50%"><strong>^s</strong> - set contact start time</td>
+<td width="50%"><strong>%m</strong> - your call (from settings)<strong><br /></strong></td>
+</tr>
+<tr>
+<td><strong>^t</strong> - go to transmit, start sending</td>
+<td><strong>%n</strong> - contact's name (from log field)<br /></td>
+</tr>
+<tr>
+<td width="50%"><strong>^x</strong> - set contact end time</td>
+<td width="50%"><strong>%q</strong> - radio model (from settings)<br /></td>
+</tr>
+<tr>
+<td width="50%"><strong>^zxx</strong> - repeat macro in xx seconds<br /></td>
+<td width="50%"><strong>%p</strong> - power in watts (from radio)<strong><br /></strong></td>
+</tr>
+<tr>
+<td width="50%"></td>
+<td width="50%"><strong>%r</strong> - report sent (from log field)<strong><br /></strong></td>
+</tr>
+<tr>
+<td width="50%"></td>
+<td width="50%"><strong>%s</strong> - KComm version<br /></td>
+</tr>
+<tr>
+<td width="50%"></td>
+<td width="50%"><strong>%x</strong> - exchange sent (from log field)</td>
+</tr>
+<tr>
+<td width="50%"></td>
+<td width="50%"><strong>%?...?</strong> - variable response</td>
+</tr>
+</tbody>
+</table>
+<p>The purpose of most of these should be self explanatory, especially when  viewed in conjunction with the example macro file provided. If you look at the  <strong>CQ</strong> macro text, you can see that it clears the text buffer, puts the radio into  transmit, sends CQ using the expansion <strong>%m</strong> which is replaced by your call, then  returns the radio to receive.</p>
+<p>The <strong>^zxx</strong> command can be used to send a CQ call repeatedly after a set interval, for example: <strong>^z10</strong>. To stop the macro being repeated hit the <strong>Esc</strong> key.</p>
+<p>The variable response expansion deserves some explanation, since the syntax  is critical for it to work correctly. This is probably a unique feature of  KComm. It allows you to enter variable information into a standard  response when it is sent. For example, you could enter the current temperature into a  stored reply about the weather, or pick the antenna you are currently using from  a list.</p>
+<p>For variable input, the format is <strong>%?prompt?</strong>. This will cause an input  box to be displayed with the text "prompt" to remind you what to put.  You must type the answer into the box and click OK, and your answer will be  inserted into the result.</p>
+<p>To present a choice of responses, the format is <strong>%?prompt|response 1|response  2|...|response n?</strong>. This will cause a list box to be displayed listing all  the responses. You must click on one, and that text will be inserted into the  result.</p>
+      	 <hr>
+	 <div class="right49">
+	    Next page: <a href="kcomm_bc.html" title="Band changing">Band changing</a>
+	 </div>
+         <div class="left49">
+            Previous page: <a href="kcomm_tx.html" title="Transmitting">Transmitting</a>
+         </div>
+           </div>
+  <div id="content_left">
+      <h2>KComm Help</h2>
+             
+<ul class="clearfix">
+
+<li><a href="kcomm_hlp.html"> About KComm </a>
+
+
+</li>
+
+<li><a href="kcomm_req.html"> System requirements </a>
+
+
+</li>
+
+<li><a href="kcomm_inst.html"> Installation </a>
+
+
+</li>
+
+<li><a href="kcomm_gs.html"> Getting started </a>
+
+
+</li>
+
+<li><a href="kcomm_logging.html"> Logging </a>
+
+
+</li>
+
+<li><a href="kcomm_rx.html"> Receiving </a>
+
+
+</li>
+
+<li><a href="kcomm_tx.html"> Transmitting </a>
+
+
+</li>
+
+<li><a href="kcomm_macros.html" class="currentpage"> Macros </a>
+
+
+</li>
+
+<li><a href="kcomm_bc.html"> Band changing </a>
+
+
+</li>
+
+<li><a href="kcomm_mc.html"> Mode changing </a>
+
+
+</li>
+
+<li><a href="kcomm-shortcuts.html"> Shortcuts </a>
+
+
+</li>
+
+<li><a href="kcomm_sb.html"> Status bar </a>
+
+
+</li>
+
+<li><a href="kcomm_dx_cluster.html"> DX Cluster </a>
+
+
+</li>
+
+<li><a href="kcomm_psk_browser.html"> PSK Browser </a>
+
+
+</li>
+
+<li><a href="kcomm_settings.html"> Settings </a>
+
+
+</li>
+
+<li><a href="kcomm_editing_log.html"> Editing log entries </a>
+
+
+</li>
+
+<li><a href="kcomm_importing.html"> Importing log data </a>
+
+
+</li>
+
+<li><a href="kcomm_exporting.html"> Exporting log data </a>
+
+
+</li>
+
+<li><a href="kcomm_stats.html"> Statistics </a>
+
+
+</li>
+
+<li><a href="kcomm_faq.html"> Frequently asked questions </a>
+
+
+</li>
+
+<li><a href="kcomm_ts.html"> Troubleshooting </a>
+
+
+
+</li>
+</ul>
+
+      <ul class="clearfix">
+        <li><a href="kcomm.html"> KComm </a></li>
+        <li><a href="index.html"> G4ILO's Shack </a></li>
+      </ul>
+        </div>
+</div>
+</div>
+</body>
+</html><!-- 0.073352 / 41 / 9978000 / 10560600 -->

@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Troubleshooting</title>
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=43&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Frequently asked questions" href="kcomm_faq.html" />
+<link rel="next" title="KTune" href="ktune.html" />
+</head>
+<body>
+<div id="main">
+<div id="content_wrapper">
+  <div id="content">
+         <h1>Troubleshooting</h1>
+      <h3>"Use PSK modem" is disabled</h3>
+<p>This occurs if the PSK Core DLL (PSKCore.dll) is missing or corrupt. If this file is present then try replacing it with <a href="http://www.g4ilo.com/files/PSKCoreDLL121.zip">this one</a>.</p>
+<h3>"Unable to create application data folder"</h3>
+<p>There have been a few reports that the above message appears when starting KComm. I have no idea as to the cause of it. In one case a user found that a file named 'kcomm' had been created in the Application Data folder. This prevented KComm from creating a folder with the same name.</p>
+<p>In all reported cases, the problem was resolved by creating the folder manually. Under Windows XP the path is normally <strong>C:\Documents and Settings\&lt;username&gt;\Application Data\kcomm</strong>. Under Windows 7 it appears to be <strong>C:\Users\&lt;username&gt;\AppData\Roaming\kcomm</strong>.</p>
+<p><strong>Note:</strong> KComm uses for its application data folder the folder where it finds the configuration file <strong>kcomm.conf</strong>. If you install by extracting from the zip file package then this will be in the same folder as the program. This has been done principally to allow portable setups under paths other than Program Files. Newer versions of Windows do not like configuration data and other changing data to be stored under the Program Files folder.</p>
+<h3>KComm vanishes after saving a contact</h3>
+<p>This can occur when sending an eQSL if the eQSL server sends a reply that is unexpected. The solution is to <a href="kcomm_eqsl_settings.html" title="eQSL">disable automatic eQSLing</a> and then to send the eQSL manually from the record editor (double-click on the entry in the log window.)</p>
+<h3>Failure to connect to radio<br /></h3>
+<p>When you start KComm and click <strong>Connect</strong>, nothing happens and the status bar shows "Connecting...". The program does not connect to your radio. It is not frozen and may be closed in the normal way using the Close (X) button.</p>
+<p>Failure to connect may be caused by one of the following reasons:</p>
+<ul>
+<li>The wrong <strong>Port</strong> has been selected in the <a href="kcomm_radio_settings.html" title="Radio control">Radio Control settings</a>.</li>
+<li>The <strong>Port</strong> is correct, but it is already being used by another program. (In this case, you will normally see a "Cannot open serial port" message.)</li>
+<li>The wrong <strong>Speed</strong> (baud rate) has been selected in the Radio Control settings. Confirm that it matches the selection made in the K3 Configuration menu. (K2s can only communicate at 4800 baud.)</li>
+<li>Data corruption is occurring and the program is not receiving the responses it expects from the radio.</li>
+</ul>
+<h4>Troubleshooting communication<br /></h4>
+<p>KComm has a debug option that lets you see the messages that are sent to and from the radio. If you suspect that data is being corrupted, check the Debug Window option in the <a href="kcomm_radio_settings.html" title="Radio control">Radio Control settings</a> and then click Connect. The Communications Trace window will open.</p>
+<p>If you are using a K3 and communication is working normally, you should see the following:</p>
+<p align="center"><img title="KComm communications trace window" src="http://www.g4ilo.com/images/kcomm-trace.gif" alt="trace window" width="266" height="131" /></p>
+<p>KComm sends a "PS;" command to the radio when it first connects, and expects to receive "PS1;" in acknowledgement. When this is received, the status bar changes to "Connected". If the "PS1;" is not received then no further communication is attempted.</p>
+<p>You can also try to test communication by typing commands such as "PS;" or "FA;" to see if a response occurs. Changing the frequency using the tuning knob, or changing band or mode should produce an "IF...;" reply.</p>
+<p><strong>Note:</strong> To make it easier to see the responses to specific commands, KComm disables polling by default when the trace window is opened. Therefore the S meter is not updated and certain other status conditions are not reported in the user interface unless you deselect the "Disable polling" option.</p>
+<p><strong>Tip:</strong> If you experience a communications failure, correct a configuration error, and KComm and your radio still won't talk, turn off the radio, reboot the computer and turn the radio back on again. It appears that some communications errors can put the serial port or radio in state where it won't respond even after the configuration has been corrected. Restarting everything will resolve that.</p>
+<h4>USB serial port adapters</h4>
+<p>The most common cause of communication failure after incorrect serial port settings is the use of USB to serial port adapters. There are many different makes and models of these, but most - including the Elecraft-supported KUSB adapter - use a Prolific PL2303 chipset. Unfortunately this chipset does not emulate a serial port very well and does not work with a number of programs. It appears to work with programs developed using Microsoft programming tools that use a Microsoft component to access the serial port. Programs developed using other programming tools (which include KComm and Fldigi) often have trouble with these adapters.</p>
+<p>My recommendation is to use a USB to serial port adapter that contains an FTDI chipset. A UK supplier <a href="http://www.usbnow.co.uk/" target="_blank">USBNow</a> states "The FTDI chipset in our opinion is easier to work with and more reliable than Prolific versions. We base this opinion on 5 years experience of selling and supporting a range of USB to Serial adapters." A <a href="http://www.google.co.uk/search?q=usb+serial+ftdi" target="_blank">Google search for "USB Serial FTDI"</a> should produce many potential suppliers.</p>
+<h3>Radio does not return to receive after sending data macro</h3>
+<p>You must disable VOX when operating digital modes. If VOX holds the TX on then the K3 ignores the command to return to receive. This could probably be considered a bug in the K3 firmware.</p>
+<h3>Some text captions are truncated</h3>
+<p>KComm was designed using Windows XP theme, standard fonts. In some other Windows themes (including Vista), and some Linux configurations the standard fonts are larger and may not fit the space available. One solution would have been to make the whole application larger, but I do not have a big enough screen. Therefore the solution I adopted was to provide an option to change the font under <a href="kcomm_miscellaneous_settings.html" title="Miscellaneous">Settings, Misc</a>. By picking a smaller or narrower font you should be able to get all the captions to fit.</p>
+      	 <hr>
+	 <div class="right49">
+	    Next page: <a href="ktune.html" title="KTune">KTune</a>
+	 </div>
+         <div class="left49">
+            Previous page: <a href="kcomm_faq.html" title="Frequently asked questions">Frequently asked questions</a>
+         </div>
+           </div>
+  <div id="content_left">
+      <h2>KComm Help</h2>
+             
+<ul class="clearfix">
+
+<li><a href="kcomm_hlp.html"> About KComm </a>
+
+
+</li>
+
+<li><a href="kcomm_req.html"> System requirements </a>
+
+
+</li>
+
+<li><a href="kcomm_inst.html"> Installation </a>
+
+
+</li>
+
+<li><a href="kcomm_gs.html"> Getting started </a>
+
+
+</li>
+
+<li><a href="kcomm_logging.html"> Logging </a>
+
+
+</li>
+
+<li><a href="kcomm_rx.html"> Receiving </a>
+
+
+</li>
+
+<li><a href="kcomm_tx.html"> Transmitting </a>
+
+
+</li>
+
+<li><a href="kcomm_macros.html"> Macros </a>
+
+
+</li>
+
+<li><a href="kcomm_bc.html"> Band changing </a>
+
+
+</li>
+
+<li><a href="kcomm_mc.html"> Mode changing </a>
+
+
+</li>
+
+<li><a href="kcomm-shortcuts.html"> Shortcuts </a>
+
+
+</li>
+
+<li><a href="kcomm_sb.html"> Status bar </a>
+
+
+</li>
+
+<li><a href="kcomm_dx_cluster.html"> DX Cluster </a>
+
+
+</li>
+
+<li><a href="kcomm_psk_browser.html"> PSK Browser </a>
+
+
+</li>
+
+<li><a href="kcomm_settings.html"> Settings </a>
+
+
+</li>
+
+<li><a href="kcomm_editing_log.html"> Editing log entries </a>
+
+
+</li>
+
+<li><a href="kcomm_importing.html"> Importing log data </a>
+
+
+</li>
+
+<li><a href="kcomm_exporting.html"> Exporting log data </a>
+
+
+</li>
+
+<li><a href="kcomm_stats.html"> Statistics </a>
+
+
+</li>
+
+<li><a href="kcomm_faq.html"> Frequently asked questions </a>
+
+
+</li>
+
+<li><a href="kcomm_ts.html" class="currentpage"> Troubleshooting </a>
+
+
+
+</li>
+</ul>
+
+      <ul class="clearfix">
+        <li><a href="kcomm.html"> KComm </a></li>
+        <li><a href="index.html"> G4ILO's Shack </a></li>
+      </ul>
+        </div>
+</div>
+</div>
+</body>
+</html><!-- 0.070961 / 48 / 10056672 / 10605184 -->

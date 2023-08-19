@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Feeding the Antenna</title>
+
+<meta name="description" content="If you use coaxial cable to feed a nonresonant antenna then the mismatch may result in a surprising amount of power being lost." />
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheet.php%3Fcssid=31&amp;mediatype=screen.css" />
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=42&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="The G4ILO Wonder Loop" href="wonder-loop.html" />
+<link rel="next" title="WSPR - Distant Whispers" href="wspr.html" />
+</head>
+<body>
+<div id="main">
+        <ul class="accessibility">
+      <li><a href="antenna.html#menuwrapper" title="Skip to navigation" accesskey="n">Skip to navigation</a></li>
+      <li><a href="antenna.html#content" title="Skip to content" accesskey="s">Skip to content</a></li>
+    </ul>
+        <hr class="accessibility" />
+    
+<!-- header start -->
+<div id="header_wrapper">
+<div id="header">
+<hr class="accessibility" />
+</div>
+</div>
+<!-- header end -->
+<div id="content_wrapper">
+
+  <div id="content">
+         <h1>Feeding the Antenna</h1>
+      <!-- adsense start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* 728x15 L/U */
+google_ad_slot = "3834710687";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+      <p>The less efficient the antenna and the lower the power you're using, the more vital it is that all that precious power reaches the antenna. You want the power your transmitter produces to warm up the ether, not the feeder. If you thought that the job of the antenna tuning unit (ATU) in your transceiver (or sitting right next to it) was to ensure that as much of the power as possible gets to the antenna, you could be in for a nasty surprise. It's a not-very-widely-known fact that best place for the antenna matching unit is at the antenna feedpoint, not at the transmitter.</p>
+<p>In my "stealth" amateur radio station I originally used an SGC SG-239 autocoupler mounted in the attic at the feedpoint of my horizontal quad loop. Later, I switched to using the excellent KAT2 automatic antenna tuner in my K2 transceiver. Although this appears to flout the conventional wisdom that the antenna tuner should be at the feedpoint, I was surprised to find that it seemed to work even better. However, my radio room is directly below my attic antenna, so that the coaxial feeder can be extremely short. If it wasn't, I'd be wasting a lot more of my precious RF using this method of feeding the antenna. Here's why.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>Feeder loss</h2>
+<p>Most people appreciate the need to use an antenna tuner at HF, so that their tranceiver transmits into a 50 ohm load and sees an SWR of close to 1:1. Most hams today have an antenna tuner sited right next to the transceiver, or even built into it. What is often not appreciated is that using an ATU at the transmitter doesn't solve the problems caused by a high SWR. It merely fools the transmitter into thinking that the antenna is matched to 50 ohms. Sure, this is pretty important for most solid-state finals, which don't like working into a high SWR, and which may even fail if there is a big mismatch. But whilst an ATU may help your PA keep its cool, it won't do a lot of good for your radiated signal.</p>
+<p>Whatever mismatch exists at the antenna, whatever SWR is measured without the ATU in circuit, this mismatch still exists whether your ATU has "matched" the antenna or not. Transmitted power will still be reflected back from the antenna instead of being radiated from it.</p>
+<p>If your antenna is designed to be nominally 50 ohms on the bands you operate on, if the SWR is, say, 3:1 or less, then it's true that the loss through mismatching will be fairly small. However, since most modern PA's aren't fazed by an SWR of 3:1 or less, there's really little point in using an ATU in this situation, apart from satisfying a need in the operator to see a 1:1 reading on the SWR meter! It will make little difference to the radiated signal (and you should bear in mind that losses of up to 10% can occur within an ATU itself.)</p>
+<p>If you are using a non-resonant antenna, or a resonant one on bands other than the one it is designed for, much bigger mismatches (and higher SWRs) will be the norm. Take my attic loop for example: according to EZNEC the SWR should be 44:1 on 17 metres, 83:1 on 15 metres and even on 10 metres it's 6.5:1. Like most people in a restricted antenna situation, I have to work with the antenna I can put up, I can't change the antenna to reduce the mismatch on these bands.</p>
+<p>So what's the problem? Well, take a look at the chart below.</p>
+<p align="center"><img src="mismatch_losses/mismatch_losses_files/image007.gif" alt="Mismatch losses: RG-213" width="445" height="240" /></p>
+<p>As you can see from the graph, at high SWRs, substantial losses occur. Even using just 2.5m of "low loss" RG-213 cable, more than 2dB of loss would occur with the calculated 83:1 SWR on 15 metres - almost half the power! That is not good news, especially for a QRP operator. These losses will occur regardless of whether an ATU is used at the transceiver to "match" the antenna or not. To see the results for different feeder types and different lengths of feeder, see the <a href="mismatch_losses/index.html" target="_blank">Mismatch Losses</a> spreadsheets.</p>
+<p>To avoid feeder losses, the antenna tuner should be placed at the feedpoint of the antenna, not at the transmitter. That way, there will be a nice 50 ohms at both ends of the coaxial cable, and only normal feeder losses will occur. (Note: standard feeder losses are <em>in addition</em> to the mismatch losses shown in the tables!)</p>
+<h2>Open wire feeder</h2>
+<p>If it isn't convenient to put the antenna tuner at the feedpoint, one way to avoid it is to use open wire feeder. The losses that occur when you use open wire feeder are so low that you can safely ignore them, as the chart below (for the same length of feeder as the one above) demonstrates.</p>
+<p align="center"><img src="mismatch_losses/mismatch_losses_files/image013.gif" alt="Mismatch losses: open wire feeder" width="445" height="240" /></p>
+<p>Using such a short length of feeder, mismatch losses are negligible even with a 100:1 SWR. Losses are low even with the longer lengths of feeder required to feed an outdoor antenna (see the <a href="mismatch_losses/index.html" target="_blank">Mismatch Losses</a> spreadsheets.) That's why old hands always use open wire feeder.</p>
+<p>However, there are several reasons why open wire feeder isn't the preferred transmission line of many amateurs. Number one, for me, is that open wire isn't particularly attractive, and not very easy to route between shack and antenna in an aesthetically satisfying manner. Coax can be hidden inside a plastic conduit to keep it out of sight, and it will happily pass through small holes in the ceiling or walls. If you want your radio room to look civilised enough to double as an office or guest bedroom, or if you are trying to achieve 100% Stealth, open wire is out of the question.</p>
+<p>Another disadvantage of open wire, I believe, is that since it's almost impossible to achieve perfect balance over the two wires, you'll inevitably get some radiation, and pick-up, on the feeder itself. This means that you are more likely to get RFI if you use open wire, and you'll probably hear more interference from domestic appliances and the computers in the shack. My attic loop is surprisingly quiet for what is basically an indoor antenna, and I think that the fact that it is fed using a well-matched co-ax feeder has a lot to do with it.</p>
+<h2>Using a balun</h2>
+<p>There's another possible solution. It's the one I'm currently using, but whether it will work well for you will depend on how bad a mismatch your non-resonant antenna is on the bands of interest, and how short a coaxial feeder you can get away with. This solution is to place a 4:1 balun at the antenna feedpoint, and then use a coaxial feeder from there to the shack.</p>
+<p>The balun won't eliminate the mismatch, but it can reduce it. In the case of my antenna, its calculated impedance on all of the bands I want to use is more than 100 ohms, quite a lot more in many cases. What the 4:1 balun does is <em>reduce</em> the mismatch. I will still incur some feeder loss, especially on the bands with the worst mismatch, but it will be a lot less than without the balun. Since I'm able to use a very short coaxial feeder, feeder losses are reduced to a minimum. The other thing the balun does is allow me to feed my balanced antenna (quad loop) with unbalanced feeder (coaxial cable) without getting TVI- and RFI-causing radiation from the shield of the feeder.</p>
+<p>For me, the advantage of this solution is that it allows me to use the K2's fine KAT2 automatic tuner, which will automatically select the correct matching position for each band as I change bands. This is a big plus when I'm listening rather than transmitting. The SG-239 autocoupler had no idea what band the K2 was switched to until I transmitted some RF, so if I just wanted to listen around, I had to make do with a mismatched antenna.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>Conclusion</h2>
+<p>From the on-air results it appears that my antenna actually works better, and signals are stronger, on 20m and up, now I'm using the balun, coaxial feeder and KAT2 antenna tuner. The SG-239 seemed to give stronger signals on 40m and 80m, and would even produce a good match on 160m. But a relatively small indoor antenna is of little use on the low bands, especially coupled with QRP power, so I was already more or less resigned to not being able to operate on those bands.</p>
+<p>It's fine to feed a non-resonant antenna with coaxial cable and an auto-ATU if the mismatch isn't too severe and you can use a very short feeder and a balun. But the general rule, as the <a href="mismatch_losses/index.html" target="_blank">Mismatch Losses</a> charts show clearly, is still that the correct place to match an antenna is at the feedpoint! If you can't do that, use open wire feeder, so the losses are low enough that you can ignore them. Or else, if the mismatch isn't too severe and the antenna-to-radio distance is short, try using a balun at the feedpoint and using an ATU in the shack.</p>
+<p><em>(</em><em><strong>Acknowledgement:</strong></em><em> the Mismatch Losses tables and charts were created using a Microsoft Excel spreadsheet developed by </em><a href="http://www.ifwtech.co.uk/g3sek/" target="_blank"><em>Ian White, G3SEK</em></a><em>, to illustrate an article on this topic that was published in the March 2002 issue of the RSGB journal RadCom.)</em></p>
+      <hr class="accessibility" />
+   <!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+  </div>
+
+  <div id="content_left">
+            <div id="menuwrapper">
+<ul>
+	<li class="menuparent"><a class="menuparent" 
+href="index.html" accesskey="1" title="Home Page, shortcut key=1"><dfn>1: </dfn>Home</a>
+
+</li>
+	<li class="menuactive menuparent"><a class="menuactive menuparent" 
+href="radio.html" ><dfn>2: </dfn>Radio Topics</a>
+
+
+	<ul class='sub_nav'>
+	<li><a 
+href="ham-radio-faq.html" ><dfn>2.1: </dfn>What is amateur radio?</a>
+
+</li>
+	<li><a 
+href="qrp.html" ><dfn>2.2: </dfn>QRP is more fun&#33;</a>
+
+</li>
+	<li><a 
+href="stealth.html" ><dfn>2.3: </dfn>Stealth Amateur Radio</a>
+
+</li>
+	<li><a 
+href="wonder-loop.html" ><dfn>2.4: </dfn>The Wonder Loop</a>
+
+</li>
+	<li class="menuactive"><a class="menuactive" 
+href="antenna.html" ><dfn>2.5: </dfn>Feeding the Antenna</a>
+
+</li>
+	<li><a 
+href="wspr.html" ><dfn>2.6: </dfn>WSPR - Distant Whispers</a>
+
+</li>
+	<li><a 
+href="linux.html" ><dfn>2.7: </dfn>Why I gave up Linux</a>
+
+</li>
+	<li><a 
+href="ft817.html" ><dfn>2.8: </dfn>The FT-817 Page</a>
+
+</li>
+	<li><a 
+href="diy-ducky.html" ><dfn>2.9: </dfn>DIY Ducky for 2m</a>
+
+</li>
+	<li><a 
+href="k2_headset.html" ><dfn>2.10: </dfn>Elecraft K2 headset</a>
+
+</li>
+	<li><a 
+href="psk31.html" ><dfn>2.11: </dfn>PSK31</a>
+
+</li>
+	<li><a 
+href="k2psk31.html" ><dfn>2.12: </dfn>K2 on data modes</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="wxsats.html" ><dfn>2.13: </dfn>Receiving Wxsats</a>
+
+</li>
+	<li><a 
+href="eqsl.html" ><dfn>2.14: </dfn>Electronic QSLing</a>
+
+</li>
+	<li><a 
+href="sporadic-e.html" ><dfn>2.15: </dfn>E-type propagation</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="aprs.html" ><dfn>2.16: </dfn>APRS - On the map</a>
+
+</li>
+	<li><a 
+href="usblink.html" ><dfn>2.17: </dfn>USBlink data interface</a>
+
+
+	</li></ul>
+	</li>
+	<li class="menuparent"><a class="menuparent" 
+href="reviews.html" ><dfn>3: </dfn>Reviews</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="software.html" ><dfn>4: </dfn>Software</a>
+
+</li>
+	<li><a 
+href="guestbook.html" ><dfn>5: </dfn>Visitors Book</a>
+
+</li>
+	<li><a 
+href="log.html" ><dfn>6: </dfn>Contact Log</a>
+
+</li>
+	<li><a 
+href="psk-reporter.html" ><dfn>7: </dfn>Recently heard</a>
+
+</li>
+	<li><a 
+href="search.html" ><dfn>8: </dfn>Search the site</a>
+
+
+			</li>
+	</ul>
+<div class="clearb"></div>
+</div>
+
+<ul>
+  <li><a href="http://blog.g4ilo.com/" >G4ILO&#39;s Blog</a></li>
+  <li><a href="http://www.youtube.com/user/g4ilohamradio" >G4ILO&#39;s Videos</a></li>
+</ul>
+            <p align="center"><g:plusone size="medium"></g:plusone></p>
+<script type="text/javascript">
+  window.___gcfg = {lang: 'en-GB'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+    <div class="misc">
+      <!-- eqsl form start --> <form action="http://www.eqsl.cc/qslcard/eQSLSearch.cfm" method="post"> <input name="ReferralID" type="hidden" value="296" /> <span style="color: #ff0000; font-size: xx-small;">You have <strong>eQSLs</strong> waiting!</span><br /> <span style="font-size: xx-small;">Enter your call and click <strong>Check</strong></span><br /> <input name="Callsign" size="10" type="text" /><br /> <input type="submit" value="Check" /> </form> <!-- eqsl form end -->
+    </div>
+    <!-- adsense start -->
+<div align="center">
+<br/><br/>
+<script type="text/javascript"><!--
+google_ad_client = "pub-8473114760998486";
+/* 160x600, created 27/05/09 */
+google_ad_slot = "9973442554";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+<br />
+    <div style="text-align: center;"><br /><a href="http://evuln.com/tools/malware-scanner/g4ilo.com/"><img style="cursor:pointer" src="http://evuln.com/tools/monitoring/badge/g4ilo.com.jpg" alt="eVuln.com" /></a></div>
+    <p align="center"><a id="clustrMapsLink" href="http://www3.clustrmaps.com/counter/maps.php?url=http://www.g4ilo.com"><img id="clustrMapsImg" style="border:0px;" title="Locations of visitors to this page" src="http://www3.clustrmaps.com/counter/index2.php?url=http://www.g4ilo.com" alt="Locations of visitors to this page" /></a></p>
+    <p align="center"><a href="http://www.rsgb.org" target="_blank"><img title="RSGB Centenary" src="http://www.g4ilo.com/images/rsgb-100.png" border="0" alt="" width="160" height="83" /></a></p>
+  </div>
+
+</div>
+
+   <div id="footer_wrapper">
+   <div id="footer"><p>Copyright © 1998 - 2012 Julian, G4ILO. All rights reserved.</p></div>
+</div>
+   </div>
+
+</body>
+</html><!-- 0.083289 / 77 / 10412104 / 11042160 -->

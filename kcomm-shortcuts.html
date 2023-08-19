@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Shortcuts</title>
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=43&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Mode changing" href="kcomm_mc.html" />
+<link rel="next" title="Status bar" href="kcomm_sb.html" />
+</head>
+<body>
+<div id="main">
+<div id="content_wrapper">
+  <div id="content">
+         <h1>Shortcuts</h1>
+      <p><img title="KComm shortcuts" src="http://www.g4ilo.com/images/kcomm-sc.gif" alt="kcomm-sc.gif" hspace="16" vspace="4" width="162" height="107" align="right" /> Shortcuts are a very powerful feature of KComm. They can be used simply as memories, to store a frequency and mode with a label. But shortcuts can be used to send any sequence of K2 or K3 control commands to the radio, so they can be used to set power levels or filter bandwidths, or emulate button presses on the K2 or K3 front panel. See the Elecraft Programmers Reference manual for more information.</p>
+<p>To execute a shortcut, you just <strong>double-click</strong> it.</p>
+<p><strong>Note:</strong> The shortcuts that come with KComm are for a K3. As many of them use button-press commands they will need to be modified to work with a K2 or KX3. An alternative set modified for the KX3 by Mark KE6BB may be downloaded <strong><a href="http://www.g4ilo.com/files/KX3-kcomm.shortcuts">here</a></strong>.</p>
+<h2>Adding a shortcut</h2>
+<p>To add a new shortcut (or store a frequency) simply right-click [Linux: middle-click] the shortcuts window and select <strong>Add shortcut</strong>. The new shortcut will be added at the top of the list. You may also select <strong>Insert shortcut</strong>, and the shortcut will be inserted above the one currently selected.</p>
+<p>The <strong>Shortcuts</strong> dialog will appear.</p>
+<p align="center"><img title="Adding a shortcut" src="http://www.g4ilo.com/images/kcomm-editshortcut.gif" alt="kcomm-editshortcut.gif" width="240" height="102" /></p>
+<p>The <strong>Name</strong> field is pre-set to the callsign currently entered in the Logging panel and the current receiver frequency. The <strong>Command</strong> field contains the K2 / K3 command to change to this frequency and mode.</p>
+<p>To store a shortcut to this frequency, edit the Name field if you wish, then click <strong>OK</strong>.</p>
+<h3>Advanced shortcuts</h3>
+<p>If you want to create a shortcut that does something other than recall a frequency and mode, for example set a particular power level or a filter bandwidth, just delete the filled-in contents of the Name and Command fields, and enter the name and sequence of commands that you want to use. Take care to ensure that the commands entered in the Command field are valid, because KComm cannot check them for you.</p>
+<p>To change an existing shortcut, right-click it and select <strong>Edit shortcut</strong>.</p>
+<h3>Shortcut commands</h3>
+<p>Any of the commands in the K2 or K3 Programmer's Reference Manual may, in theory, be used in a shortcut. If you need to execute a pause between sending commands you can use the fake command <strong>WT;</strong> which causes KComm to wait for 500ms before sending the next command.</p>
+<p>With the K3, if you send a <strong>DS;</strong> command and the VFO B display on the front panel is <em>not</em> displaying the VFO B frequency, KComm will display the contents of the VFO B display on the status bar. This can be useful to create macros that get information about the K3 status, such as checking the PA temperature. See the shortcuts included with KComm for some examples.</p>
+<h2>Organizing shortcuts</h2>
+<p>There is no limit to the number of shortcuts you can have. You may find it convenient to organize the shortcut list into sections containing shortcuts for different things. You can create an entry that is just a section header by adding a shortcut that has only a name and no command.</p>
+<p>To change the order of shortcuts, press the <strong>Ctrl</strong> key and then use the keypad up and down arrows to move the entries around.</p>
+<p>To move whole blocks of shortcuts you will probably find it easier to close KComm and then edit the shortcuts file using a text editor.</p>
+<h2>Sharing shortcuts</h2>
+<p>If you create a useful set of shortcuts, such as a list of 10m beacons or 6m repeaters, you might want to make it available to other KComm users. KComm allows you to export shortcuts to a file, and to import them from a file to the current shortcut list. You can also load different shortcut files, according to what you are doing at the time. <em>Please send your shortcut files to me, so they can be made available via this website. </em></p>
+<p>To export shortcuts to a file, select the block of shortcuts that you want to export. You can do this by clicking the first one you want to export, then holding the <span style="font-weight: bold">Shift</span> key and pressing the down arrow key until you have selected the lot. Then right-click [Linux: middle-click] the shortcuts window and select <span style="font-weight: bold">Export shortcuts</span>.</p>
+<p>To import shortcuts from a file, right-click the shortcuts window and select <span style="font-weight: bold">Import shortcuts</span>. The contents of the file will be appended to the current list.</p>
+<p>Alternatively you can load a shortcuts file by selecting <span style="font-weight: bold">Load shortcuts</span>. In this case, the current shortcuts will be unloaded and then the selected file will be loaded.</p>
+      	 <hr>
+	 <div class="right49">
+	    Next page: <a href="kcomm_sb.html" title="Status bar">Status bar</a>
+	 </div>
+         <div class="left49">
+            Previous page: <a href="kcomm_mc.html" title="Mode changing">Mode changing</a>
+         </div>
+           </div>
+  <div id="content_left">
+      <h2>KComm Help</h2>
+             
+<ul class="clearfix">
+
+<li><a href="kcomm_hlp.html"> About KComm </a>
+
+
+</li>
+
+<li><a href="kcomm_req.html"> System requirements </a>
+
+
+</li>
+
+<li><a href="kcomm_inst.html"> Installation </a>
+
+
+</li>
+
+<li><a href="kcomm_gs.html"> Getting started </a>
+
+
+</li>
+
+<li><a href="kcomm_logging.html"> Logging </a>
+
+
+</li>
+
+<li><a href="kcomm_rx.html"> Receiving </a>
+
+
+</li>
+
+<li><a href="kcomm_tx.html"> Transmitting </a>
+
+
+</li>
+
+<li><a href="kcomm_macros.html"> Macros </a>
+
+
+</li>
+
+<li><a href="kcomm_bc.html"> Band changing </a>
+
+
+</li>
+
+<li><a href="kcomm_mc.html"> Mode changing </a>
+
+
+</li>
+
+<li><a href="kcomm-shortcuts.html" class="currentpage"> Shortcuts </a>
+
+
+</li>
+
+<li><a href="kcomm_sb.html"> Status bar </a>
+
+
+</li>
+
+<li><a href="kcomm_dx_cluster.html"> DX Cluster </a>
+
+
+</li>
+
+<li><a href="kcomm_psk_browser.html"> PSK Browser </a>
+
+
+</li>
+
+<li><a href="kcomm_settings.html"> Settings </a>
+
+
+</li>
+
+<li><a href="kcomm_editing_log.html"> Editing log entries </a>
+
+
+</li>
+
+<li><a href="kcomm_importing.html"> Importing log data </a>
+
+
+</li>
+
+<li><a href="kcomm_exporting.html"> Exporting log data </a>
+
+
+</li>
+
+<li><a href="kcomm_stats.html"> Statistics </a>
+
+
+</li>
+
+<li><a href="kcomm_faq.html"> Frequently asked questions </a>
+
+
+</li>
+
+<li><a href="kcomm_ts.html"> Troubleshooting </a>
+
+
+
+</li>
+</ul>
+
+      <ul class="clearfix">
+        <li><a href="kcomm.html"> KComm </a></li>
+        <li><a href="index.html"> G4ILO's Shack </a></li>
+      </ul>
+        </div>
+</div>
+</div>
+</body>
+</html><!-- 0.079308 / 41 / 9981888 / 10563080 -->

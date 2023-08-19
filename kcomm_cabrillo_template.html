@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Creating a Cabrillo template</title>
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=43&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Export to Cabrillo" href="kcomm_export_cabrillo.html" />
+<link rel="next" title="Statistics" href="kcomm_stats.html" />
+</head>
+<body>
+<div id="main">
+<div id="content_wrapper">
+  <div id="content">
+         <h1>Creating a Cabrillo template</h1>
+      <p>
+It is your responsibility to create a template to export your log data, 
+although of course there is nothing to stop anyone who has created and tested a 
+template for a contest they are interested in to advertise its availability for 
+others who wish to use it.
+</p>
+ 
+<p>
+The format of the template is the same as a Cabrillo log file, beginning with 
+START-OF-LOG and ending with END-OF-LOG. Dummy information or prompts may be 
+entered for the various header fields, or they may simply be left blank, as they 
+will be filled in when the log is created.
+</p>
+ 
+<p>
+There must be only one QSO: line. In place of dummy contact data it must  
+contain tokens, which occupy the space (character positions) used by  
+this data and also define its content. In generating the Cabrillo log,  
+KComm will simply replace each token that appears on this line by its corresponding item of data,  
+padded out to the length of the token. Anything that is not a valid token will 
+be left as-is.
+</p>
+ 
+<p>
+Supported tokens are:
+</p>
+<div align="center">
+ 
+<table border="2" cellpadding="2" width="80%">
+	<tbody>
+		<tr>
+			<th valign="top">Token</th>
+			<th valign="top">Replaced by</th>
+		</tr>
+		<tr>
+			<td valign="top">ffffff, fffff</td>
+			<td valign="top">Frequency</td>
+		</tr>
+		<tr>
+			<td valign="top">mm</td>
+			<td valign="top">Mode</td>
+		</tr>
+		<tr>
+			<td valign="top">dddddddddd</td>
+			<td valign="top">Date (yyyy-mm-dd)</td>
+		</tr>
+		<tr>
+			<td valign="top">tttt</td>
+			<td valign="top">Time (hhmm)</td>
+		</tr>
+		<tr>
+			<td valign="top">yyyyyyyyyyyyyy, yyyyyyyyyyyyy, yyyyyyyyyyyy</td>
+			<td valign="top">Your call</td>
+		</tr>
+		<tr>
+			<td valign="top">sss</td>
+			<td valign="top">RST sent</td>
+		</tr>
+		<tr>
+			<td valign="top">xxxxxx, xxxxx, xxxx</td>
+			<td valign="top">Exchange sent</td>
+		</tr>
+		<tr>
+			<td valign="top">0000x, 000x, 00x, 0x</td>
+			<td valign="top">Exchange sent, padded with zeros (must be numeric)</td>
+		</tr>
+		<tr>
+			<td valign="top">cccccccccccccc, ccccccccccccc, cccccccccccc</td>
+			<td valign="top">His call</td>
+		</tr>
+		<tr>
+			<td valign="top">rrr</td>
+			<td valign="top">RST received</td>
+		</tr>
+		<tr>
+			<td valign="top">wwwwww, wwwww, wwww</td>
+			<td valign="top">Exchange received</td>
+		</tr>
+		<tr>
+			<td valign="top">0000w, 000w, 00w, 0w</td>
+			<td valign="top">Exchange received, padded with zeros</td>
+		</tr>
+		<tr>
+			<td valign="top">gggg, gggggg</td>
+			<td valign="top">Grid square (4- or 6-character format)</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<p>
+Note that only the exact token lengths shown in the table may be used.
+</p>
+  
+      	 <hr>
+	 <div class="right49">
+	    Next page: <a href="kcomm_stats.html" title="Statistics">Statistics</a>
+	 </div>
+         <div class="left49">
+            Previous page: <a href="kcomm_export_cabrillo.html" title="Export to Cabrillo">Export to Cabrillo</a>
+         </div>
+           </div>
+  <div id="content_left">
+      <h2>KComm Help</h2>
+             
+<ul class="clearfix">
+
+<li><a href="kcomm_hlp.html"> About KComm </a>
+
+
+</li>
+
+<li><a href="kcomm_req.html"> System requirements </a>
+
+
+</li>
+
+<li><a href="kcomm_inst.html"> Installation </a>
+
+
+</li>
+
+<li><a href="kcomm_gs.html"> Getting started </a>
+
+
+</li>
+
+<li><a href="kcomm_logging.html"> Logging </a>
+
+
+</li>
+
+<li><a href="kcomm_rx.html"> Receiving </a>
+
+
+</li>
+
+<li><a href="kcomm_tx.html"> Transmitting </a>
+
+
+</li>
+
+<li><a href="kcomm_macros.html"> Macros </a>
+
+
+</li>
+
+<li><a href="kcomm_bc.html"> Band changing </a>
+
+
+</li>
+
+<li><a href="kcomm_mc.html"> Mode changing </a>
+
+
+</li>
+
+<li><a href="kcomm-shortcuts.html"> Shortcuts </a>
+
+
+</li>
+
+<li><a href="kcomm_sb.html"> Status bar </a>
+
+
+</li>
+
+<li><a href="kcomm_dx_cluster.html"> DX Cluster </a>
+
+
+</li>
+
+<li><a href="kcomm_psk_browser.html"> PSK Browser </a>
+
+
+</li>
+
+<li><a href="kcomm_settings.html"> Settings </a>
+
+
+</li>
+
+<li><a href="kcomm_editing_log.html"> Editing log entries </a>
+
+
+</li>
+
+<li><a href="kcomm_importing.html"> Importing log data </a>
+
+
+</li>
+
+<li class="activeparent"> <a href="kcomm_exporting.html" class="activeparent"> Exporting log data </a>
+
+
+<ul>
+
+<li><a href="kcomm_export_adif.html"> Export to ADIF </a>
+
+
+</li>
+
+<li><a href="kcomm_export_cabrillo.html"> Export to Cabrillo </a>
+
+
+</li>
+
+<li><a href="kcomm_cabrillo_template.html" class="currentpage"> Create Cabrillo template </a>
+
+
+</li></ul>
+</li>
+
+<li><a href="kcomm_stats.html"> Statistics </a>
+
+
+</li>
+
+<li><a href="kcomm_faq.html"> Frequently asked questions </a>
+
+
+</li>
+
+<li><a href="kcomm_ts.html"> Troubleshooting </a>
+
+
+
+</li>
+</ul>
+
+      <ul class="clearfix">
+        <li><a href="kcomm.html"> KComm </a></li>
+        <li><a href="index.html"> G4ILO's Shack </a></li>
+      </ul>
+        </div>
+</div>
+</div>
+</body>
+</html><!-- 0.083775 / 41 / 9998016 / 10582232 -->

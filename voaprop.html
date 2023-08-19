@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>VOAProp</title>
+
+<meta name="description" content="VOAProp is an easy to use interface for the VOACAP HF propagation prediction model that enables you to visualize propagation conditions at different times of day, throughout the year and" />
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheet.php%3Fcssid=31&amp;mediatype=screen.css" />
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=42&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="PSK31 Delphi Demo" href="psk31test.html" />
+<link rel="next" title="About VOAProp" href="voaprop_about.html" />
+</head>
+<body>
+<div id="main">
+        <ul class="accessibility">
+      <li><a href="voaprop.html#menuwrapper" title="Skip to navigation" accesskey="n">Skip to navigation</a></li>
+      <li><a href="voaprop.html#content" title="Skip to content" accesskey="s">Skip to content</a></li>
+    </ul>
+        <hr class="accessibility" />
+    
+<!-- header start -->
+<div id="header_wrapper">
+<div id="header">
+<hr class="accessibility" />
+</div>
+</div>
+<!-- header end -->
+<div id="content_wrapper">
+
+  <div id="content">
+         <h1>VOAProp</h1>
+      <!-- adsense start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* 728x15 L/U */
+google_ad_slot = "3834710687";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+      <p>VOAProp was written to satisfy my need for a program that would show me what HF band propagation should be like on a particular day on a particular band. It was the successor to my popular propagation program HFProp, which used a fast, but not very accurate propagation modelling algorithm. VOAProp uses the well-regarded VOACAP forecasting software, and provides a simplified graphical interface for it so that you can get an overall idea of how propagation should be at a given time and date without getting bogged down in detail.</p>
+<p align="center"><img title="VOAProp main propagation display" src="http://www.g4ilo.com/images/voaprop-1s.jpg" border="0" alt="screenshot" width="480" height="345" /></p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>Description</h2>
+<p><img title="VOAProp point to point propagation chart" src="http://www.g4ilo.com/images/voaprop-2s.jpg" border="0" alt="screenshot" hspace="32" vspace="4" width="200" height="196" align="right" />VOAProp shows you typical propagation for a given hour of the day during a given month. The propagation is shown as expected signal strengths to be received from different parts of the world, plotted on a world map. VOAProp can also display daily point-to-point propagation charts showing the best frequency and time of day for communication with a particular location.</p>
+<p>VOAProp includes a table of smoothed sunspot number (SSN) data going back to the year 1900. This data is used by VOACAP to produce a plot of average expected propagation for the time of day. VOAProp can also obtain real-time solar data from WWV, which it uses to give a qualitative assessment of conditions. This can show whether conditions are likely to be better or worse than predicted.</p>
+<p>VOAProp can also be used as an IARU amateur bands beacon monitor. If your computer clock is accurate, the program displays icons on the map which show which beacon is currently transmitting, together with the expected received signal strength according to the predicted conditions.</p>
+<p>VOAProp includes a built-in updater which can download the WWV solar data, and update the SSN table and beacon status data, via an Internet connection.</p>
+<p>For more information about VOAProp see the <a href="voaprop_about.html" target="_blank">VOAProp online help</a>.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>Version information</h2>
+<p>Version 1.1 is the last version of the software. There were no known bugs at the time of release, but updates to external files or new versions of Windows may cause problems and will eventually make this program obsolete. There will be <strong>no further development of VOAProp</strong> for both personal and technical reasons.</p>
+<h2>Important notice<br /></h2>
+<p>Because of a change in the format of the WWV solar information file updates now fail with an error. Thanks to Mirek, OK1DUB a fixed version of the file has been made available. The URL in the Solar Data window must be <strong>http://ok1dub.cz/wwv/wwv.txt</strong>. See <a href="http://blog.g4ilo.com/2011/12/voaprop-and-wwv.html">this blog post</a> for more information.</p>
+<p>Thanks to Gianni, IS0VSG for the updated locations data file that is included in the download. Please note that the locations data is based on a very old file and may well contain inaccuracies. The file provided with the program was never intended to be a 100% accurate or up to date list of DX locations. Please make your own changes to the file if you are unhappy with any of the entries.</p>
+<h2>Requirements</h2>
+<ul>
+<li>PC running Windows 98, Me, 2000 or XP.</li>
+<li>VOACAP for Windows.</li>
+</ul>
+<h3>Running under Windows Vista and Windows 7</h3>
+<p>Windows Vista and Windows 7 have security restrictions that prevent the modification of files stored in Program Files\... This affects programs such as VOAProp that store settings in an INI file in the same folder as the program itself.</p>
+<p>A workaround suggested by another ham radio developer is to install the program in a folder directly off C:\ for example C:\VOAProp. You could also install it under My Documents.</p>
+<p>An alternative suggestion is to use compatibility mode and set it to Windows XP SP2. Compatibility mode is only present in the Professional version of Windows 7 and actually involves running a separate copy of Windows XP so the first suggestion is probably the better of the two.</p>
+<p><strong>Linux users:</strong> VOAProp will run under Linux using <a href="http://www.winehq.org/" target="_blank">wine</a>.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>Terms and Conditions</h2>
+<p><strong>Please note:</strong> I have <strong>completely given up all software development activities.</strong> The programs on this site, including this one, are provided with <strong>absolutely no support</strong> and there will be <strong>no further updates of any of them.</strong> <em>Bug reports and feature requests are not required.</em> For help with any known issues see <strong><a href="voaprop_probs.html" title="Troubleshooting">Troubleshooting</a></strong>.</p>
+<p>The source code of this program is not available.</p>
+<h2>Downloads</h2>
+<a href="http://www.g4ilo.com/files/voapropsetup.exe">
+<h3>Download VOAProp 1.1 Setup (1Mb)</h3>
+</a>
+<p style="color:red;"><strong>Important!</strong> Please read <a href="voaprop_probs.html" title="Troubleshooting">Troubleshooting</a> section of the documentation.</p>
+<p><strong>Trojan warning!</strong> Some third rate virus scanners claim the installer used by my programs is a virus or a trojan. <span style="text-decoration: underline;">It is not a trojan it is a false alarm.</span> If you choose to believe your scanner rather than me that is up to you. But please don't tell me about it, because I already know. See <a href="2009/10/lunatics-have-taken-over-asylum.html">this blog post</a> for more information.</p>
+<p><strong>This file has been scanned for malware at <a class="external" href="http://upx.sourceforge.net/">jotti.org</a> and found to be clean</strong>, but some scanners report (correctly) that the file has been compressed using the executable unpacker <a class="external" href="http://upx.sourceforge.net/" target="_blank">UPX</a>.</p>
+<p>The source code for this project is not available.</p>
+<p>If you wish to provide a link to this program from your own web pages please link to <a href="voaprop.html">this page</a>, not directly to the download file.</p>
+<a title="linux" name="linux"></a><a href="http://www.g4ilo.com/files/voaprop.tar.gz">
+<h3>VOAProp for Linux (5.8Mb)</h3>
+</a>
+<p>This is a copy of VOAProp together with an installation of VOACAP, packaged as a .tar.gz archive for installation on Linux. It is <em>not</em> a native Linux binary so it must be run under <a href="http://www.winehq.org/" target="_blank">wine</a>, which is available for just about any Linux distribution.</p>
+<p>You will need to extract the software to a convenient folder in your wine installation, preferably one without spaces in the name, such as <strong>../Ham/VOAProp</strong>. After that, you must set write permissions, since VOACAP needs to be able to write to files in its folders. Open a console window, change to the directory where you installed the software, and execute the command <strong>chmod -R u+w</strong>. Now start VOAProp and set the location of VOACAP using the dialog that appears. If you receive an error message from VOACAP, close it, then right-click the map and set your home location. Close VOAProp to save your location. It should work normally after that.</p>
+<p>You will probably also want to create a link to the <a href="voaprop_about.html" target="_blank">VOAProp online help</a>.</p>
+<h3><a href="http://www.g4ilo.com/files/VOAProp_DtHilfe_PDF.zip">German language help file (450Kb)</a></h3>
+<p>This translation of the online help into German has been kindly provided by Eike, DM3ML.</p>
+      <hr class="accessibility" />
+   <!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+  </div>
+
+  <div id="content_left">
+            <div id="menuwrapper">
+<ul>
+	<li class="menuparent"><a class="menuparent" 
+href="index.html" accesskey="1" title="Home Page, shortcut key=1"><dfn>1: </dfn>Home</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="radio.html" ><dfn>2: </dfn>Radio Topics</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="reviews.html" ><dfn>3: </dfn>Reviews</a>
+
+</li>
+	<li class="menuactive menuparent"><a class="menuactive menuparent" 
+href="software.html" ><dfn>4: </dfn>Software</a>
+
+
+	<ul class='sub_nav'>
+	<li><a 
+href="k2net.html" ><dfn>4.2: </dfn>K2Net</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="kcomm.html" ><dfn>4.3: </dfn>KComm</a>
+
+</li>
+	<li><a 
+href="ktune.html" ><dfn>4.4: </dfn>KTune</a>
+
+</li>
+	<li><a 
+href="morse-machine.html" ><dfn>4.5: </dfn>Morse Machine</a>
+
+</li>
+	<li><a 
+href="morsegen.html" ><dfn>4.6: </dfn>MorseGen</a>
+
+</li>
+	<li><a 
+href="morsetest.html" ><dfn>4.7: </dfn>MorseTest</a>
+
+</li>
+	<li><a 
+href="psk31test.html" ><dfn>4.8: </dfn>PSK31 Delphi Demo</a>
+
+</li>
+	<li class="menuactive menuparent"><a class="menuactive menuparent" 
+href="voaprop.html" ><dfn>4.9: </dfn>VOAProp</a>
+
+
+	<ul class='sub_nav'>
+	<li><a 
+href="voaprop_about.html" ><dfn>4.9.1: </dfn>About VOAProp</a>
+
+</li>
+	<li><a 
+href="voaprop_instreq.html" ><dfn>4.9.2: </dfn>Installation</a>
+
+</li>
+	<li><a 
+href="voaprop_gs.html" ><dfn>4.9.3: </dfn>Getting started</a>
+
+</li>
+	<li><a 
+href="voaprop_bcns.html" ><dfn>4.9.4: </dfn>Beacon monitoring</a>
+
+</li>
+	<li><a 
+href="voaprop_locns.html" ><dfn>4.9.5: </dfn>Editing locations</a>
+
+</li>
+	<li><a 
+href="voaprop_faq.html" ><dfn>4.9.6: </dfn>Frequently asked questions</a>
+
+</li>
+	<li><a 
+href="voaprop_probs.html" ><dfn>4.9.7: </dfn>Troubleshooting</a>
+
+</li>
+	<li><a 
+href="voaprop_how_it_works.html" ><dfn>4.9.8: </dfn>How it works</a>
+
+
+	</li></ul>
+	</li>
+	<li><a 
+href="webprop.html" ><dfn>4.10: </dfn>WebProp</a>
+
+
+	</li></ul>
+	</li>
+	<li><a 
+href="guestbook.html" ><dfn>5: </dfn>Visitors Book</a>
+
+</li>
+	<li><a 
+href="log.html" ><dfn>6: </dfn>Contact Log</a>
+
+</li>
+	<li><a 
+href="psk-reporter.html" ><dfn>7: </dfn>Recently heard</a>
+
+</li>
+	<li><a 
+href="search.html" ><dfn>8: </dfn>Search the site</a>
+
+
+			</li>
+	</ul>
+<div class="clearb"></div>
+</div>
+
+<ul>
+  <li><a href="http://blog.g4ilo.com/" >G4ILO&#39;s Blog</a></li>
+  <li><a href="http://www.youtube.com/user/g4ilohamradio" >G4ILO&#39;s Videos</a></li>
+</ul>
+            <p align="center"><g:plusone size="medium"></g:plusone></p>
+<script type="text/javascript">
+  window.___gcfg = {lang: 'en-GB'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+    <div class="misc">
+      <!-- eqsl form start --> <form action="http://www.eqsl.cc/qslcard/eQSLSearch.cfm" method="post"> <input name="ReferralID" type="hidden" value="296" /> <span style="color: #ff0000; font-size: xx-small;">You have <strong>eQSLs</strong> waiting!</span><br /> <span style="font-size: xx-small;">Enter your call and click <strong>Check</strong></span><br /> <input name="Callsign" size="10" type="text" /><br /> <input type="submit" value="Check" /> </form> <!-- eqsl form end -->
+    </div>
+    <!-- adsense start -->
+<div align="center">
+<br/><br/>
+<script type="text/javascript"><!--
+google_ad_client = "pub-8473114760998486";
+/* 160x600, created 27/05/09 */
+google_ad_slot = "9973442554";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+<br />
+    <div style="text-align: center;"><br /><a href="http://evuln.com/tools/malware-scanner/g4ilo.com/"><img style="cursor:pointer" src="http://evuln.com/tools/monitoring/badge/g4ilo.com.jpg" alt="eVuln.com" /></a></div>
+    <p align="center"><a id="clustrMapsLink" href="http://www3.clustrmaps.com/counter/maps.php?url=http://www.g4ilo.com"><img id="clustrMapsImg" style="border:0px;" title="Locations of visitors to this page" src="http://www3.clustrmaps.com/counter/index2.php?url=http://www.g4ilo.com" alt="Locations of visitors to this page" /></a></p>
+    <p align="center"><a href="http://www.rsgb.org" target="_blank"><img title="RSGB Centenary" src="http://www.g4ilo.com/images/rsgb-100.png" border="0" alt="" width="160" height="83" /></a></p>
+  </div>
+
+</div>
+
+   <div id="footer_wrapper">
+   <div id="footer"><p>Copyright © 1998 - 2012 Julian, G4ILO. All rights reserved.</p></div>
+</div>
+   </div>
+
+</body>
+</html><!-- 0.099835 / 77 / 10268120 / 10867144 -->

@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>PSK31 Delphi Demo</title>
+
+<meta name="description" content="A demonstration of how to use the PSK Core DLL in Borland Delphi. Source code for a complete working PSK31 program." />
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheet.php%3Fcssid=31&amp;mediatype=screen.css" />
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=42&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="MorseTest" href="morsetest.html" />
+<link rel="next" title="VOAProp" href="voaprop.html" />
+</head>
+<body>
+<div id="main">
+        <ul class="accessibility">
+      <li><a href="psk31test.html#menuwrapper" title="Skip to navigation" accesskey="n">Skip to navigation</a></li>
+      <li><a href="psk31test.html#content" title="Skip to content" accesskey="s">Skip to content</a></li>
+    </ul>
+        <hr class="accessibility" />
+    
+<!-- header start -->
+<div id="header_wrapper">
+<div id="header">
+<hr class="accessibility" />
+</div>
+</div>
+<!-- header end -->
+<div id="content_wrapper">
+
+  <div id="content">
+         <h1>PSK31 Delphi Demo</h1>
+      <!-- adsense start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* 728x15 L/U */
+google_ad_slot = "3834710687";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+      <p>This program, PSK31Test, is a demonstration of how to use the PSK31 Core DLL written by Moe Wheatley, AE4JY, in a Borland Delphi program. It is released for the benefit of those who would like to use Borland Delphi to develop PSK31 programs of their own. The DLL itself plus documentation may be obtained from Moe Wheatley's web site at <a href="http://www.qsl.net/ae4jy/" target="_blank">http://www.qsl.net/ae4jy/</a>.</p>
+<p align="center"><img title="PSK31 Delphi Demo" src="http://www.g4ilo.com/images/psk31dd.gif" alt="screenshot" width="480" height="364" /></p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<p>Note that since this program was written, several updates to the PSK31 Core DLL have been made, and some new DLL functions have been added that are not included in the examples. Please consult the PSK31 Core DLL documentation for more information. It should be fairly obvious how to add Delphi interfaces for the new functions.</p>
+<h2>Description</h2>
+<p>Although the program is a functional working PSK31 program in its own right, it was only written to demonstrate how a PSK31 application could be written in Borland Delphi using the PSK31 Core DLL. The program is not intended for regular on-air use. This project is intended to be used by other programmers to create their own PSK31 software.</p>
+<h2>Requirements</h2>
+<ul>
+<li>PC running Windows 95, 98, Me, 2000 or XP.</li>
+<li>Sound card configured as default wave output device.</li>
+<li>Borland Delphi 3.0 or later (to compile the source code.)</li>
+</ul>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>Downloads</h2>
+<a href="http://www.g4ilo.com/files/psk31dd.zip">
+<h3>Download PSK31 Delphi Demo (175Kb)</h3>
+</a>
+<p>This software is released under the GNU General Public License. The download package includes the full source code.</p>
+<p>If you wish to provide a link to this program from your own web pages please link to <a href="psk31test.html">this page</a>, not directly to the download file.</p>
+      <hr class="accessibility" />
+   <!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+  </div>
+
+  <div id="content_left">
+            <div id="menuwrapper">
+<ul>
+	<li class="menuparent"><a class="menuparent" 
+href="index.html" accesskey="1" title="Home Page, shortcut key=1"><dfn>1: </dfn>Home</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="radio.html" ><dfn>2: </dfn>Radio Topics</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="reviews.html" ><dfn>3: </dfn>Reviews</a>
+
+</li>
+	<li class="menuactive menuparent"><a class="menuactive menuparent" 
+href="software.html" ><dfn>4: </dfn>Software</a>
+
+
+	<ul class='sub_nav'>
+	<li><a 
+href="k2net.html" ><dfn>4.2: </dfn>K2Net</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="kcomm.html" ><dfn>4.3: </dfn>KComm</a>
+
+</li>
+	<li><a 
+href="ktune.html" ><dfn>4.4: </dfn>KTune</a>
+
+</li>
+	<li><a 
+href="morse-machine.html" ><dfn>4.5: </dfn>Morse Machine</a>
+
+</li>
+	<li><a 
+href="morsegen.html" ><dfn>4.6: </dfn>MorseGen</a>
+
+</li>
+	<li><a 
+href="morsetest.html" ><dfn>4.7: </dfn>MorseTest</a>
+
+</li>
+	<li class="menuactive"><a class="menuactive" 
+href="psk31test.html" ><dfn>4.8: </dfn>PSK31 Delphi Demo</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="voaprop.html" ><dfn>4.9: </dfn>VOAProp</a>
+
+</li>
+	<li><a 
+href="webprop.html" ><dfn>4.10: </dfn>WebProp</a>
+
+
+	</li></ul>
+	</li>
+	<li><a 
+href="guestbook.html" ><dfn>5: </dfn>Visitors Book</a>
+
+</li>
+	<li><a 
+href="log.html" ><dfn>6: </dfn>Contact Log</a>
+
+</li>
+	<li><a 
+href="psk-reporter.html" ><dfn>7: </dfn>Recently heard</a>
+
+</li>
+	<li><a 
+href="search.html" ><dfn>8: </dfn>Search the site</a>
+
+
+			</li>
+	</ul>
+<div class="clearb"></div>
+</div>
+
+<ul>
+  <li><a href="http://blog.g4ilo.com/" >G4ILO&#39;s Blog</a></li>
+  <li><a href="http://www.youtube.com/user/g4ilohamradio" >G4ILO&#39;s Videos</a></li>
+</ul>
+            <p align="center"><g:plusone size="medium"></g:plusone></p>
+<script type="text/javascript">
+  window.___gcfg = {lang: 'en-GB'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+    <div class="misc">
+      <!-- eqsl form start --> <form action="http://www.eqsl.cc/qslcard/eQSLSearch.cfm" method="post"> <input name="ReferralID" type="hidden" value="296" /> <span style="color: #ff0000; font-size: xx-small;">You have <strong>eQSLs</strong> waiting!</span><br /> <span style="font-size: xx-small;">Enter your call and click <strong>Check</strong></span><br /> <input name="Callsign" size="10" type="text" /><br /> <input type="submit" value="Check" /> </form> <!-- eqsl form end -->
+    </div>
+    <!-- adsense start -->
+<div align="center">
+<br/><br/>
+<script type="text/javascript"><!--
+google_ad_client = "pub-8473114760998486";
+/* 160x600, created 27/05/09 */
+google_ad_slot = "9973442554";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+<br />
+    <div style="text-align: center;"><br /><a href="http://evuln.com/tools/malware-scanner/g4ilo.com/"><img style="cursor:pointer" src="http://evuln.com/tools/monitoring/badge/g4ilo.com.jpg" alt="eVuln.com" /></a></div>
+    <p align="center"><a id="clustrMapsLink" href="http://www3.clustrmaps.com/counter/maps.php?url=http://www.g4ilo.com"><img id="clustrMapsImg" style="border:0px;" title="Locations of visitors to this page" src="http://www3.clustrmaps.com/counter/index2.php?url=http://www.g4ilo.com" alt="Locations of visitors to this page" /></a></p>
+    <p align="center"><a href="http://www.rsgb.org" target="_blank"><img title="RSGB Centenary" src="http://www.g4ilo.com/images/rsgb-100.png" border="0" alt="" width="160" height="83" /></a></p>
+  </div>
+
+</div>
+
+   <div id="footer_wrapper">
+   <div id="footer"><p>Copyright © 1998 - 2012 Julian, G4ILO. All rights reserved.</p></div>
+</div>
+   </div>
+
+</body>
+</html><!-- 0.077969 / 61 / 10089080 / 10699488 -->

@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Transmitting</title>
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=43&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Receiving" href="kcomm_rx.html" />
+<link rel="next" title="Macros" href="kcomm_macros.html" />
+</head>
+<body>
+<div id="main">
+<div id="content_wrapper">
+  <div id="content">
+         <h1>Transmitting</h1>
+      <p>The transmit panel is used to send Morse or data by typing it into the text window or by using <a href="kcomm_macros.html" title="Macros">macros</a> containing pre-prepared texts. Macros are  similar in purpose to a Morse memory keyer, but they may contain special symbols  that are replaced with information such as the other station's call or name in  real time. They may control the logging of information.</p>
+<p style="text-align: center;"><img src="http://www.g4ilo.com/images/kcomm-h4.gif" border="0" alt="The Transmitting panel" width="600" height="156" /></p>
+<p>KComm provides sixteen macros for use at any one time. These may be loaded and saved using   the icon buttons on the right, so it is easy to have different macro sets for   different modes, or for contesting, DXing and ragchewing. KComm remembers   the macro set last used for each mode, so you don't have to manually switch macros when changing from CW to data and back.</p>
+<p>Each macro button has a caption which tells you what it does. To provide  further confirmation a tool-tip pops up when you hover the mouse over the  button. You specify what to put in the caption and tool-tip.</p>
+<p>The button caption is shown in bold if the macro starts sending  whatever is in the text buffer immediately, which it does by including the  command <strong>^t</strong> in the macro. Other macros simply copy their contents to the  text buffer, shown in the large window, and are not sent until you click <strong>Start  sending</strong>.</p>
+<p>You can type text directly into the window as well, either to prepare a reply   while the other side is sending (hence it is called the <strong>typeahead window</strong>)  or in real time, during the transmission. You cannot edit the text to be sent by typing into the middle of it. You can usually backspace to correct mistakes on a line, but not always during sending, because the software grabs the text out of the buffer and sends it to the radio in big chunks, after which it is difficult to do anything about it.</p>
+<p>The best way to find out how the text panel and macros work is to put the K2  or K3 into test mode and make some imaginary contacts. This is especially  important when developing your own macros because the syntax of the commands is  quite specific and if you make a mistake you may end up sending gibberish!</p>
+<p>You can choose to have typed Morse text appear in upper case, if you prefer.  The <strong>Clear</strong> button clears the contents of the text buffer. The <strong>Load</strong> button lets you load the contents of a text file into the text buffer, should  you have a reason to do that.</p>
+<p>Once sending has started, the Start sending button caption changes to <strong>Stop  sending</strong>. Click this when you have entered all you want to send. It will take  effect only once all the sending has been completed. If you wish to abort a  transmission, click Stop sending a second time, or click in the transmit window  to ensure it is the focus of your typing and then hit <strong>Esc</strong>.</p>
+<h2>Shortcut keys and CW prosigns</h2>
+<p>In CW mode you can send Morse prosigns either by typing them as text, with spaces on either side - e.g. ' AR ', ' BT ', ' KN ', ' SK ' - or by typing the ASCII characters that the K2/K3 associates with the prosigns: ( for KN, + for AR, = for BT, % for AS, * for SK and ! for VE.</p>
+<p>You can also use Ctrl key codes to insert prosigns and some other information (such as name and callsign) into the text you are typing.</p>
+<table border="2" cellspacing="2" cellpadding="2" width="80%" align="center">
+<tbody>
+<tr>
+<td>Ctrl+A</td>
+<td>CW prosign 'AR'</td>
+</tr>
+<tr>
+<td>Ctrl+B</td>
+<td>CW prosign 'BT'</td>
+</tr>
+<tr>
+<td>Ctrl+C</td>
+<td>Other station's callsign (from log field) <br /></td>
+</tr>
+<tr>
+<td>Ctrl+G</td>
+<td>Greeting (e.g. GA, 'good afternoon')</td>
+</tr>
+<tr>
+<td>Ctrl+K</td>
+<td>CW prosign 'KN' <br /></td>
+</tr>
+<tr>
+<td>Ctrl+M</td>
+<td>Your callsign (MYCALL) <br /></td>
+</tr>
+<tr>
+<td>Ctrl+N</td>
+<td>Other station's name (from log field)<br /></td>
+</tr>
+<tr>
+<td>Ctrl+R</td>
+<td>Report (RST) sent <br /></td>
+</tr>
+<tr>
+<td>Ctrl+S</td>
+<td>CW prosign 'SK'</td>
+</tr>
+<tr>
+<td>Ctrl+X</td>
+<td>Contest exchange sent</td>
+</tr>
+</tbody>
+</table>
+<p><strong>K3 Notes:</strong></p>
+<p>1. The K3 can be set up to use the @ character in CW mode <em>either</em> as an abort signal, <em>or</em> to send the CW prosign for '@'. The former option must be selected (from the CONFIG menu) otherwise you will not be able to abort CW text that has been sent to the K3 by hitting the Esc key.</p>
+<p>2. In the current version of the K3 firmware, all text in PSK31 is transmitted as lower case regardless of how it is sent by KComm.</p>
+<h2>Character sets</h2>
+<p>In data modes that can transmit the full 256 ASCII characters the difficulty arises that the topmost 128 character values stand for different characters depending on the character set being used. KComm needs to know the character set being used on your computer in order to convert the characters correctly. Under Windows this can be detected automatically but under Linux it isn't, so this needs to be set using one of the <a href="kcomm_miscellaneous_settings.html" title="Miscellaneous">Miscellaneous Settings</a> options.</p>
+<p>If you use the Language Bar or equivalent Linux feature to switch languages then KComm cannot detect this so you should use the setting mentioned above to select the character set you habitually use. This setting affects any <a href="kcomm_macros.html" title="Macros">macros</a> you create as well, so if for example you have some stored greetings in Cyrillic text to send to Russian hams when you work them on PSK31, you must have one of the Cyrillic character encodings selected when you transmit those macros.</p>
+      	 <hr>
+	 <div class="right49">
+	    Next page: <a href="kcomm_macros.html" title="Macros">Macros</a>
+	 </div>
+         <div class="left49">
+            Previous page: <a href="kcomm_rx.html" title="Receiving">Receiving</a>
+         </div>
+           </div>
+  <div id="content_left">
+      <h2>KComm Help</h2>
+             
+<ul class="clearfix">
+
+<li><a href="kcomm_hlp.html"> About KComm </a>
+
+
+</li>
+
+<li><a href="kcomm_req.html"> System requirements </a>
+
+
+</li>
+
+<li><a href="kcomm_inst.html"> Installation </a>
+
+
+</li>
+
+<li><a href="kcomm_gs.html"> Getting started </a>
+
+
+</li>
+
+<li><a href="kcomm_logging.html"> Logging </a>
+
+
+</li>
+
+<li><a href="kcomm_rx.html"> Receiving </a>
+
+
+</li>
+
+<li><a href="kcomm_tx.html" class="currentpage"> Transmitting </a>
+
+
+</li>
+
+<li><a href="kcomm_macros.html"> Macros </a>
+
+
+</li>
+
+<li><a href="kcomm_bc.html"> Band changing </a>
+
+
+</li>
+
+<li><a href="kcomm_mc.html"> Mode changing </a>
+
+
+</li>
+
+<li><a href="kcomm-shortcuts.html"> Shortcuts </a>
+
+
+</li>
+
+<li><a href="kcomm_sb.html"> Status bar </a>
+
+
+</li>
+
+<li><a href="kcomm_dx_cluster.html"> DX Cluster </a>
+
+
+</li>
+
+<li><a href="kcomm_psk_browser.html"> PSK Browser </a>
+
+
+</li>
+
+<li><a href="kcomm_settings.html"> Settings </a>
+
+
+</li>
+
+<li><a href="kcomm_editing_log.html"> Editing log entries </a>
+
+
+</li>
+
+<li><a href="kcomm_importing.html"> Importing log data </a>
+
+
+</li>
+
+<li><a href="kcomm_exporting.html"> Exporting log data </a>
+
+
+</li>
+
+<li><a href="kcomm_stats.html"> Statistics </a>
+
+
+</li>
+
+<li><a href="kcomm_faq.html"> Frequently asked questions </a>
+
+
+</li>
+
+<li><a href="kcomm_ts.html"> Troubleshooting </a>
+
+
+
+</li>
+</ul>
+
+      <ul class="clearfix">
+        <li><a href="kcomm.html"> KComm </a></li>
+        <li><a href="index.html"> G4ILO's Shack </a></li>
+      </ul>
+        </div>
+</div>
+</div>
+</body>
+</html><!-- 0.08959 / 43 / 9999376 / 10579648 -->

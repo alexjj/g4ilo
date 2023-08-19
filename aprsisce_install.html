@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Installing APRSISCE/32</title>
+
+<meta name="description" content="This article shows you how to install and configure a basic installation of APRSISCE / APRSIS32 for the first time." />
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheet.php%3Fcssid=31&amp;mediatype=screen.css" />
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=42&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="APRS - Putting ham radio on the map" href="aprs.html" />
+<link rel="next" title="Getting started with APRSISCE/32" href="aprsisce_gs.html" />
+</head>
+<body>
+<div id="main">
+        <ul class="accessibility">
+      <li><a href="aprsisce_install.html#menuwrapper" title="Skip to navigation" accesskey="n">Skip to navigation</a></li>
+      <li><a href="aprsisce_install.html#content" title="Skip to content" accesskey="s">Skip to content</a></li>
+    </ul>
+        <hr class="accessibility" />
+    
+<!-- header start -->
+<div id="header_wrapper">
+<div id="header">
+<hr class="accessibility" />
+</div>
+</div>
+<!-- header end -->
+<div id="content_wrapper">
+
+  <div id="content">
+         <h1>Installing APRSISCE/32</h1>
+      <!-- adsense start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* 728x15 L/U */
+google_ad_slot = "3834710687";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+      <p>If you thought <a href="aprs.html" title="APRS - Putting ham radio on the map">APRS</a> was just about using ham radio to plot the position of mobiles on a map then you are wrong. If you thought you needed a TNC connected to a VHF radio to use APRS then you were wrong about that too - it certainly helps if you want to actively participate but it isn't essential. With nothing more than some free software and the computer you are using now you can join the APRS network and see what is going on in ham radio in your locality. So why not give it a try?</p>
+<h2>APRSISCE</h2>
+<p>APRSISCE is the latest, most actively developed APRS client software for Windows. It runs on Windows PCs, Windows Mobile phones (up to WM 6.5) and many older Pocket PC / Windows CE devices. It also runs under wine on Linux. This article will show you how to get a basic APRSISCE installation up and running. The Windows desktop PC version (APRSIS32) is illustrated, but the mobile version is very similar.</p>
+<p>APRSISCE is developed by Lynn Deffenbaugh, KJ4ERJ. To get the software you must first join the <strong><a class="external" href="http://groups.yahoo.com/group/aprsisce/" target="_blank">APRSISCE group at Yahoo!</a></strong> Be sure to give your name and call on the registration page or your application will be delayed until Lynn has obtained that information from you. Once you have been granted access you can go to the <strong>Files</strong> section in the group and download the software. You want the APRSIS32 version for Windows desktop PCs and APRSISCE6P for mobile devices.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>Installing the software</h2>
+<p>The program is packaged in a zip file. There is no installer. Create a folder for APRSIS32 and extract the contents of the zip file into the folder. I would recommend C:\APRSIS32 or C:\Ham\APRSIS32 (the last is what I actually use - I keep all my ham radio programs under the C:\Ham folder.)</p>
+<p>If you are running Windows Vista or Windows 7 then <strong>do not install APRSISCE into a folder under Program Files</strong>. The program needs to have read/write access to files in this folder and a subfolder it creates for the map tiles, and the Windows protection of the Program Files folder won't allow it.</p>
+<p>Now you can create a shortcut on the desktop or wherever is convenient to start the program.</p>
+<h2>Starting the configuration</h2>
+<p>Double-click the .EXE file to run the program. The <strong>Client Configuration</strong> dialog will appear.</p>
+<p style="text-align: center;"><img src="http://www.g4ilo.com/images/aprsisce_cfg_1.gif" alt="APRSISCE Client configuration dialog" width="245" height="244" /></p>
+<p>Enter your call and desired SSID into <strong>MyCall-ssid</strong>. If you don't know what an SSID is then your call on its own will do fine.</p>
+<p>If you have used other APRS software before and have a password that you used with it, enter it into <strong>Password</strong>. The password allows you to send information to the APRS-IS internet network. If you don't have a password, leave it as the default -1 for now. This will let you receive information from the network but not send it. To obtain a password for APRSISCE you must request one from KJ4ERJ (<a href="mailto:aprsisce-owner@yahoogroups.com">aprsisce-owner@yahoogroups.com</a>.) Be sure to state your <strong>name</strong> and <strong>callsign</strong> when requesting it.</p>
+<p>As you're using a computer, the laptop icon is also good for now. If you're using a mobile phone then you'll probably have a blue telephone icon instead. So click <strong>Accept</strong> to get to the next stage of the configuration.</p>
+<h2>Setting your position<br /></h2>
+<p>The main window of APRSISCE will now appear. However, since the program doesn't know where you are, it will have you located at zero degrees of longitude on the Equator.</p>
+<p style="text-align: center;"><img src="http://www.g4ilo.com/images/aprsisce_cfg_3.gif" alt="APRSISCE Setting your position" width="480" height="267" /></p>
+<p>You set your position by dragging the map so that your location is centered, zooming in to increase the scale and show more detail in order to pinpoint your position exactly.</p>
+<p>You can drag the map using your mouse (or your finger in the mobile version.) Use the <strong>Up arrow</strong> key to increase the scale (zoom in) and the <strong>Down arrow</strong> key to decrease it (zoom out).</p>
+<p style="text-align: center;"><img src="http://www.g4ilo.com/images/aprsisce_cfg_4.gif" alt="APRSISCE Finding your location" width="480" height="267" /></p>
+<p>The Left and Right arrow keys alter the transparency of the map. The <strong>Right arrow</strong> increases the opacity (makes it less transparent) while the <strong>Left arrow</strong> increases the transparency (makes it less opaque.) <em>Tip for Linux users: If you don't see a map at all, your display drivers under wine may not support transparency so hit the Right arrow key at least 10 times to reach full opacity.</em></p>
+<p style="text-align: center;"><img src="http://www.g4ilo.com/images/aprsisce_cfg_5.gif" alt="APRSISCE Zooming in on your location" width="480" height="267" /></p>
+<p>Once you have the center of the screen in the ball-park, zoom right in to set your position with accuracy. (The black diamond with an I in it is the symbol for my VHF gateway which had been received while I was doing this: you won't normally see anything unless you have another APRS station. The yellow expanding circle shows the progress of APRSISCE retrieving map tiles for the area.)</p>
+<p>When you are satisfied that you have your exact location in the center of the screen, click <strong>Transmit</strong> on the menu. This will set your position so that it will be recalled the next time you start the program.</p>
+<p>You can now zoom back out again to see the whole of the area you are interested in.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>Conclusion</h2>
+<p>You now have a working basic installation of APRSISCE/32. In future articles in the series I hope to cover more advanced configuration, messaging, connecting a radio or TNC and other aspects of the program. The next tutorial in the series looks at <a href="aprsisce_gs.html" title="Getting started with APRSISCE/32">Getting Started with APRSISCE/32</a>.</p>
+<p>If you have any questions about using APRSISCE/32 then check out the <a class="external" href="http://aprsisce.wikidot.com/" target="_blank">APRSISCE wiki</a>. If you can't find the answer there then please ask in the APRSISCE Yahoo! group. Use the group's search function first in case it is a frequently asked question!</p>
+      <hr class="accessibility" />
+   <!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+
+  </div>
+
+  <div id="content_left">
+            <div id="menuwrapper">
+<ul>
+	<li class="menuparent"><a class="menuparent" 
+href="index.html" accesskey="1" title="Home Page, shortcut key=1"><dfn>1: </dfn>Home</a>
+
+</li>
+	<li class="menuactive menuparent"><a class="menuactive menuparent" 
+href="radio.html" ><dfn>2: </dfn>Radio Topics</a>
+
+
+	<ul class='sub_nav'>
+	<li><a 
+href="ham-radio-faq.html" ><dfn>2.1: </dfn>What is amateur radio?</a>
+
+</li>
+	<li><a 
+href="qrp.html" ><dfn>2.2: </dfn>QRP is more fun&#33;</a>
+
+</li>
+	<li><a 
+href="stealth.html" ><dfn>2.3: </dfn>Stealth Amateur Radio</a>
+
+</li>
+	<li><a 
+href="wonder-loop.html" ><dfn>2.4: </dfn>The Wonder Loop</a>
+
+</li>
+	<li><a 
+href="antenna.html" ><dfn>2.5: </dfn>Feeding the Antenna</a>
+
+</li>
+	<li><a 
+href="wspr.html" ><dfn>2.6: </dfn>WSPR - Distant Whispers</a>
+
+</li>
+	<li><a 
+href="linux.html" ><dfn>2.7: </dfn>Why I gave up Linux</a>
+
+</li>
+	<li><a 
+href="ft817.html" ><dfn>2.8: </dfn>The FT-817 Page</a>
+
+</li>
+	<li><a 
+href="diy-ducky.html" ><dfn>2.9: </dfn>DIY Ducky for 2m</a>
+
+</li>
+	<li><a 
+href="k2_headset.html" ><dfn>2.10: </dfn>Elecraft K2 headset</a>
+
+</li>
+	<li><a 
+href="psk31.html" ><dfn>2.11: </dfn>PSK31</a>
+
+</li>
+	<li><a 
+href="k2psk31.html" ><dfn>2.12: </dfn>K2 on data modes</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="wxsats.html" ><dfn>2.13: </dfn>Receiving Wxsats</a>
+
+</li>
+	<li><a 
+href="eqsl.html" ><dfn>2.14: </dfn>Electronic QSLing</a>
+
+</li>
+	<li><a 
+href="sporadic-e.html" ><dfn>2.15: </dfn>E-type propagation</a>
+
+</li>
+	<li class="menuactive menuparent"><a class="menuactive menuparent" 
+href="aprs.html" ><dfn>2.16: </dfn>APRS - On the map</a>
+
+
+	<ul class='sub_nav'>
+	<li class="menuactive"><a class="menuactive" 
+href="aprsisce_install.html" ><dfn>2.16.1: </dfn>Installing APRSISCE/32</a>
+
+</li>
+	<li><a 
+href="aprsisce_gs.html" ><dfn>2.16.2: </dfn>Getting started</a>
+
+
+	</li></ul>
+	</li>
+	<li><a 
+href="usblink.html" ><dfn>2.17: </dfn>USBlink data interface</a>
+
+
+	</li></ul>
+	</li>
+	<li class="menuparent"><a class="menuparent" 
+href="reviews.html" ><dfn>3: </dfn>Reviews</a>
+
+</li>
+	<li class="menuparent"><a class="menuparent" 
+href="software.html" ><dfn>4: </dfn>Software</a>
+
+</li>
+	<li><a 
+href="guestbook.html" ><dfn>5: </dfn>Visitors Book</a>
+
+</li>
+	<li><a 
+href="log.html" ><dfn>6: </dfn>Contact Log</a>
+
+</li>
+	<li><a 
+href="psk-reporter.html" ><dfn>7: </dfn>Recently heard</a>
+
+</li>
+	<li><a 
+href="search.html" ><dfn>8: </dfn>Search the site</a>
+
+
+			</li>
+	</ul>
+<div class="clearb"></div>
+</div>
+
+<ul>
+  <li><a href="http://blog.g4ilo.com/" >G4ILO&#39;s Blog</a></li>
+  <li><a href="http://www.youtube.com/user/g4ilohamradio" >G4ILO&#39;s Videos</a></li>
+</ul>
+            <p align="center"><g:plusone size="medium"></g:plusone></p>
+<script type="text/javascript">
+  window.___gcfg = {lang: 'en-GB'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+    <div class="misc">
+      <!-- eqsl form start --> <form action="http://www.eqsl.cc/qslcard/eQSLSearch.cfm" method="post"> <input name="ReferralID" type="hidden" value="296" /> <span style="color: #ff0000; font-size: xx-small;">You have <strong>eQSLs</strong> waiting!</span><br /> <span style="font-size: xx-small;">Enter your call and click <strong>Check</strong></span><br /> <input name="Callsign" size="10" type="text" /><br /> <input type="submit" value="Check" /> </form> <!-- eqsl form end -->
+    </div>
+    <!-- adsense start -->
+<div align="center">
+<br/><br/>
+<script type="text/javascript"><!--
+google_ad_client = "pub-8473114760998486";
+/* 160x600, created 27/05/09 */
+google_ad_slot = "9973442554";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+<br />
+    <div style="text-align: center;"><br /><a href="http://evuln.com/tools/malware-scanner/g4ilo.com/"><img style="cursor:pointer" src="http://evuln.com/tools/monitoring/badge/g4ilo.com.jpg" alt="eVuln.com" /></a></div>
+    <p align="center"><a id="clustrMapsLink" href="http://www3.clustrmaps.com/counter/maps.php?url=http://www.g4ilo.com"><img id="clustrMapsImg" style="border:0px;" title="Locations of visitors to this page" src="http://www3.clustrmaps.com/counter/index2.php?url=http://www.g4ilo.com" alt="Locations of visitors to this page" /></a></p>
+    <p align="center"><a href="http://www.rsgb.org" target="_blank"><img title="RSGB Centenary" src="http://www.g4ilo.com/images/rsgb-100.png" border="0" alt="" width="160" height="83" /></a></p>
+  </div>
+
+</div>
+
+   <div id="footer_wrapper">
+   <div id="footer"><p>Copyright © 1998 - 2012 Julian, G4ILO. All rights reserved.</p></div>
+</div>
+   </div>
+
+</body>
+</html><!-- 0.097782 / 81 / 10437368 / 11068536 -->

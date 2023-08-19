@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Logging</title>
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=43&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Getting started" href="kcomm_gs.html" />
+<link rel="next" title="Receiving" href="kcomm_rx.html" />
+</head>
+<body>
+<div id="main">
+<div id="content_wrapper">
+  <div id="content">
+         <h1>Logging</h1>
+      <p>KComm stores details of contacts made in a log file.The format of this log file is exactly the same as that used by the <strong><a href="http://mixw.net/" target="_blank"> MixW</a></strong> software. If you use MixW then you can tell KComm (in the <a href="kcomm_log_settings.html" title="Logging">Logging settings</a>) to use the same log file. Your contacts will then be logged to the same log database, whichever software you are using, and you can use the features of MixW to work on the log data. (But please don't run both programs at the same time, or your log may get corrupted!)</p>
+<div style="text-align: center;"><img style="border: 0pt none;" src="http://www.g4ilo.com/images/kcomm-h2.gif" alt="The Logging panel" width="591" height="199" /></div>
+<p>The <strong>Logging</strong> panel is used for logging contacts, It consists of a tabulated  list of the completed contacts, and a set of input fields which are used to add  new contacts. To the right of these are four buttons. The purpose of the fields  and buttons should be almost self explanatory.</p>
+<p>You use the <strong> New</strong> button to clear the fields ready for a new contact. You  may then begin to enter details of a station you are about to try to contact.  When a call has been entered into the Call field, two small blue question marks  will appear above this field. These are links that you can click to open the  details of that call at qrz.com or the HamCall website. In the Windows version you can click the yellow pin icon to report reception of that station to the <a href="kcomm_psk_browser.html" title="PSK Browser">PSK Reporter</a> website.</p>
+<p>(<strong>Note:</strong> KComm does some basic validation on the contents of some  fields, and may give you an error message if you click away from a field when  the data entered is incomplete and hence invalid. To stop the error message from  appearing, either enter valid data or clear the field.)</p>
+<p>When a station replies to your call, click <strong> Log start</strong>, which enters the start   time, receive frequency and mode into the respective fields. If you are using  macros (see later) to send CW or data text, then you can include commands to log the start and end of a contact as part of the macro.</p>
+<p>Click the <strong>Log end</strong> button to record the end of the contact. This field is held internally and is not visible from the main window. If the contact doesn't end  when you thought it would, you can click this button again to update the end  time as often as you want.</p>
+<p>When the contact has finished and you have completed and checked all the   fields, you can add it to the log by clicking the <strong> Save</strong> button, which then clears the fields ready for the next contact.</p>
+<p>Once a contact has been saved to the log, you can edit it by <strong>double-clicking</strong> on that entry. This opens a dialog box allowing you to change any of the fields, including some fields that don't appear in the main window. You can record when QSLs are sent and received, and even submit eQSLs from this window.</p>
+<p>(<strong>Note:</strong> log entries are always appended to the log so they <em> must</em> be added in chronological order. However, if you do manage to add entries out of order then it is possible to correct the problem using a text editor, as the log file is in plain text, editable using Notepad.)</p>
+<h2>Callsign lookups</h2>
+<p>The two ?'s above the Call field in both the logging window and the edit window can be used to look up details of that call using one of the popular callsign databases: <a href="http://hamcall.net/" target="_blank">HamCall</a> and <a href="http://qrz.com" target="_blank">QRZ.com</a>. The lookups are performed using the websites, through your web browser. KComm does not support the use of CD databases.</p>
+<p>You may need to be logged in to the appropriate website in order to go straight to the database entry.</p>
+<p>You can change the websites used to perform the lookups using the <strong><a href="kcomm_lookups_settings.html" title="Lookups">Lookups</a></strong> settings option.</p>
+<h2>Search, import, export and statistics</h2>
+<p>The log panel has some important features that may not immediately be apparent.  If you right-click<em> </em>[Linux: middle-click] on the tabular log listing a pop-up menu will appear. One of  the options is to <strong> search for a call</strong>. Just type the callsign you are looking  for and the listing will be scrolled to show that entry. You can then search for  subsequent contacts with the same call.</p>
+<p>You also use this pop-up menu to <strong>import</strong> a log in ADIF format from another logging program, <strong>export</strong> sections of the log to a file for  import to other software or for submitting a contest log, and to get <strong>statistics</strong> of your contacts. After importing some contacts you can <strong>sort</strong> the log file so that they appear in chronological order.</p>
+<p><strong>Warning:</strong> Due to differences in interpretation of the ADIF format, importing a log from some programs may corrupt the log file. Because of this, KComm creates a backup of the original log file before saving any changes. If corruption seems to have occurred, do not try any further imports or the backup will be overwritten by the corrupted version.</p>
+<p>To <strong>select the block of contacts</strong> you want to export or get  statistics on, click on the first contact you are interested in, then press and hold the Shift key while clicking on the last contact you want. You should see a column of data highlighted, with the last item shown in a selection box. Now you can right-click [Linux: middle-click] the table and select Statistics, or Export Selected.</p>
+<p>To save time, there is a built-in option to get statistics on the entire log.  In contest mode, you can also instantly get statistics or export all of the  contacts made from the start of the contest until the end of the log.</p>
+      	 <hr>
+	 <div class="right49">
+	    Next page: <a href="kcomm_rx.html" title="Receiving">Receiving</a>
+	 </div>
+         <div class="left49">
+            Previous page: <a href="kcomm_gs.html" title="Getting started">Getting started</a>
+         </div>
+           </div>
+  <div id="content_left">
+      <h2>KComm Help</h2>
+             
+<ul class="clearfix">
+
+<li><a href="kcomm_hlp.html"> About KComm </a>
+
+
+</li>
+
+<li><a href="kcomm_req.html"> System requirements </a>
+
+
+</li>
+
+<li><a href="kcomm_inst.html"> Installation </a>
+
+
+</li>
+
+<li><a href="kcomm_gs.html"> Getting started </a>
+
+
+</li>
+
+<li><a href="kcomm_logging.html" class="currentpage"> Logging </a>
+
+
+</li>
+
+<li><a href="kcomm_rx.html"> Receiving </a>
+
+
+</li>
+
+<li><a href="kcomm_tx.html"> Transmitting </a>
+
+
+</li>
+
+<li><a href="kcomm_macros.html"> Macros </a>
+
+
+</li>
+
+<li><a href="kcomm_bc.html"> Band changing </a>
+
+
+</li>
+
+<li><a href="kcomm_mc.html"> Mode changing </a>
+
+
+</li>
+
+<li><a href="kcomm-shortcuts.html"> Shortcuts </a>
+
+
+</li>
+
+<li><a href="kcomm_sb.html"> Status bar </a>
+
+
+</li>
+
+<li><a href="kcomm_dx_cluster.html"> DX Cluster </a>
+
+
+</li>
+
+<li><a href="kcomm_psk_browser.html"> PSK Browser </a>
+
+
+</li>
+
+<li><a href="kcomm_settings.html"> Settings </a>
+
+
+</li>
+
+<li><a href="kcomm_editing_log.html"> Editing log entries </a>
+
+
+</li>
+
+<li><a href="kcomm_importing.html"> Importing log data </a>
+
+
+</li>
+
+<li><a href="kcomm_exporting.html"> Exporting log data </a>
+
+
+</li>
+
+<li><a href="kcomm_stats.html"> Statistics </a>
+
+
+</li>
+
+<li><a href="kcomm_faq.html"> Frequently asked questions </a>
+
+
+</li>
+
+<li><a href="kcomm_ts.html"> Troubleshooting </a>
+
+
+
+</li>
+</ul>
+
+      <ul class="clearfix">
+        <li><a href="kcomm.html"> KComm </a></li>
+        <li><a href="index.html"> G4ILO's Shack </a></li>
+      </ul>
+        </div>
+</div>
+</div>
+</body>
+</html><!-- 0.070871 / 47 / 10000216 / 10581080 -->

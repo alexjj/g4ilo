@@ -1,0 +1,207 @@
+/* Start of CMSMS style sheet 'g4ilo_main' */
+body {
+	margin-top:0px;
+	margin-bottom:12px;
+	color:#404040;
+	background-color:#F0F0F0;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+
+#main {
+	width:995px;
+	text-align:center;
+	margin:0 auto;
+	font-size:100%;
+	line-height:140%;
+	background-color:#F8F8F8;
+}
+
+#header_wrapper, #content_wrapper {
+	width:1000px;
+}
+
+/* header image */
+#header {
+	clear:right;
+	background-image:url(http://www.g4ilo.com/images/slogo3.jpg);
+	background-repeat:no-repeat;
+	background-color:#D0D0D0;
+	height: 160px;
+	text-align:left;
+}
+
+/* main textual content area */
+#content {
+	padding:8px 0 0 0;
+	margin:0;
+	line-height:140%;
+	background-color:#F8F8F8;
+	text-align:left;
+	float:right;
+	width:800px;
+}
+#content p, pre {
+	padding:0;
+	margin:4px 8px 8px 16px;
+}
+#content form {
+	padding:0;
+	margin:8px 8px 0 8px;
+}
+#content_l { /* main textual content area (left box) */
+	margin:0;
+	padding:4px 0 4px 0;
+	background-color:#F8F8F8;
+	display:inline;
+	float:left;
+	width:48%;
+}
+#content_r { /* main textual content area (right box) */
+	margin:0;
+	padding:4px 0 4px 0;
+	background-color:#F8F8F8;
+	display:inline;
+	float:right;
+	width:48%;
+}
+/* left navigation area */
+#content_left {
+	float:left;
+	width:180px;
+	padding:8px 0 0 8px;
+	line-height:135%;
+	text-align:left;
+	font-size:100%;
+}
+#content_left ul { /* starts left navigation */
+	margin:0;
+	padding:0 0 0 8px;
+	text-align:left;
+	font-weight:bold;
+}
+#content_left ul ul {
+	font-size:90%;
+}
+#content_left ul.sub_nav { /* starts left navigation */
+	font-weight:normal;
+}
+#content_left li { /* main navigation list item */
+	display:block;
+	list-style:none;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+#content_left a, #content_left a:visited { /* mouse out navigation anchor link styles */
+	display:block;
+	width:100%;
+	margin:0px;
+	padding:0px;
+	text-decoration:none;
+	color:#404040;
+}
+#content_left a:hover, #content_left a:visited:hover { /* mouse over navigation anchor link styles */
+	display:block;
+	width:100%;
+	margin:0px;
+	padding:0px;
+	color:#2a56d6;
+	text-decoration:underline;
+}
+/* as we hid all hr for accessibility we create new hr with extra div element */
+div.hr {
+   height: 1px;
+   padding: 2px;
+   border-top: 1px solid #FFFFFF;
+   border-bottom: 1px solid #808080;
+   margin: 2px;
+}
+.misc {
+	margin:20px 0;
+	text-align:center;
+}
+
+/* header tags */
+h1 {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size:130%;
+	display:block;
+	width:96%;
+	background-color:#F0F0F0;
+	margin:0;
+	padding:4px 0 4px 8px;
+}
+h2 {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size:120%;
+	display:block;
+	width:96%;
+	background-color:#F0F0F0;
+	margin: 8px 0 0 0;
+	padding:4px 0 4px 8px;
+}
+h3 {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size:115%;
+	margin: 8px 0 0 0;
+	padding:4px 0 4px 8px;
+}
+
+h4 {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size:105%;
+	margin: 8px 0 0 0;
+	padding:0 0 0 8px;
+}
+
+ul.feeds,ul.new { /* latest blog entries */
+	font-size:90%;
+	margin:8px 0 0 16px;
+	padding:0 0 0 8px;
+	text-align:left;
+}
+#list li {
+	font-size:80%
+}
+
+/* anchor links */
+a, a:visited {
+	text-decoration:none;
+	color:#2a56d6;
+}
+a:hover, a:visited:hover {
+	color:#2a56d6;
+	text-decoration:underline;
+}
+
+#qso_log {
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size:80%;
+	line-height:90%;
+}
+tr.d0 {
+	background-color:#FFFFFF;
+}
+tr.d1 {
+	background-color:#F0F0F0;
+}
+
+/* footer */
+#footer_wrapper {
+	margin:0 auto;
+	padding:0;
+	width:800px;
+	font-size:80%;
+	text-align:center;
+	clear:both;
+}
+#footer {
+	padding-right:5px;
+	margin:0;
+	line-height:190%;
+	text-align:right;
+	clear:both;
+	vertical-align:middle;
+}
+/* End of 'g4ilo_main' */
+

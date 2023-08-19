@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>CW software</title>
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=43&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="DX Cluster" href="kcomm_dx_cluster_settings.html" />
+<link rel="next" title="Digimode software" href="kcomm_digimode_software.html" />
+</head>
+<body>
+<div id="main">
+<div id="content_wrapper">
+  <div id="content">
+         <h1>CW software</h1>
+      <p>The CW Software settings allow you to set up integration (or communication) between KComm and one of two Windows CW decoder programs, CW Skimmer and MRP40.</p>
+<h2>MRP40</h2>
+<p><img src="http://www.g4ilo.com/images/kcomm-h17.gif" alt="CW Skimmer settings" hspace="16" vspace="4" width="240" height="230" align="right" />If these settings are configured, you can use MRP40 to decode CW via the sound card and have the decoded text displayed in KComm's received text window.</p>
+<ul>
+<li><strong>Enable MRP40 integration</strong> - this tells KComm to copy decoded text from MRP40 into its received text window when CW mode is selected and MRP40 is running, and to display the MRP40 icon in the status bar to launch the decoder.</li>
+<li><strong>Keep on top</strong> - this tells KComm to keep itself in front of the MRP40 window.</li>
+<li><strong>Path to MRP40</strong> - here you must enter the path to the MRP40 program. You can use the Browse (...) button to locate it.</li>
+</ul>
+The calls of stations decoded by MRP40 will be spotted to the PSK Reporter website if <strong>Spot decoded calls to pskreporter.info</strong> has been selected under <a href="kcomm_log_settings.html" title="Logging"><strong>Logging</strong></a><strong></strong>.<br />
+<h3>MRP40 Setup</h3>
+<p>For MRP40 integration to work correctly, a registered version of MRP40 is required.</p>
+<p>In MRP40<strong> Options</strong>, <strong>Text Formatting</strong>, <strong>No Word Formatting</strong> must be selected. <em>All other options should not be selected.</em> This is because MRP40 dynamically rewrites the text when other options are selected, and this can cause characters to be lost when transferring the text to KComm.</p>
+<h2>CW Skimmer</h2>
+<p>These options allow you to use CW Skimmer as a Morse decoder and quickly transfer decoded words such as call, name and QTH into KComm's log fields. It also allows KComm to highlight calls in CW Skimmer to show new countries or prefixes or stations previously worked.</p>
+<ul>
+<li><span style="font-weight: bold">Enable CW Skimmer integration</span> - this tells KComm to activate this feature and display a CW Skimmer icon on the status bar to launch the program..</li>
+<li><span style="font-weight: bold">Path to CW Skimmer</span> - here you must enter the full path to the CW Skimmer program. You can use the Browse (<span style="font-weight: bold">...</span>) button to locate it.</li>
+<li><strong>Report spots to pskreporter.info</strong> - if selected, calls decoded by CW Skimmer will be spotted to the <a href="kcomm_psk_browser.html" title="PSK Browser">PSK Reporter</a> website. <em>Note: CW Skimmer may spot the call of the station the one you are receiving is working. To avoid this, select "Do not send callsigns without CQ" on the Telnet tab. To avoid false spots it is also recommended to use "Aggressive" call validation.</em></li>
+</ul>
+<h3>CW Skimmer setup<br /></h3>
+<p>CW Skimmer requires access to the serial port in order to set and get the frequency from the K2 or K3 - as does KComm. It is not normally possible for two programs to access a serial port at the same time under Windows.</p>
+<p>To allow both programs to have simultaneous access to the serial port to control your K2 or K3, you must install the <a href="http://www.eterlogic.com/Products.VSPE.html" target="_blank">Eterlogic Virtual Serial Port Emulator</a>. This is a freeware tool that lets you create various virtual devices. Use it to create a splitter in which the real serial port is the one connected to your transceiver. Then configure KComm and CW Skimmer to connect to the virtual serial port instead.</p>
+<p>(It is possible that <a href="http://com0com.sourceforge.net/" target="_blank">com0com</a> could be used as an alternative serial port splitter, however I haven't tried it and the setup looks to be more complicated.)</p>
+<p>Some other CW Skimmer settings need to be set up a certain way:</p>
+<ul>
+<li><span style="text-decoration: underline;">Audio tab</span><br /> <strong>Sound card driver</strong> - If you use any of KComm's internal soundcard options select <strong>MME</strong>. This is not essential but avoids conflict if CW Skimmer and KComm both try to use the soundcard at the same time.</li>
+<li><span style="text-decoration: underline;">Telnet tab</span><br /> <strong>Enable Telnet Server</strong> should be <strong>On</strong>.<br /> <strong>Port</strong> should be <strong>7300</strong>.<br /> <strong>Require password</strong> should be <strong>Off</strong>.<br /> <strong>Allow SKIMMER commands</strong> should be <strong>On</strong>.</li>
+</ul>
+<h3>Benefits of CW Skimmer integration</h3>
+<p>When CW Skimmer integration is used, KComm receives a notification of every new DX call that CW Skimmer spots. KComm checks this call against the log and sends a reply to Skimmer that allows it to color code a call if it is a new country or some other type of entity (prefix, zone). If the call has been worked before (contest duplicate) then it is colored gray. KComm checks the whole log unless <a href="kcomm_contest_settings.html" title="Contest">contest mode</a> has been selected, in which case it checks only the entries for that contest.</p>
+<p>Integration also allows you to use CW Skimmer as a Morse decoder. Click on a trace in the CW Skimmer waterfall, and the program displays the decoded text in a scrolling marquee just above the status bar. You can click on any word in the scrolling display and it is inserted into the appropriate log field.</p>
+<p>When using CW Skimmer you should tune in a CW station by clicking on the trace, and tune the band using the up and down arrow keys (as recommended in the CW Skimmer documentation) rather than using the radio tuning dial, so that the program can keep track of what is what. KComm will automatically pick up any frequency changes made by CW Skimmer.</p>
+      	 <hr>
+	 <div class="right49">
+	    Next page: <a href="kcomm_digimode_software.html" title="Digimode software">Digimode software</a>
+	 </div>
+         <div class="left49">
+            Previous page: <a href="kcomm_dx_cluster_settings.html" title="DX Cluster">DX Cluster</a>
+         </div>
+           </div>
+  <div id="content_left">
+      <h2>KComm Help</h2>
+             
+<ul class="clearfix">
+
+<li><a href="kcomm_hlp.html"> About KComm </a>
+
+
+</li>
+
+<li><a href="kcomm_req.html"> System requirements </a>
+
+
+</li>
+
+<li><a href="kcomm_inst.html"> Installation </a>
+
+
+</li>
+
+<li><a href="kcomm_gs.html"> Getting started </a>
+
+
+</li>
+
+<li><a href="kcomm_logging.html"> Logging </a>
+
+
+</li>
+
+<li><a href="kcomm_rx.html"> Receiving </a>
+
+
+</li>
+
+<li><a href="kcomm_tx.html"> Transmitting </a>
+
+
+</li>
+
+<li><a href="kcomm_macros.html"> Macros </a>
+
+
+</li>
+
+<li><a href="kcomm_bc.html"> Band changing </a>
+
+
+</li>
+
+<li><a href="kcomm_mc.html"> Mode changing </a>
+
+
+</li>
+
+<li><a href="kcomm-shortcuts.html"> Shortcuts </a>
+
+
+</li>
+
+<li><a href="kcomm_sb.html"> Status bar </a>
+
+
+</li>
+
+<li><a href="kcomm_dx_cluster.html"> DX Cluster </a>
+
+
+</li>
+
+<li><a href="kcomm_psk_browser.html"> PSK Browser </a>
+
+
+</li>
+
+<li class="activeparent"> <a href="kcomm_settings.html" class="activeparent"> Settings </a>
+
+
+<ul>
+
+<li><a href="kcomm_log_settings.html"> Logging </a>
+
+
+</li>
+
+<li><a href="kcomm_radio_settings.html"> Radio control </a>
+
+
+</li>
+
+<li><a href="kcomm_contest_settings.html"> Contest </a>
+
+
+</li>
+
+<li><a href="kcomm_eqsl_settings.html"> eQSL </a>
+
+
+</li>
+
+<li><a href="kcomm_soundcard.html"> Soundcard </a>
+
+
+</li>
+
+<li><a href="kcomm_dx_cluster_settings.html"> DX Cluster </a>
+
+
+</li>
+
+<li><a href="kcomm_cw_software.html" class="currentpage"> CW software </a>
+
+
+</li>
+
+<li><a href="kcomm_digimode_software.html"> Digimode software </a>
+
+
+</li>
+
+<li><a href="kcomm_lookups_settings.html"> Lookups </a>
+
+
+</li>
+
+<li><a href="kcomm_miscellaneous_settings.html"> Miscellaneous </a>
+
+
+</li></ul>
+</li>
+
+<li><a href="kcomm_editing_log.html"> Editing log entries </a>
+
+
+</li>
+
+<li><a href="kcomm_importing.html"> Importing log data </a>
+
+
+</li>
+
+<li><a href="kcomm_exporting.html"> Exporting log data </a>
+
+
+</li>
+
+<li><a href="kcomm_stats.html"> Statistics </a>
+
+
+</li>
+
+<li><a href="kcomm_faq.html"> Frequently asked questions </a>
+
+
+</li>
+
+<li><a href="kcomm_ts.html"> Troubleshooting </a>
+
+
+
+</li>
+</ul>
+
+      <ul class="clearfix">
+        <li><a href="kcomm.html"> KComm </a></li>
+        <li><a href="index.html"> G4ILO's Shack </a></li>
+      </ul>
+        </div>
+</div>
+</div>
+</body>
+</html><!-- 0.076317 / 57 / 10154704 / 10702448 -->

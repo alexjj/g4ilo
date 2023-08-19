@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Troubleshooting</title>
+
+<base href="" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-6 Ted Kulp. All rights reserved." />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<link rel="stylesheet" type="text/css" media="print,projection,screen" href="stylesheet.php%3Fcssid=43&amp;mediatype=print,projection,screen.css" />
+
+<link rel="start" title="Home Page, shortcut key=1" href="index.html" />
+<link rel="prev" title="Frequently asked questions" href="voaprop_faq.html" />
+<link rel="next" title="How it works" href="voaprop_how_it_works.html" />
+</head>
+<body>
+<div id="main">
+<div id="content_wrapper">
+  <div id="content">
+         <h1>Troubleshooting</h1>
+      <h2>VOAProp reports WWV solar data has invalid format</h2>
+<p>Because of a change in the format of the WWV solar information file updates now fail with an error. Thanks to Mirek, OK1DUB a fixed version of the file has been made available. You must change the URL in the Solar Data window to <strong>http://ok1dub.cz/wwv/wwv.txt</strong>. See <a href="http://blog.g4ilo.com/2011/12/voaprop-and-wwv.html">this blog post</a> for more information.</p>
+<h2>Installation issues</h2>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<p>VOAProp installs flawlessly for me every time I try, simply by running the setup program, accepting all the defaults, then clicking the button to go to the VOACAP website, downloading the latest version from there, and installing that, also using the defaults. VOAProp also works flawlessly for the thousands of other users who hit my site every day checking for updates to the data files. It works for many under Windows Vista. It even works in Linux under <em>wine</em> without too much difficulty.</p>
+<p>A very few people have been unable to get VOAProp to work at all. Unfortunately, I have no idea why not. It really is impossible to guess what the explanation is for a problem someone is having when I can't actually see the computer in question, so if none of the information here helps I can only suggest that you delete all traces of the software from your computer and then try again, following the instructions to the letter. You could also try installing it on a different computer.</p>
+<p>All of the known issues or things that could possibly cause problems for the program are documented below.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>Running under Windows Vista and Windows 7</h2>
+<p>Windows Vista and Windows 7 have security restrictions that prevent the modification of files stored in Program Files\... This affects programs such as VOAProp that store settings in an INI file in the same folder as the program itself.</p>
+<p>A workaround suggested by another ham radio developer is to install the program in a folder directly off C:\ for example C:\VOAProp. You could also install it under My Documents.</p>
+<p>An alternative suggestion is to use compatibility mode and set it to Windows XP SP2. Compatibility mode is only present in the Professional version of Windows 7 and actually involves running a separate copy of Windows XP so the first suggestion is probably the better of the two.</p>
+<h2>Settings must be re-entered each time VOAProp runs</h2>
+<p>This is a manifestation of the security restrictions in Windows Vista and Windows 7. See the solutions suggested above.</p>
+<h2>VOAProp freezes when run</h2>
+<p>Assuming that VOACAP has been installed, this is most likely due to a problem with the way it was installed. My advice is to uninstall both VOAProp and VOACAP, ensure that the folders they were installed in are completely removed, then install them again. <strong>Take care to specify to VOAProp the location of the VOACAP folder correctly.</strong> Unfortunately VOAProp does not check that the folder you tell it VOACAP is in is really the right one. This is an aspect of the program that could be improved, but that is not going to happen now that I am no longer able to create new versions of the program.</p>
+<h2>When I try to enter the latitude and longitude of my home QTH, they keep changing</h2>
+<p>This may be because you are entering a prefix, in the same format as the built-in locations. If the first letters you type match the first letters in an entry in the list, the program will use the position details of that entry. To work around this issue, just type the name of the place itself. Don't enter anything that would match one of the built-in entries. You can then enter the latitude and longitude manually.</p>
+<p>Another possible source of confusion is the interaction between the latitude and longitude fields and the locator. When you exit the latitude and longitude fields, the locator is calculated from those values. When you exit the locator field, the latitude and longitude are calculated. Therefore if your values for lat, long and locator differ from those VOAProp thinks is right, you'll have an endless disagreement unless you let the program win. :)</p>
+<h2>I am getting I/O error 103</h2>
+<p>You should no longer see this error. It occurred when using VOAProp 1.0 Release 1. It indicates that VOACAP did not run. One possibility is that you have an existing, old version of VOACAP that behaves in a different way from the one I used. Another is that you changed the default installation path and used one with spaces in the name. I can only suggest that you delete completely VOACAP from your computer, and then run VOAProp again. It will prompt you to download, install, and locate VOACAP. Install VOACAP into the default path to ensure that everything is set up as expected.</p>
+<h2>Nothing is displayed on the map</h2>
+<p>Right-click the map and check that at least one of Show workable call areas or Show signal strengths is selected. You should also ensure that you have selected a frequency band for which some propagation is expected. If you are certain that something should be displayed, check the possible solutions described for the item above.</p>
+<p>If VOACAP does not run and generate propagation data then VOAProp does not display an error message, but nothing will be displayed on the map. Check that VOACAP is installed and that VOAProp has the correct path to it in its INI file. Delete the VOAPROP.INI file from the program folder and run VOAProp again. It will prompt for the location of VOACAP.</p>
+<p>Note that VOACAP may not work properly if it is installed in a folder that has spaces in the name such as C:\Program Files. If you are experiencing problems, install VOACAP in the folder suggested by the installer by default.</p>
+<h2>Close button disappears from chart window under Windows Vista</h2>
+<p>This is a known issue, which is probably caused to the fact that the development tool used to compile VOAProp, Borland Delphi 6, is not compatible with Windows Vista.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<h2>Problems downloading data updates</h2>
+<p>Possible reasons for these issues are:</p>
+<h3>Unreliable DNS servers</h3>
+<p>This is a common problem. Wait a few hours, or a day, and try again, before assuming that there is anything wrong with your system. Change your ISP if this is a common problem ( if it is, it is likely that you also frequently experience "Page unavailable" errors when trying to visit other websites.)</p>
+<h3>Web server down or unavailable</h3>
+<p>This is possible. Again, wait a few hours, up to a day, before assuming something is wrong, if nothing has changed at your end of the connection.</p>
+<h3>Firewall blocking access</h3>
+<p>This is unfortunately all too common, as many people using these intrusive software "personal firewalls." ZoneAlarm, and anything with Norton in the title, are a particularly common cause of problems (not specifically with VOAProp, but with any software that accesses the Internet in general). I don't use these abominations myself so I am unable to provide any practical assistance with using them. Even disabling the firewall may not always solve the problem: it may sometimes be necessary to uninstall it completely to get it to "forget" its dislike of a particular program. There are <a href="http://forum.zonelabs.org/zonelabs/board/message?board.id=inst&amp;message.id=36584" target="_blank">instructions for performing a clean uninstall of ZoneAlarm</a> on the product's support website, which is proof in itself that such a drastic step is often necessary.</p>
+<p>VOAProp uses Microsoft Internet Explorer "behind the scenes" to download data files WWV. Therefore if Internet Explorer can access the Internet, VOAProp should also be able to. VOAProp tries to update the following files:</p>
+<ul>
+<li>Daily: the <a href="http://www.g4ilo.com/files/beacons.txt" target="_blank">beacon status file</a> and the 	<a href="http://www.g4ilo.com/files/ssndata.txt" target="_blank">smoothed 	sunspot number data file</a>.</li>
+<li>Hourly, or on request: the <a href="http://www.sec.noaa.gov/ftpdir/latest/wwv.txt" target="_blank">solar 	data file from WWV</a>.</li>
+</ul>
+<h3>A file may be corrupted</h3>
+<p>This is a remote possibility. A corrupt downloaded data file might cause VOAProp to crash or hang, or one of the program files could be corrupted. To resolve this:</p>
+<ul>
+<li>Clear the browser cache (If using Internet Explorer, click Tools, Internet Options, Delete 	Files...) to remove any cached copy of the corrupt download.</li>
+<li>Uninstall VOAProp and VOACap, 	check that the folders into which they were installed are <span style="text-decoration: underline;"> completely deleted,</span> and then reinstall them.</li>
+</ul>
+<h3>If none of the above resolves the problem</h3>
+<p>Failure of the automatic update feature to work is not a show stopper. VOACAP uses only smoothed sunspot numbers in its calculations. These are read from a file <strong>ssndata.txt </strong> in the VOAProp program folder. This file contains monthly values for the smoothed sunspot number, and it contains predicted values for several months hence. It is updated no more often than monthly, and the changes to the current values are small, and have little impact on the results. You can always <a href="http://www.g4ilo.com/files/ssndata.txt" target="_blank">download the latest version of ssndata.txt from g4ilo.com manually</a> and save it into the VOAProp program folder. (<strong>Tip:</strong> Right-click the above link and select Save Target as...)</p>
+<p>At your own risk, you may also update the file ssndata.txt manually using <a href="ftp://ftp.ngdc.noaa.gov/STP/SOLAR_DATA/SUNSPOT_NUMBERS/sunspot.predict">data from the National Geophysical Data Center</a>. Make sure all the columns of figures line up exactly.</p>
+<p>The solar data from WWV is not used by the VOACAP prediction engine. It is only used by VOAProp to display the current propagation status and forecast on a line of text below the map. If you are unable to download the data, simply untick the <strong>Auto Update</strong> box and this information will not be displayed by the program.</p>
+<p><!-- adsense 728x90 start -->
+<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8473114760998486";
+/* ad_728x90 */
+google_ad_slot = "9594690087";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- adsense end -->
+</p>
+<p>The beacon status data is updated when I become aware that a beacon has gone off the air or come back on again. As with the sunspot number data, this file can be <a href="http://www.g4ilo.com/files/beacons.txt" target="_blank">downloaded manually</a> and saved as <strong>beacons.txt</strong> in the VOAProp program folder.</p>
+<p><strong>Note:</strong> You must close and restart VOAProp after updating the solar data file, to make it read in the new version.</p>
+      	 <hr>
+	 <div class="right49">
+	    Next page: <a href="voaprop_how_it_works.html" title="How it works">How it works</a>
+	 </div>
+         <div class="left49">
+            Previous page: <a href="voaprop_faq.html" title="Frequently asked questions">Frequently asked questions</a>
+         </div>
+           </div>
+  <div id="content_left">
+      <h2>VOAProp Help</h2>
+             
+<ul class="clearfix">
+
+<li><a href="voaprop_about.html"> About VOAProp </a>
+
+
+</li>
+
+<li><a href="voaprop_instreq.html"> Installation </a>
+
+
+</li>
+
+<li><a href="voaprop_gs.html"> Getting started </a>
+
+
+</li>
+
+<li><a href="voaprop_bcns.html"> Beacon monitoring </a>
+
+
+</li>
+
+<li><a href="voaprop_locns.html"> Editing locations </a>
+
+
+</li>
+
+<li><a href="voaprop_faq.html"> Frequently asked questions </a>
+
+
+</li>
+
+<li><a href="voaprop_probs.html" class="currentpage"> Troubleshooting </a>
+
+
+</li>
+
+<li><a href="voaprop_how_it_works.html"> How it works </a>
+
+
+
+</li>
+</ul>
+
+      <ul class="clearfix">
+        <li><a href="voaprop.html"> VOAProp </a></li>
+        <li><a href="index.html"> G4ILO's Shack </a></li>
+      </ul>
+
+        </div>
+</div>
+</div>
+</body>
+</html><!-- 0.073023 / 20 / 9659688 / 10249920 -->
